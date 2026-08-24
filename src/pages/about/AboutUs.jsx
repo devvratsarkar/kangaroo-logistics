@@ -4,7 +4,7 @@ export default function AboutUsPage() {
       <h1 className="font-display text-4xl font-semibold tracking-tight text-primary">
         About Us
       </h1>
-      <p className="mt-3 text-black/70">
+      <p className="mt-3 text-muted">
         Learn more about Kangaroo Logistics and what we stand for.
       </p>
     </section>

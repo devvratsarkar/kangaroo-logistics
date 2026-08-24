@@ -4,7 +4,7 @@ export default function GetAQuotePage() {
       <h1 className="font-display text-4xl font-semibold tracking-tight text-primary">
         Get a Quote
       </h1>
-      <p className="mt-3 text-black/70">
+      <p className="mt-3 text-muted">
         Request a tailored quote for your logistics needs.
       </p>
     </section>

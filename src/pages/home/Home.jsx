@@ -4,7 +4,7 @@ export default function HomePage() {
       <h1 className="font-display text-4xl font-semibold tracking-tight text-primary">
         Home
       </h1>
-      <p className="mt-3 text-black/70">
+      <p className="mt-3 text-muted">
         Welcome to Kangaroo Logistics. Explore our services and learn more about us.
       </p>
     </section>

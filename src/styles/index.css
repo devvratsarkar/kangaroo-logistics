@@ -2,10 +2,9 @@
 @import "./common.css";
 
 @theme {
-  --color-primary: #184734;
-  --color-secondary: #5C8019;
-  --color-cream: #F4F2E9;
-  --color-black: #000000;
+  --color-primary: #0c2036;
+  --color-secondary: #d8c89b;
+  --color-muted: #78848f;
   --color-white: #ffffff;
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Libre Baskerville", ui-serif, Georgia, serif;
@@ -18,6 +17,6 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--color-cream);
-  color: var(--color-black);
+  background: var(--color-white);
+  color: var(--color-primary);
 }

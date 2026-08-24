@@ -4,7 +4,7 @@ export default function ServicesPage() {
       <h1 className="font-display text-4xl font-semibold tracking-tight text-primary">
         Services
       </h1>
-      <p className="mt-3 text-black/70">
+      <p className="mt-3 text-muted">
         Explore the logistics solutions Kangaroo Logistics offers.
       </p>
     </section>

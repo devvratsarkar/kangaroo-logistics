@@ -3,7 +3,7 @@ import PrimaryHeader from './header/PrimaryHeader.jsx'
 
 export default function MainLayout() {
   return (
-    <div className="min-h-svh bg-cream text-black">
+    <div className="min-h-svh bg-white text-primary">
       <PrimaryHeader />
       <main>
         <Outlet />
