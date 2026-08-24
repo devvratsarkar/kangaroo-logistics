@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Autoplay, EffectCoverflow } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -125,30 +125,55 @@ function SlideContent({ slide, active }) {
 
 export default function HomeHeroSlider() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isDesktopSlider, setIsDesktopSlider] = useState(false)
   const swiperRef = useRef(null)
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 640px)')
+
+    function updateSliderMode(event) {
+      setIsDesktopSlider(event.matches)
+    }
+
+    setIsDesktopSlider(mediaQuery.matches)
+    mediaQuery.addEventListener('change', updateSliderMode)
+
+    return () => mediaQuery.removeEventListener('change', updateSliderMode)
+  }, [])
+
   return (
-    <section className="home-banner-slider relative sm:pt-4" aria-label="Home banner">
-      <div className="custom_container">
+    <section
+      className={[
+        'home-banner-slider relative sm:pt-4',
+        isDesktopSlider ? 'is-desktop' : 'is-mobile',
+      ].join(' ')}
+      aria-label="Home banner"
+    >
+      <div className="home-banner-slider-container">
         <div className="banner-slider-shell relative overflow-hidden rounded-none sm:rounded-[20px]">
         <Swiper
-          modules={[Autoplay, EffectCoverflow]}
+          key={isDesktopSlider ? 'desktop-banner' : 'mobile-banner'}
+          modules={isDesktopSlider ? [Autoplay, EffectCoverflow] : [Autoplay]}
           className="banner-classic-swiper h-full"
-          effect="coverflow"
+          effect={isDesktopSlider ? 'coverflow' : undefined}
           speed={1500}
           loop
           grabCursor
-          centeredSlides
+          centeredSlides={isDesktopSlider}
           slidesPerView={1}
-          spaceBetween={30}
+          spaceBetween={isDesktopSlider ? 30 : 0}
           autoHeight={false}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
+          coverflowEffect={
+            isDesktopSlider
+              ? {
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }
+              : undefined
+          }
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,

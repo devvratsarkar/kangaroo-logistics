@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { ChevronDownIcon, CloseIcon } from '../../ui/AllSVG.jsx'
+import { ChevronDownIcon, CloseIcon, MailIcon, PhoneIcon, ArrowRightLongIcon } from '../../ui/AllSVG.jsx'
 import { serviceNavItems } from '../../../data/services.js'
 import {
   getAboutPageRoute,
@@ -11,11 +11,9 @@ import {
   getServicesPageRoute,
 } from '../../../routes/routes.js'
 
-const mobileLinkClass = ({ isActive }) =>
-  [
-    'offcanvas-nav-item block border-b border-primary/10 py-3.5 text-[13px] font-semibold tracking-[0.1em] uppercase',
-    isActive ? 'text-secondary' : 'text-primary hover:text-secondary',
-  ].join(' ')
+function mobileLinkClass(isActive) {
+  return ['offcanvas-link offcanvas-nav-item', isActive ? 'is-active' : ''].filter(Boolean).join(' ')
+}
 
 export default function OffCanvasMenu({ isOpen, onClose }) {
   const location = useLocation()
@@ -86,108 +84,145 @@ export default function OffCanvasMenu({ isOpen, onClose }) {
         aria-hidden={!isOpen}
         aria-label="Mobile navigation"
       >
-        <div className="flex shrink-0 items-center justify-between border-b border-secondary px-5 py-4">
-          <span className="text-[11px] font-bold tracking-[0.2em] text-primary uppercase">
-            Menu
-          </span>
+        <div className="offcanvas-head">
+          <div className="offcanvas-head-top">
+            <Link to={getHomePageRoute()} className="offcanvas-logo" onClick={onClose}>
+              <img
+                src="/logo-footer.png"
+                alt="Kangaroo Logistics LLC"
+                width={200}
+                height={56}
+                loading="lazy"
+                decoding="async"
+              />
+            </Link>
 
-          <button
-            type="button"
-            className="inline-flex size-10 items-center justify-center border border-primary/15 text-primary transition-colors hover:border-secondary hover:text-secondary"
-            aria-label="Close menu"
-            onClick={onClose}
-          >
-            <CloseIcon />
-          </button>
+            <button
+              type="button"
+              className="offcanvas-close"
+              aria-label="Close menu"
+              onClick={onClose}
+            >
+              <CloseIcon className="size-5" />
+            </button>
+          </div>
+
+          <div className="offcanvas-quick">
+            <a href="tel:+17185550124">
+              <PhoneIcon className="size-3.5" strokeWidth={1.6} />
+              +1 (718) 555-0124
+            </a>
+            <a href="mailto:ops@kangaroologistics.com">
+              <MailIcon className="size-3.5" strokeWidth={1.6} />
+              ops@kangaroologistics.com
+            </a>
+          </div>
         </div>
 
-        <nav
-          aria-label="Mobile"
-          className="flex-1 overflow-y-auto px-5 py-2 pb-8"
-        >
-          <NavLink to={getHomePageRoute()} className={mobileLinkClass} onClick={onClose}>
+        <nav aria-label="Mobile" className="offcanvas-body">
+          <NavLink
+            to={getHomePageRoute()}
+            className={({ isActive }) => mobileLinkClass(isActive)}
+            onClick={onClose}
+          >
             Home
           </NavLink>
 
-          <NavLink to={getAboutPageRoute()} className={mobileLinkClass} onClick={onClose}>
+          <NavLink
+            to={getAboutPageRoute()}
+            className={({ isActive }) => mobileLinkClass(isActive)}
+            onClick={onClose}
+          >
             About Us
           </NavLink>
 
-          <div className="offcanvas-nav-item border-b border-primary/10">
-            <div className="flex items-center justify-between gap-2">
-              <NavLink
-                to={getServicesPageRoute()}
-                className={[
-                  'flex-1 py-3.5 text-[13px] font-semibold tracking-widest uppercase transition-colors',
-                  servicesActive ? 'text-secondary' : 'text-primary hover:text-secondary',
-                ].join(' ')}
-                onClick={onClose}
-              >
-                Services
-              </NavLink>
-
-              <button
-                type="button"
-                className={[
-                  'inline-flex size-10 items-center justify-center transition-colors',
-                  servicesActive || servicesOpen
-                    ? 'text-secondary'
-                    : 'text-primary hover:text-secondary',
-                ].join(' ')}
-                aria-label={servicesOpen ? 'Hide services' : 'Show services'}
-                aria-expanded={servicesOpen}
-                onClick={() => setServicesOpen((open) => !open)}
-              >
-                <ChevronDownIcon
-                  className={[
-                    'size-3.5 transition-transform duration-300 ease-out',
-                    servicesOpen ? 'rotate-180' : '',
-                  ].join(' ')}
-                />
-              </button>
-            </div>
+          <div
+            className={[
+              'offcanvas-services offcanvas-nav-item',
+              servicesOpen ? 'is-open' : '',
+            ]
+              .filter(Boolean)
+              .join(' ')}
+          >
+            <button
+              type="button"
+              className={[
+                'offcanvas-services-toggle',
+                servicesActive ? 'is-active' : '',
+              ]
+                .filter(Boolean)
+                .join(' ')}
+              aria-label={servicesOpen ? 'Hide services' : 'Show services'}
+              aria-expanded={servicesOpen}
+              onClick={() => setServicesOpen((open) => !open)}
+            >
+              <span className="offcanvas-services-toggle-text">
+                <span>Services</span>
+                <small>{serviceNavItems.length} logistics solutions</small>
+              </span>
+              <ChevronDownIcon className="size-3.5" />
+            </button>
 
             <div
               className={[
-                'grid transition-[grid-template-rows,opacity] duration-300 ease-out',
-                servicesOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0',
-              ].join(' ')}
+                'offcanvas-services-panel',
+                servicesOpen ? 'is-open' : '',
+              ]
+                .filter(Boolean)
+                .join(' ')}
             >
-              <div className="overflow-hidden">
-                <div className="mb-3">
-                  {serviceNavItems.map((item, index) => (
+              <div className="offcanvas-services-panel-inner">
+                <div className="offcanvas-subnav">
+                  {serviceNavItems.map((item) => (
                     <Link
                       key={item.slug}
                       to={item.to}
-                      className={[
-                        'block px-4 py-3 text-[13px] font-medium text-primary transition-colors hover:bg-primary/4',
-                        index < serviceNavItems.length - 1
-                          ? 'border-b border-dashed border-secondary/80'
-                          : '',
-                      ].join(' ')}
+                      className="offcanvas-subnav-link"
                       onClick={onClose}
                     >
-                      {item.label}
+                      <span className="offcanvas-subnav-icon">
+                        <img src={item.icon} alt="" loading="lazy" decoding="async" />
+                      </span>
+
+                      <span className="offcanvas-subnav-text">
+                        <span className="offcanvas-subnav-title">{item.label}</span>
+                        <span className="offcanvas-subnav-desc">{item.description}</span>
+                      </span>
+
+                      <ArrowRightLongIcon className="offcanvas-subnav-arrow size-4" />
                     </Link>
                   ))}
                 </div>
+
+                <Link
+                  to={getServicesPageRoute()}
+                  className="offcanvas-subnav-all mb-3!"
+                  onClick={onClose}
+                >
+                  View all services
+                  <ArrowRightLongIcon className="size-4" />
+                </Link>
               </div>
             </div>
           </div>
 
-          <NavLink to={getBlogPageRoute()} className={mobileLinkClass} onClick={onClose}>
+          <NavLink
+            to={getBlogPageRoute()}
+            className={({ isActive }) => mobileLinkClass(isActive)}
+            onClick={onClose}
+          >
             Blog
           </NavLink>
 
-          <NavLink to={getContactPageRoute()} className={mobileLinkClass} onClick={onClose}>
+          <NavLink
+            to={getContactPageRoute()}
+            className={({ isActive }) => mobileLinkClass(isActive)}
+            onClick={onClose}
+          >
             Contact
           </NavLink>
 
-          <Link
-            to={getQuotePageRoute()}
-            className="offcanvas-nav-item mt-5 inline-flex w-full items-center justify-center border border-secondary bg-secondary px-4 py-3.5 text-[12px] font-bold tracking-[0.14em] text-primary uppercase transition-colors hover:border-primary hover:bg-primary hover:text-white"
-            onClick={onClose}
-          >
+          <Link to={getQuotePageRoute()} className="offcanvas-cta offcanvas-nav-item" onClick={onClose}>
             Get a Quote
           </Link>
         </nav>

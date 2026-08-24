@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useId, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import PrimaryToolbar from './PrimaryToolbar.jsx'
-import PrimaryMenu from './PrimaryMenu.jsx'
+import PrimaryMenu, { ServicesMegaMenu } from './PrimaryMenu.jsx'
 import OffCanvasMenu from './OffCanvasMenu.jsx'
-import { CloseIcon, MenuIcon } from '../../ui/AllSVG.jsx'
+import { ArrowRightLongIcon, CloseIcon, MenuIcon, PhoneIcon } from '../../ui/AllSVG.jsx'
 import {
   getHomePageRoute,
   getQuotePageRoute,
@@ -11,60 +11,145 @@ import {
 
 export default function PrimaryHeader() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const servicesMenuId = useId()
+  const servicesCloseTimerRef = useRef(null)
+  const location = useLocation()
+
+  useEffect(() => {
+    setServicesOpen(false)
+  }, [location.pathname])
+
+  useEffect(() => {
+    return () => {
+      if (servicesCloseTimerRef.current) clearTimeout(servicesCloseTimerRef.current)
+    }
+  }, [])
+
+  function cancelServicesClose() {
+    if (servicesCloseTimerRef.current) {
+      clearTimeout(servicesCloseTimerRef.current)
+      servicesCloseTimerRef.current = null
+    }
+  }
+
+  function openServicesMenu() {
+    cancelServicesClose()
+    setServicesOpen(true)
+  }
+
+  function scheduleServicesClose() {
+    cancelServicesClose()
+    servicesCloseTimerRef.current = setTimeout(() => {
+      setServicesOpen(false)
+      servicesCloseTimerRef.current = null
+    }, 220)
+  }
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 12)
+    }
+
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    if (!servicesOpen) return undefined
+
+    function onKeyDown(event) {
+      if (event.key === 'Escape') setServicesOpen(false)
+    }
+
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [servicesOpen])
 
   return (
     <>
       <PrimaryToolbar />
 
-      <header className="sticky top-0 z-40 bg-white">
-        <div className="border-b border-secondary bg-white">
-          <div className="custom_container lg:w-[85%]! flex h-19 items-center justify-between gap-6 lg:h-21">
-            <Link
-              to={getHomePageRoute()}
-              className="relative z-10 flex shrink-0 items-center"
-              aria-label="Kangaroo Logistics home"
-            >
-              <img
-                src="/logo.png"
-                alt="Kangaroo Logistics LLC"
-                className="h-11 w-auto sm:h-12 lg:h-13"
-                width={260}
-                height={74}
-              />
-            </Link>
+      <header
+        className={[
+          'site-header',
+          scrolled ? 'is-scrolled' : '',
+          servicesOpen ? 'is-services-open' : '',
+        ]
+          .filter(Boolean)
+          .join(' ')}
+      >
+        <div className="site-header-pattern" aria-hidden="true" />
 
-            <PrimaryMenu />
-
-            <div className="flex items-center gap-3">
+        <div className="site-header-body">
+          <div className="custom_container site-header-shell">
+            <div className="site-header-bar">
               <Link
-                to={getQuotePageRoute()}
-                className="hidden items-center border border-secondary bg-secondary px-5 py-2.5 text-[11px] font-bold tracking-[0.16em] text-primary uppercase transition-colors hover:border-primary hover:bg-primary hover:text-white sm:inline-flex"
+                to={getHomePageRoute()}
+                className="site-header-logo"
+                aria-label="Kangaroo Logistics home"
               >
-                Get a Quote
+                <img
+                  src="/logo.png"
+                  alt="Kangaroo Logistics LLC"
+                  width={260}
+                  height={74}
+                />
               </Link>
 
-              <button
-                type="button"
-                className="inline-flex size-11 items-center justify-center text-primary transition-colors hover:text-secondary lg:hidden"
-                aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-                aria-expanded={mobileOpen}
-                onClick={() => setMobileOpen((open) => !open)}
-              >
-                {mobileOpen ? (
-                  <CloseIcon className="size-7" />
-                ) : (
-                  <MenuIcon className="size-7" />
-                )}
-              </button>
+              <PrimaryMenu
+                servicesOpen={servicesOpen}
+                onServicesOpen={openServicesMenu}
+                onServicesClose={scheduleServicesClose}
+                onServicesCancelClose={cancelServicesClose}
+                servicesMenuId={servicesMenuId}
+              />
+
+              <div className="site-header-actions">
+                <div className="site-header-help">
+                  <span className="site-header-help-label">Need assistance?</span>
+                  <a href="tel:+17185550124" className="site-header-help-phone">
+                    <PhoneIcon className="size-4" strokeWidth={1.7} />
+                    +1 (718) 555-0124
+                  </a>
+                </div>
+
+                <Link to={getQuotePageRoute()} className="site-header-cta">
+                  <span className="site-header-cta-text">
+                    <span>Get a Quote</span>
+                    <small>Free estimate in 24hrs</small>
+                  </span>
+                  <span className="site-header-cta-icon" aria-hidden="true">
+                    <ArrowRightLongIcon className="size-5" />
+                  </span>
+                </Link>
+
+                <button
+                  type="button"
+                  className="site-header-menu-btn"
+                  aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+                  aria-expanded={mobileOpen}
+                  onClick={() => setMobileOpen((open) => !open)}
+                >
+                  {mobileOpen ? <CloseIcon className="size-6" /> : <MenuIcon className="size-6" />}
+                </button>
+              </div>
             </div>
           </div>
+
+          <ServicesMegaMenu
+            isOpen={servicesOpen}
+            onOpen={openServicesMenu}
+            onClose={scheduleServicesClose}
+            onCancelClose={cancelServicesClose}
+            servicesMenuId={servicesMenuId}
+          />
         </div>
       </header>
 
-      <OffCanvasMenu
-        isOpen={mobileOpen}
-        onClose={() => setMobileOpen(false)}
-      />
+      <OffCanvasMenu isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
     </>
   )
 }
