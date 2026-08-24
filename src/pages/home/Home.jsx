@@ -1,12 +1,5 @@
+import HomeHeroSlider from '../../components/home/HomeHeroSlider.jsx'
+
 export default function HomePage() {
-  return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="font-display text-4xl font-semibold tracking-tight text-primary">
-        Home
-      </h1>
-      <p className="mt-3 text-muted">
-        Welcome to Kangaroo Logistics. Explore our services and learn more about us.
-      </p>
-    </section>
-  )
+  return <HomeHeroSlider />
 }

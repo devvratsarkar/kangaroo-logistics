@@ -6,8 +6,8 @@
   --color-secondary: #d8c89b;
   --color-muted: #78848f;
   --color-white: #ffffff;
-  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Libre Baskerville", ui-serif, Georgia, serif;
+  --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -19,4 +19,64 @@ body {
   min-width: 320px;
   background: var(--color-white);
   color: var(--color-primary);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bannerChar {
+  from {
+    opacity: 0;
+    transform: translateX(50px) rotateX(35deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateX(0deg);
+  }
+}
+
+@keyframes bannerFade {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner-char-animate {
+  animation: bannerChar 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+}
+
+.banner-fade-animate {
+  animation: bannerFade 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home-banner-slider .banner-classic-swiper {
+  overflow: hidden;
+}
+
+.home-banner-slider .swiper-slide {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-banner-slider .swiper-slide-shadow-left,
+.home-banner-slider .swiper-slide-shadow-right {
+  background: linear-gradient(
+    to left,
+    rgba(12, 32, 54, 0.45),
+    rgba(12, 32, 54, 0.05)
+  );
 }
