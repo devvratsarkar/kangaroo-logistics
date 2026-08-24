@@ -41,11 +41,12 @@ export default function PrimaryHeader() {
   }, [mobileOpen])
 
   return (
-    <header className="sticky top-0 z-40 bg-white">
+    <>
       <PrimaryToolbar />
 
-      <div className="border-b border-secondary bg-white">
-        <div className="custom_container flex h-19 items-center justify-between gap-6 lg:h-21">
+      <header className="sticky top-0 z-40 bg-white">
+        <div className="border-b border-secondary bg-white">
+        <div className="custom_container lg:w-[85%]! flex h-19 items-center justify-between gap-6 lg:h-21">
           <Link
             to={getHomePageRoute()}
             className="relative z-10 flex shrink-0 items-center"
@@ -167,6 +168,7 @@ export default function PrimaryHeader() {
           </Link>
         </div>
       </div>
-    </header>
+      </header>
+    </>
   )
 }

@@ -21,6 +21,21 @@ body {
   color: var(--color-primary);
 }
 
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+input[type="button"]:not(:disabled),
+input[type="submit"]:not(:disabled),
+input[type="reset"]:not(:disabled),
+label[for],
+summary {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -64,6 +79,63 @@ body {
   animation: bannerFade 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.home-banner-slider .banner-slider-shell {
+  height: 520px;
+}
+
+@media (min-width: 640px) {
+  .home-banner-slider .banner-slider-shell {
+    height: 580px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-banner-slider .banner-slider-shell {
+    height: 640px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-banner-slider .banner-slider-shell {
+    height: 700px;
+  }
+}
+
+.home-banner-slider .banner-classic-swiper,
+.home-banner-slider .banner-classic-swiper .swiper-wrapper,
+.home-banner-slider .banner-slide,
+.home-banner-slider .banner-slide-inner {
+  height: 100%;
+}
+
+.home-banner-slider .banner-headline-block {
+  min-height: 9.5rem;
+}
+
+@media (min-width: 640px) {
+  .home-banner-slider .banner-headline-block {
+    min-height: 11.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-banner-slider .banner-headline-block {
+    min-height: 14rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-banner-slider .banner-headline-block {
+    min-height: 17.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-banner-slider .banner-headline-block {
+    min-height: 20rem;
+  }
+}
+
 .home-banner-slider .banner-classic-swiper {
   overflow: hidden;
 }
@@ -79,4 +151,97 @@ body {
     rgba(12, 32, 54, 0.45),
     rgba(12, 32, 54, 0.05)
   );
+}
+
+.special-services-section {
+  position: relative;
+}
+
+.welcome-image-accent {
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 92%);
+}
+
+.special-stage {
+  animation: specialStageIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.special-stage-media {
+  background: var(--color-primary);
+}
+
+.special-stage-copy {
+  animation: specialCopyIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.special-progress {
+  width: 0;
+  animation-name: specialProgress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes specialStageIn {
+  from {
+    opacity: 0.55;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes specialCopyIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes specialProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.service-detail-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -15%;
+  width: 0;
+  height: 106%;
+  background: var(--color-secondary);
+  transform: skewX(20deg);
+  transition: width 0.4s ease;
+  z-index: 0;
+}
+
+.service-detail-btn:hover::before {
+  width: 130%;
+}
+
+.service-detail-btn:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .special-stage,
+  .special-stage-copy,
+  .special-progress {
+    animation: none !important;
+  }
+
+  .special-progress {
+    width: 100%;
+  }
 }

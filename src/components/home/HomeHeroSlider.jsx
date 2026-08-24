@@ -39,8 +39,8 @@ function AnimatedLine({ text, className = '', delay = 0, active }) {
 
 function SlideContent({ slide, active }) {
   return (
-    <div className="relative z-2 flex h-full min-h-130 items-center px-5 py-22 sm:min-h-140 sm:px-8 sm:py-26.25 lg:min-h-155 lg:px-12 lg:py-30 xl:px-16">
-      <div className="max-w-5xl">
+    <div className="relative z-2 flex h-full items-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 xl:px-10">
+      <div className="w-full max-w-5xl">
         <h1
           className={[
             'relative mb-7 inline-flex min-h-10 items-center pl-6 font-display text-[15px] font-medium text-white sm:mb-8 sm:text-lg',
@@ -58,7 +58,7 @@ function SlideContent({ slide, active }) {
           {slide.eyebrow}
         </h1>
 
-        <div className="space-y-1 sm:space-y-0">
+        <div className="banner-headline-block space-y-1 sm:space-y-0">
           {slide.lines.map((line, lineIndex) => (
             <AnimatedLine
               key={`${slide.id}-${line}`}
@@ -66,7 +66,7 @@ function SlideContent({ slide, active }) {
               active={active}
               delay={0.12 + lineIndex * 0.14}
               className={[
-                'text-[34px] leading-[1.08] sm:text-[40px] sm:leading-12.5 md:text-[50px] md:leading-15 lg:text-[64px] lg:leading-17.5 xl:text-[74px] xl:leading-19.5',
+                'text-[34px] leading-[1.08] sm:text-[40px] sm:leading-[1.12] md:text-[50px] md:leading-[1.12] lg:text-[64px] lg:leading-[1.1] xl:text-[74px] xl:leading-[1.08]',
                 lineIndex === 0 ? 'tracking-[-0.01em]' : 'font-semibold',
               ].join(' ')}
             />
@@ -128,14 +128,12 @@ export default function HomeHeroSlider() {
   const swiperRef = useRef(null)
 
   return (
-    <section
-      className="home-banner-slider relative px-0 pt-0 pb-0 sm:px-4.5 sm:pt-4 lg:px-7.5"
-      aria-label="Home banner"
-    >
-      <div className="relative overflow-hidden rounded-none sm:rounded-[20px]">
+    <section className="home-banner-slider relative sm:pt-4" aria-label="Home banner">
+      <div className="custom_container">
+        <div className="banner-slider-shell relative overflow-hidden rounded-none sm:rounded-[20px]">
         <Swiper
           modules={[Autoplay, EffectCoverflow]}
-          className="banner-classic-swiper"
+          className="banner-classic-swiper h-full"
           effect="coverflow"
           speed={1500}
           loop
@@ -143,6 +141,7 @@ export default function HomeHeroSlider() {
           centeredSlides
           slidesPerView={1}
           spaceBetween={30}
+          autoHeight={false}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -164,8 +163,8 @@ export default function HomeHeroSlider() {
           }}
         >
           {homeSlides.map((slide, slideIndex) => (
-            <SwiperSlide key={slide.id} className="h-auto! overflow-hidden rounded-none sm:rounded-[20px]">
-              <div className="relative overflow-hidden rounded-none sm:rounded-[20px]">
+            <SwiperSlide key={slide.id} className="banner-slide overflow-hidden rounded-none sm:rounded-[20px]">
+              <div className="banner-slide-inner relative h-full overflow-hidden rounded-none sm:rounded-[20px]">
                 <img
                   src={slide.image}
                   alt={slide.imageAlt}
@@ -215,6 +214,7 @@ export default function HomeHeroSlider() {
           >
             <ArrowRightLongIcon className="size-4" />
           </button>
+        </div>
         </div>
       </div>
     </section>
