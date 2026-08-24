@@ -117,7 +117,7 @@ export default function PrimaryMenu({ onNavigate }) {
               : 'pointer-events-none -translate-y-1 opacity-0',
           ].join(' ')}
         >
-          <div className="overflow-hidden border border-secondary bg-white">
+          <div className="overflow-hidden border-y border-secondary bg-white">
             <ul>
               {serviceNavItems.map((item, index) => (
                 <li key={item.slug}>

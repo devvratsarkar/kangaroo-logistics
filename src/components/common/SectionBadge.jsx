@@ -1,4 +1,4 @@
-export function BuildingIcon({ className = 'size-[18px]', strokeWidth = 1.7 }) {
+export function BuildingIcon({ className = 'size-4.5', strokeWidth = 1.7 }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -55,7 +55,7 @@ export default function SectionBadge({
           styles.iconWrap,
         ].join(' ')}
       >
-        <Icon className={['size-4 sm:size-[18px]', styles.icon].join(' ')} />
+        <Icon className={['size-4 sm:size-4.5', styles.icon].join(' ')} />
       </span>
       <span className="font-display text-[15px] font-semibold leading-none tracking-[0.01em] sm:text-[17px]">
         {children}
