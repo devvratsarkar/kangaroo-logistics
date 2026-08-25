@@ -6,8 +6,10 @@ import ServiceDetailPage from '../pages/services/ServiceDetail'
 import ContactUsPage from '../pages/contact/ContactUs'
 import GetAQuotePage from '../pages/quote/GetAQuote'
 import BlogPage from '../pages/blog/Blog'
+import BlogDetailPage from '../pages/blog/BlogDetail'
 import {
   getAboutPageRoute,
+  getBlogDetailPageRoute,
   getBlogPageRoute,
   getContactPageRoute,
   getHomePageRoute,
@@ -47,6 +49,10 @@ export const RouterData = [
       {
         path: getBlogPageRoute(),
         element: <BlogPage />,
+      },
+      {
+        path: getBlogDetailPageRoute(),
+        element: <BlogDetailPage />,
       },
     ],
   },

@@ -1,12 +1,11 @@
+import BlogHero from '../../components/blog/BlogHero.jsx'
+import BlogGrid from '../../components/blog/BlogGrid.jsx'
+
 export default function BlogPage() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="font-display text-4xl font-semibold tracking-tight text-primary">
-        Blog
-      </h1>
-      <p className="mt-3 text-muted">
-        News, insights, and updates from Kangaroo Logistics.
-      </p>
-    </section>
+    <>
+      <BlogHero />
+      <BlogGrid />
+    </>
   )
 }

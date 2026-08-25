@@ -1,33 +1,7 @@
-import { Link } from 'react-router-dom'
 import { latestBlogs } from '../../data/latestBlogs.js'
 import SectionBadge from '../common/SectionBadge.jsx'
-import { ArrowRightLongIcon, TagIcon } from '../ui/AllSVG.jsx'
-
-function BlogCard({ post }) {
-  return (
-    <article className="blog-card">
-      <Link to={post.to} className="blog-card-thumb block">
-        <figure className="blog-card-figure">
-          <img src={post.image} alt={post.imageAlt} loading="lazy" decoding="async" />
-        </figure>
-        <span className="blog-card-tag">{post.category}</span>
-      </Link>
-
-      <div className="blog-card-content">
-        <h3 className="blog-card-title">
-          <Link to={post.to}>{post.title}</Link>
-        </h3>
-        <p className="blog-card-desc">{post.excerpt}</p>
-        <div className="blog-card-btn">
-          <Link to={post.to} className="blog-card-read">
-            Read more
-            <ArrowRightLongIcon className="size-4 shrink-0" />
-          </Link>
-        </div>
-      </div>
-    </article>
-  )
-}
+import BlogCard from '../blog/BlogCard.jsx'
+import { TagIcon } from '../ui/AllSVG.jsx'
 
 export default function HomeLatestBlog() {
   return (

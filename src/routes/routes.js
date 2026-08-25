@@ -25,3 +25,7 @@ export function getQuotePageRoute() {
 export function getBlogPageRoute() {
   return `/blog`
 }
+
+export function getBlogDetailPageRoute(slug = ':slug') {
+  return `/blog/${slug}`
+}
