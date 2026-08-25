@@ -1,12 +1,25 @@
+import AboutHero from '../../components/about/AboutHero.jsx'
+import AboutIntro from '../../components/about/AboutIntro.jsx'
+import AboutSolutions from '../../components/about/AboutSolutions.jsx'
+import AboutMission from '../../components/about/AboutMission.jsx'
+import AboutValues from '../../components/about/AboutValues.jsx'
+import HomeWorkingProcess from '../../components/home/HomeWorkingProcess.jsx'
+import AboutCapabilities from '../../components/about/AboutCapabilities.jsx'
+import AboutFaq from '../../components/about/AboutFaq.jsx'
+import HomeTestimonials from '../../components/home/HomeTestimonials.jsx'
+
 export default function AboutUsPage() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="font-display text-4xl font-semibold tracking-tight text-primary">
-        About Us
-      </h1>
-      <p className="mt-3 text-muted">
-        Learn more about Kangaroo Logistics and what we stand for.
-      </p>
-    </section>
+    <>
+      <AboutHero />
+      <AboutIntro />
+      <AboutSolutions />
+      <AboutMission />
+      <AboutValues />
+      <HomeWorkingProcess />
+      <AboutCapabilities />
+      <AboutFaq />
+      <HomeTestimonials />
+    </>
   )
 }

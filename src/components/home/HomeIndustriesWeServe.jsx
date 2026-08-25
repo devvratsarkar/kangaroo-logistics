@@ -104,20 +104,17 @@ export default function HomeIndustriesWeServe() {
           {industriesWeServe.map((industry) => (
             <li
               key={industry.id}
-              className="industry-card group cursor-pointer rounded-[18px] border border-primary/10 bg-white p-6 shadow-[0_8px_30px_rgba(12,32,54,0.06)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-primary hover:shadow-[0_16px_40px_rgba(12,32,54,0.18)] sm:p-7"
+              className="industry-card rounded-[18px] border border-primary/10 bg-white p-6 shadow-[0_8px_30px_rgba(12,32,54,0.06)] transition-[transform,box-shadow,border-color] duration-300 ease-out sm:p-7"
             >
-              <div className="relative z-1 flex size-14 items-center justify-center rounded-full border border-dashed border-secondary bg-secondary/15 text-primary transition-all duration-300 ease-out group-hover:scale-110 group-hover:border-secondary group-hover:bg-white/10 group-hover:text-secondary group-hover:shadow-[0_8px_20px_rgba(216,200,155,0.25)]">
-                <IndustryIcon
-                  type={industry.icon}
-                  className="size-7 transition-transform duration-300 ease-out group-hover:scale-105"
-                />
+              <div className="industry-card-icon flex size-14 items-center justify-center rounded-full border border-dashed border-secondary bg-secondary/15 text-primary transition-all duration-300 ease-out">
+                <IndustryIcon type={industry.icon} className="size-7" />
               </div>
 
-              <h3 className="relative z-1 mt-5 font-display text-[20px] leading-tight font-semibold text-primary transition-colors duration-300 group-hover:text-white sm:text-[22px]">
+              <h3 className="industry-card-title mt-5 font-display text-[20px] leading-tight font-semibold text-primary transition-colors duration-300 sm:text-[22px]">
                 {industry.title}
               </h3>
 
-              <p className="relative z-1 mt-3 text-[15px] leading-7 text-muted transition-colors duration-300 group-hover:text-white/70 sm:text-[16px]">
+              <p className="industry-card-copy mt-3 text-[15px] leading-7 text-muted transition-colors duration-300 sm:text-[16px]">
                 {industry.description}
               </p>
             </li>

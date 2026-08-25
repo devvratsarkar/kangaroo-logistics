@@ -1,12 +1,19 @@
+import ServicesHero from '../../components/services/ServicesHero.jsx'
+import ServicesHighlights from '../../components/services/ServicesHighlights.jsx'
+import ServicesGrid from '../../components/services/ServicesGrid.jsx'
+import ServicesCta from '../../components/services/ServicesCta.jsx'
+import HomeTestimonials from '../../components/home/HomeTestimonials.jsx'
+import HomeLatestBlog from '../../components/home/HomeLatestBlog.jsx'
+
 export default function ServicesPage() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="font-display text-4xl font-semibold tracking-tight text-primary">
-        Services
-      </h1>
-      <p className="mt-3 text-muted">
-        Explore the logistics solutions Kangaroo Logistics offers.
-      </p>
-    </section>
+    <>
+      <ServicesHero />
+      <ServicesHighlights />
+      <ServicesGrid />
+      <HomeTestimonials />
+      <HomeLatestBlog />
+      <ServicesCta />
+    </>
   )
 }

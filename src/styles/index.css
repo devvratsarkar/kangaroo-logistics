@@ -299,13 +299,47 @@ input:disabled {
   z-index: 0;
 }
 
-.industry-card:hover::before {
-  width: 130%;
+.industry-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Only true pointer devices — avoids sticky :hover on mobile leaving navy-on-navy text */
+@media (hover: hover) and (pointer: fine) {
+  .industry-card:hover::before {
+    width: 130%;
+  }
+
+  .industry-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(12, 32, 54, 0.18);
+  }
+
+  .industry-card:hover .industry-card-icon {
+    transform: scale(1.1);
+    border-color: var(--color-secondary);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-secondary);
+    box-shadow: 0 8px 20px rgba(216, 200, 155, 0.25);
+  }
+
+  .industry-card:hover .industry-card-title {
+    color: var(--color-white);
+  }
+
+  .industry-card:hover .industry-card-copy {
+    color: rgba(255, 255, 255, 0.7);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .industry-card::before {
     transition: none;
+  }
+
+  .industry-card:hover {
+    transform: none;
   }
 }
 
@@ -1619,7 +1653,7 @@ input:disabled {
 /* ── Site header ── */
 
 .site-header.is-scrolled .site-header-shell {
-  box-shadow: 0 8px 24px rgba(12, 32, 54, 0.08);
+  box-shadow: none;
 }
 
 .site-toolbar {
@@ -2790,4 +2824,127 @@ a.site-toolbar-chip:hover {
 
 .offcanvas-panel.is-visible .offcanvas-nav-item:nth-child(6) {
   transition-delay: 0.26s;
+}
+
+/* ── Services page ── */
+
+.services-page-hero {
+  background: var(--color-primary);
+}
+
+.services-page-hero-overlay {
+  background:
+    linear-gradient(
+      105deg,
+      rgba(7, 20, 37, 0.68) 0%,
+      rgba(12, 32, 54, 0.48) 45%,
+      rgba(12, 32, 54, 0.22) 100%
+    ),
+    linear-gradient(180deg, rgba(7, 20, 37, 0.12) 0%, rgba(7, 20, 37, 0.4) 100%);
+}
+
+.services-page-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.services-page-breadcrumb a {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.services-page-breadcrumb a:hover {
+  color: var(--color-secondary);
+}
+
+.services-page-breadcrumb [aria-current='page'] {
+  color: var(--color-secondary);
+}
+
+.services-catalog-card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(7, 20, 37, 0.35) 100%);
+  pointer-events: none;
+}
+
+.services-cta-panel {
+  background: var(--color-primary);
+  min-height: 320px;
+}
+
+.services-cta-overlay {
+  background:
+    linear-gradient(
+      120deg,
+      rgba(7, 20, 37, 0.94) 0%,
+      rgba(12, 32, 54, 0.82) 55%,
+      rgba(12, 32, 54, 0.7) 100%
+    );
+}
+
+/* ── Quote modal ── */
+
+.quote-modal-panel {
+  animation: quoteModalIn 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes quoteModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ── Contact page ── */
+
+.contact-info-link {
+  display: block;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.contact-info-link:hover {
+  color: #9a8858;
+}
+
+.contact-info-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(216, 200, 155, 0.55);
+  box-shadow: 0 20px 50px rgba(12, 32, 54, 0.1);
+}
+
+.about-solutions-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about-solutions-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(216, 200, 155, 0.45);
+  box-shadow: 0 22px 55px rgba(12, 32, 54, 0.1);
 }

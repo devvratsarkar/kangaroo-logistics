@@ -38,6 +38,7 @@ const toneStyles = {
 export default function SectionBadge({
   children,
   icon: Icon = BuildingIcon,
+  iconSrc,
   tone = 'brand',
 }) {
   const styles = toneStyles[tone] ?? toneStyles.brand
@@ -52,10 +53,21 @@ export default function SectionBadge({
       <span
         className={[
           'flex size-8 shrink-0 items-center justify-center rounded-full sm:size-9',
-          styles.iconWrap,
+          iconSrc ? 'bg-secondary text-primary' : styles.iconWrap,
         ].join(' ')}
       >
-        <Icon className={['size-4 sm:size-4.5', styles.icon].join(' ')} />
+        {iconSrc ? (
+          <img
+            src={iconSrc}
+            alt=""
+            aria-hidden="true"
+            className="size-4 object-contain brightness-0 sm:size-4.5"
+            width={18}
+            height={18}
+          />
+        ) : (
+          <Icon className={['size-4 sm:size-4.5', styles.icon].join(' ')} />
+        )}
       </span>
       <span className="font-display text-[15px] font-semibold leading-none tracking-[0.01em] sm:text-[17px]">
         {children}
