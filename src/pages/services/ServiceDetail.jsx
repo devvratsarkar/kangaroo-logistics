@@ -67,7 +67,7 @@ export default function ServiceDetailPage() {
               <li key={item.slug}>
                 <Link
                   to={item.to}
-                  className="group flex h-full items-center gap-4 rounded-[20px] border border-primary/10 bg-[#f7f9fa] p-4 transition-colors hover:border-primary/25 hover:bg-white"
+                  className="group flex h-full items-center gap-4 rounded-[20px] border border-primary/10 bg-surface p-4 transition-colors hover:border-primary/25 hover:bg-white"
                 >
                   <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-secondary">
                     <img

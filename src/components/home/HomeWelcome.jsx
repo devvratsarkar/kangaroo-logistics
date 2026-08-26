@@ -10,7 +10,7 @@ export default function HomeWelcome() {
         <div
           className="relative overflow-hidden rounded-none sm:rounded-[20px] px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-16 xl:px-14"
           style={{
-            backgroundColor: '#f0f8f8',
+            backgroundColor: 'var(--color-surface)',
             backgroundImage: "url('/home/about-bg.webp')",
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center center',
@@ -58,7 +58,7 @@ export default function HomeWelcome() {
                 aria-hidden="true"
                 className="welcome-image-accent pointer-events-none absolute inset-x-2 top-2 bottom-0 rounded-[20px] bg-secondary sm:inset-x-3 sm:top-3"
               />
-              <div className="relative overflow-hidden rounded-[18px] border border-white/80 shadow-[0_20px_50px_rgba(12,32,54,0.12)] sm:rounded-[22px]">
+              <div className="relative overflow-hidden rounded-[18px] border border-white/80 shadow-[0_20px_50px_rgba(13,27,61,0.12)] sm:rounded-[22px]">
                 <img
                   src="/home/welcome.jpg"
                   alt="Kangaroo Logistics team coordinating freight operations"

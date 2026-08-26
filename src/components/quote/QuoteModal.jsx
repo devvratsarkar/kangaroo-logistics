@@ -44,12 +44,12 @@ export default function QuoteModal({
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="quote-modal-panel relative z-1 flex h-[100dvh] max-h-[100dvh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[20px] bg-white shadow-[0_28px_90px_rgba(12,32,54,0.32)] sm:h-auto sm:max-h-[92vh] sm:rounded-3xl"
+        className="quote-modal-panel relative z-1 flex h-[100dvh] max-h-[100dvh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[20px] bg-white shadow-[0_28px_90px_rgba(13,27,61,0.32)] sm:h-auto sm:max-h-[92vh] sm:rounded-3xl"
       >
         <div className="quote-modal-header relative shrink-0 border-b border-primary/10">
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0 pr-1">
-              <p className="font-display text-[11px] tracking-[0.16em] text-secondary uppercase sm:text-[12px]">
+              <p className="font-display text-[11px] tracking-[0.16em] text-secondary-ink uppercase sm:text-[12px]">
                 Request a quote
               </p>
               <h2

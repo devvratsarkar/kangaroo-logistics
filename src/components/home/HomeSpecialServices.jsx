@@ -65,7 +65,7 @@ export default function HomeSpecialServices() {
         >
           <article
             key={active.slug}
-            className="special-stage overflow-hidden rounded-3xl border border-primary/10 bg-white shadow-[0_8px_40px_rgba(12,32,54,0.06)]"
+            className="special-stage overflow-hidden rounded-3xl border border-primary/10 bg-white shadow-[0_8px_40px_rgba(13,27,61,0.06)]"
           >
             <div className="grid items-stretch lg:grid-cols-2">
               <div className="special-stage-media relative min-h-65 sm:min-h-80 lg:min-h-110">
@@ -175,7 +175,7 @@ export default function HomeSpecialServices() {
                     className={[
                       'flex w-full flex-col items-center gap-2.5 rounded-2xl border px-3 py-4 text-center transition-all duration-300 sm:px-4 sm:py-5',
                       isActive
-                        ? 'border-primary bg-primary text-white shadow-[0_8px_24px_rgba(12,32,54,0.15)]'
+                        ? 'border-primary bg-primary text-white shadow-[0_8px_24px_rgba(13,27,61,0.15)]'
                         : 'border-primary/10 bg-white text-primary hover:border-primary/30 hover:bg-primary/3',
                     ].join(' ')}
                   >

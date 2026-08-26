@@ -19,7 +19,7 @@ export default function AboutMission() {
           {aboutPageContent.missionItems.map((item) => (
             <li
               key={item.title}
-              className="rounded-[22px] border border-primary/10 bg-white p-6 shadow-[0_10px_36px_rgba(12,32,54,0.05)] sm:p-7"
+              className="rounded-[22px] border border-primary/10 bg-white p-6 shadow-[0_10px_36px_rgba(13,27,61,0.05)] sm:p-7"
             >
               <span className="flex size-11 items-center justify-center rounded-xl bg-secondary text-primary">
                 <CheckCircleIcon className="size-5" strokeWidth={1.6} />

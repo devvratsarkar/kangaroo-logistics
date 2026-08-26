@@ -104,7 +104,7 @@ export default function HomeIndustriesWeServe() {
           {industriesWeServe.map((industry) => (
             <li
               key={industry.id}
-              className="industry-card rounded-[18px] border border-primary/10 bg-white p-6 shadow-[0_8px_30px_rgba(12,32,54,0.06)] transition-[transform,box-shadow,border-color] duration-300 ease-out sm:p-7"
+              className="industry-card rounded-[18px] border border-primary/10 bg-white p-6 shadow-[0_8px_30px_rgba(13,27,61,0.06)] transition-[transform,box-shadow,border-color] duration-300 ease-out sm:p-7"
             >
               <div className="industry-card-icon flex size-14 items-center justify-center rounded-full border border-dashed border-secondary bg-secondary/15 text-primary transition-all duration-300 ease-out">
                 <IndustryIcon type={industry.icon} className="size-7" />

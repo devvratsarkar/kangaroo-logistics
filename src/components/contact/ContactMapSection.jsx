@@ -8,7 +8,7 @@ export default function ContactMapSection() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: '#f0f8f8',
+          backgroundColor: 'var(--color-surface)',
           backgroundImage: "url('/home/about-bg.webp')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
@@ -30,7 +30,7 @@ export default function ContactMapSection() {
           </p>
         </div>
 
-        <div className="mt-10 overflow-hidden rounded-[28px] border border-primary/10 bg-white shadow-[0_18px_50px_rgba(12,32,54,0.08)]">
+        <div className="mt-10 overflow-hidden rounded-[28px] border border-primary/10 bg-white shadow-[0_18px_50px_rgba(13,27,61,0.08)]">
           <iframe
             title="Kangaroo Logistics Wilmington office location"
             src={contactPageInfo.address.mapUrl}

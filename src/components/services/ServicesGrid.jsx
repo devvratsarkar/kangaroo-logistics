@@ -24,7 +24,7 @@ export default function ServicesGrid() {
             <li key={service.slug}>
               <Link
                 to={service.to}
-                className="services-catalog-card group flex h-full flex-col overflow-hidden rounded-[22px] border border-primary/10 bg-white transition-all duration-300 hover:border-primary/20 hover:shadow-[0_18px_48px_rgba(12,32,54,0.1)]"
+                className="services-catalog-card group flex h-full flex-col overflow-hidden rounded-[22px] border border-primary/10 bg-white transition-all duration-300 hover:border-primary/20 hover:shadow-[0_18px_48px_rgba(13,27,61,0.1)]"
               >
                 <span className="services-catalog-card-media relative block aspect-16/10 overflow-hidden bg-primary">
                   <img
@@ -35,7 +35,7 @@ export default function ServicesGrid() {
                     loading={index < 3 ? 'eager' : 'lazy'}
                     decoding="async"
                   />
-                  <span className="services-catalog-card-icon absolute bottom-4 left-4 flex size-12 items-center justify-center rounded-xl bg-secondary shadow-[0_8px_24px_rgba(12,32,54,0.18)]">
+                  <span className="services-catalog-card-icon absolute bottom-4 left-4 flex size-12 items-center justify-center rounded-xl bg-secondary shadow-[0_8px_24px_rgba(13,27,61,0.18)]">
                     <img
                       src={service.icon}
                       alt=""

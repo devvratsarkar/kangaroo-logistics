@@ -31,8 +31,8 @@ function FieldError({ name }) {
 
 export default function BlogCommentForm({ postTitle }) {
   return (
-    <div className="blog-comment-box mt-10 rounded-[24px] border border-primary/10 bg-[#f7f9fa] p-5 sm:p-7">
-      <p className="font-display text-[13px] tracking-[0.14em] text-secondary uppercase">
+    <div className="blog-comment-box mt-10 rounded-[24px] border border-primary/10 bg-surface p-5 sm:p-7">
+      <p className="font-display text-[13px] tracking-[0.14em] text-secondary-ink uppercase">
         0 Comments
       </p>
       <h2 className="mt-2 font-display text-[26px] font-bold text-primary sm:text-[30px]">

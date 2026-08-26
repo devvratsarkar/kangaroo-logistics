@@ -48,7 +48,7 @@ export default function BlogGrid() {
     <section className="bg-white py-14 sm:py-16 lg:py-20">
       <div className="custom_container">
         {activeCategory ? (
-          <div className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-primary/10 bg-[#f7f9fa] px-4 py-3.5 sm:px-5">
+          <div className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-primary/10 bg-surface px-4 py-3.5 sm:px-5">
             <p className="font-display text-[15px] text-muted">
               Showing posts in{' '}
               <span className="font-semibold text-primary">{activeCategory.label}</span>
@@ -73,7 +73,7 @@ export default function BlogGrid() {
             ))}
           </ul>
         ) : (
-          <div className="rounded-[22px] border border-primary/10 bg-[#f7f9fa] px-6 py-12 text-center">
+          <div className="rounded-[22px] border border-primary/10 bg-surface px-6 py-12 text-center">
             <p className="font-display text-[18px] font-semibold text-primary">
               No posts in this category yet
             </p>

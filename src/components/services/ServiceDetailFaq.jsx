@@ -40,7 +40,7 @@ export default function ServiceDetailFaq({ service }) {
                   <span
                     className={[
                       'flex size-9 shrink-0 items-center justify-center rounded-full border border-primary/10 text-primary transition-transform duration-300',
-                      isOpen ? 'rotate-180 bg-secondary' : 'bg-[#f7f9fa]',
+                      isOpen ? 'rotate-180 bg-secondary' : 'bg-surface',
                     ].join(' ')}
                   >
                     <ChevronDownIcon className="size-3.5" />

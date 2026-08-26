@@ -6,7 +6,7 @@ export default function ContactFormSection() {
   return (
     <section className="overflow-hidden bg-white py-14 sm:py-16 lg:py-20">
       <div className="custom_container">
-        <div className="grid overflow-hidden rounded-[28px] border border-primary/10 shadow-[0_20px_60px_rgba(12,32,54,0.07)] lg:grid-cols-2">
+        <div className="grid overflow-hidden rounded-[28px] border border-primary/10 shadow-[0_20px_60px_rgba(13,27,61,0.07)] lg:grid-cols-2">
           <div className="contact-consultation-thumb relative min-h-80 sm:min-h-100 lg:min-h-full">
             <img
               src="/home/contact-thumb.webp"

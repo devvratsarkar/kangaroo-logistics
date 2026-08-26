@@ -62,7 +62,7 @@ export default function GetAQuotePage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundColor: '#f0f8f8',
+            backgroundColor: 'var(--color-surface)',
             backgroundImage: "url('/home/about-bg.webp')",
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center center',
@@ -73,7 +73,7 @@ export default function GetAQuotePage() {
 
         <div className="custom_container relative">
           <div className="grid items-stretch gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-12">
-            <div className="flex flex-col justify-between rounded-[28px] border border-primary/8 bg-white/70 p-6 shadow-[0_16px_50px_rgba(12,32,54,0.05)] backdrop-blur-sm sm:p-8 lg:p-10">
+            <div className="flex flex-col justify-between rounded-[28px] border border-primary/8 bg-white/70 p-6 shadow-[0_16px_50px_rgba(13,27,61,0.05)] backdrop-blur-sm sm:p-8 lg:p-10">
               <div>
                 <SectionBadge icon={ChatBubbleIcon} tone="soft">
                   Quote request
@@ -148,14 +148,14 @@ export default function GetAQuotePage() {
               </div>
 
               <p className="mt-5 flex items-center gap-2 text-[13px] text-muted">
-                <ClockIcon className="size-4 text-secondary" strokeWidth={1.7} />
+                <ClockIcon className="size-4 text-secondary-ink" strokeWidth={1.7} />
                 Mon–Fri, 8AM – 6PM EST
               </p>
             </div>
 
-            <div className="rounded-[28px] border border-primary/10 bg-white p-5 shadow-[0_20px_60px_rgba(12,32,54,0.08)] sm:p-8 lg:p-9">
+            <div className="rounded-[28px] border border-primary/10 bg-white p-5 shadow-[0_20px_60px_rgba(13,27,61,0.08)] sm:p-8 lg:p-9">
               <div className="mb-6 border-b border-primary/8 pb-5">
-                <p className="font-display text-[12px] tracking-[0.14em] text-secondary uppercase">
+                <p className="font-display text-[12px] tracking-[0.14em] text-secondary-ink uppercase">
                   Shipment details
                 </p>
                 <h3 className="mt-1.5 font-display text-[22px] font-bold text-primary sm:text-[24px]">

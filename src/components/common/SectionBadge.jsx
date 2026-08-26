@@ -19,7 +19,7 @@ export function BuildingIcon({ className = 'size-4.5', strokeWidth = 1.7 }) {
 
 const toneStyles = {
   brand: {
-    wrap: 'border-secondary bg-white/70 text-primary shadow-[0_4px_20px_rgba(12,32,54,0.06)] backdrop-blur-sm',
+    wrap: 'border-secondary bg-white/70 text-primary shadow-[0_4px_20px_rgba(13,27,61,0.06)] backdrop-blur-sm',
     iconWrap: 'bg-secondary text-primary',
     icon: 'text-primary',
   },
@@ -29,7 +29,7 @@ const toneStyles = {
     icon: 'text-white',
   },
   soft: {
-    wrap: 'border-primary/10 bg-white text-primary shadow-[0_8px_30px_rgba(12,32,54,0.08)]',
+    wrap: 'border-primary/10 bg-white text-primary shadow-[0_8px_30px_rgba(13,27,61,0.08)]',
     iconWrap: 'bg-secondary text-primary',
     icon: 'text-primary',
   },

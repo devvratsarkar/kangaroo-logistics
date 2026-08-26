@@ -29,7 +29,7 @@ function StarRating({ rating, size = 'md' }) {
 
 function FeaturedTestimonial({ item, progressKey, paused }) {
   return (
-    <article className="testimonial-feature-card relative overflow-hidden rounded-3xl border border-primary/10 bg-white shadow-[0_24px_70px_rgba(12,32,54,0.09)]">
+    <article className="testimonial-feature-card relative overflow-hidden rounded-3xl border border-primary/10 bg-white shadow-[0_24px_70px_rgba(13,27,61,0.09)]">
       <div
         aria-hidden="true"
         className="absolute inset-y-0 left-0 w-1 bg-secondary"
@@ -38,12 +38,12 @@ function FeaturedTestimonial({ item, progressKey, paused }) {
       <div className="relative p-8 sm:p-10 lg:p-12 xl:p-14">
         <div className="flex items-start justify-between gap-4">
           <div className="inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1.5">
-            <QuoteIcon className="size-4 text-secondary" strokeWidth={1.6} />
+            <QuoteIcon className="size-4 text-secondary-ink" strokeWidth={1.6} />
             <span className="font-display text-[13px] font-medium tracking-[0.08em] text-primary uppercase">
               Client Review
             </span>
           </div>
-          <div className="flex items-center gap-2 rounded-full border border-primary/10 bg-[#f8fafb] px-3.5 py-1.5">
+          <div className="flex items-center gap-2 rounded-full border border-primary/10 bg-[#f6f8fb] px-3.5 py-1.5">
             <span className="font-display text-[18px] font-bold leading-none text-primary">
               {item.rating.toFixed(1)}
             </span>
@@ -126,7 +126,7 @@ export default function HomeTestimonials() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: '#f0f8f8',
+          backgroundColor: 'var(--color-surface)',
           backgroundImage: "url('/home/about-bg.webp')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
@@ -156,7 +156,7 @@ export default function HomeTestimonials() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <div className="rounded-2xl border border-primary/10 bg-white/80 px-4 py-3 shadow-[0_8px_24px_rgba(12,32,54,0.05)] backdrop-blur-sm">
+              <div className="rounded-2xl border border-primary/10 bg-white/80 px-4 py-3 shadow-[0_8px_24px_rgba(13,27,61,0.05)] backdrop-blur-sm">
                 <p className="font-display text-[24px] font-bold leading-none text-primary">
                   {averageRating}
                 </p>
@@ -164,7 +164,7 @@ export default function HomeTestimonials() {
                   Avg. Rating
                 </p>
               </div>
-              <div className="rounded-2xl border border-primary/10 bg-white/80 px-4 py-3 shadow-[0_8px_24px_rgba(12,32,54,0.05)] backdrop-blur-sm">
+              <div className="rounded-2xl border border-primary/10 bg-white/80 px-4 py-3 shadow-[0_8px_24px_rgba(13,27,61,0.05)] backdrop-blur-sm">
                 <p className="font-display text-[24px] font-bold leading-none text-primary">
                   {total}+
                 </p>
@@ -179,7 +179,7 @@ export default function HomeTestimonials() {
                 type="button"
                 onClick={prev}
                 aria-label="Previous testimonial"
-                className="flex size-12 items-center justify-center rounded-full border border-primary/15 bg-white text-primary shadow-[0_8px_24px_rgba(12,32,54,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary hover:text-white hover:shadow-[0_12px_28px_rgba(12,32,54,0.12)]"
+                className="flex size-12 items-center justify-center rounded-full border border-primary/15 bg-white text-primary shadow-[0_8px_24px_rgba(13,27,61,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary hover:text-white hover:shadow-[0_12px_28px_rgba(13,27,61,0.12)]"
               >
                 <ArrowLeftLongIcon className="size-4" />
               </button>
@@ -187,7 +187,7 @@ export default function HomeTestimonials() {
                 type="button"
                 onClick={next}
                 aria-label="Next testimonial"
-                className="flex size-12 items-center justify-center rounded-full border border-primary/15 bg-white text-primary shadow-[0_8px_24px_rgba(12,32,54,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary hover:text-white hover:shadow-[0_12px_28px_rgba(12,32,54,0.12)]"
+                className="flex size-12 items-center justify-center rounded-full border border-primary/15 bg-white text-primary shadow-[0_8px_24px_rgba(13,27,61,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary hover:text-white hover:shadow-[0_12px_28px_rgba(13,27,61,0.12)]"
               >
                 <ArrowRightLongIcon className="size-4" />
               </button>

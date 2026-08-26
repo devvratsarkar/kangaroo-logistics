@@ -7,7 +7,7 @@ export default function AboutValues() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: '#f0f8f8',
+          backgroundColor: 'var(--color-surface)',
           backgroundImage: "url('/home/about-bg.webp')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
@@ -30,9 +30,9 @@ export default function AboutValues() {
           {aboutPageContent.values.map((item, index) => (
             <li
               key={item.title}
-              className="rounded-[24px] border border-primary/10 bg-white p-6 shadow-[0_14px_40px_rgba(12,32,54,0.05)] sm:p-8"
+              className="rounded-[24px] border border-primary/10 bg-white p-6 shadow-[0_14px_40px_rgba(13,27,61,0.05)] sm:p-8"
             >
-              <span className="font-display text-[13px] tracking-[0.14em] text-secondary uppercase">
+              <span className="font-display text-[13px] tracking-[0.14em] text-secondary-ink uppercase">
                 Value {String(index + 1).padStart(2, '0')}
               </span>
               <h3 className="mt-3 font-display text-[22px] font-bold text-primary sm:text-[24px]">

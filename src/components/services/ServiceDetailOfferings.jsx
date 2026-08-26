@@ -15,7 +15,7 @@ export default function ServiceDetailOfferings({ service }) {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: '#f0f8f8',
+          backgroundColor: 'var(--color-surface)',
           backgroundImage: "url('/home/about-bg.webp')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
@@ -44,7 +44,7 @@ export default function ServiceDetailOfferings({ service }) {
             return (
               <li
                 key={label}
-                className="rounded-[20px] border border-primary/10 bg-white p-5 shadow-[0_8px_30px_rgba(12,32,54,0.04)] sm:p-6"
+                className="rounded-[20px] border border-primary/10 bg-white p-5 shadow-[0_8px_30px_rgba(13,27,61,0.04)] sm:p-6"
               >
                 <span className="flex size-10 items-center justify-center rounded-xl bg-secondary text-primary">
                   <CheckCircleIcon className="size-5" strokeWidth={1.6} />

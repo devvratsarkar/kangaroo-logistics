@@ -4,7 +4,7 @@ import { industriesWeServe } from '../../data/industriesWeServe.js'
 
 export default function ServiceDetailIndustries() {
   return (
-    <section className="border-y border-primary/8 bg-[#f7f9fa] py-14 sm:py-16 lg:py-18">
+    <section className="border-y border-primary/8 bg-surface py-14 sm:py-16 lg:py-18">
       <div className="custom_container">
         <div className="mx-auto max-w-3xl text-center">
           <SectionBadge icon={GlobeIcon} tone="soft">

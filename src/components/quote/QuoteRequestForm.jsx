@@ -70,7 +70,7 @@ function QuoteFormFields({
       <div className={compact ? 'grid gap-3 sm:grid-cols-2 sm:gap-4' : 'grid gap-4 sm:grid-cols-2'}>
         <div>
           <label htmlFor={fieldId('fullName')} className={compact ? 'mb-1.5 block text-[13px] font-medium text-primary sm:mb-2 sm:text-[14px]' : 'mb-2 block text-[14px] font-medium text-primary'}>
-            Your Full Name<span className="text-secondary">*</span>
+            Your Full Name<span className="text-secondary-ink">*</span>
           </label>
           <Field
             id={fieldId('fullName')}
@@ -85,7 +85,7 @@ function QuoteFormFields({
 
         <div>
           <label htmlFor={fieldId('email')} className={compact ? 'mb-1.5 block text-[13px] font-medium text-primary sm:mb-2 sm:text-[14px]' : 'mb-2 block text-[14px] font-medium text-primary'}>
-            Your Email Address<span className="text-secondary">*</span>
+            Your Email Address<span className="text-secondary-ink">*</span>
           </label>
           <Field
             id={fieldId('email')}
@@ -105,7 +105,7 @@ function QuoteFormFields({
             htmlFor={fieldId('serviceType')}
             className={compact ? 'mb-1.5 block text-[13px] font-medium text-primary sm:mb-2 sm:text-[14px]' : 'mb-2 block text-[14px] font-medium text-primary'}
           >
-            Service Type<span className="text-secondary">*</span>
+            Service Type<span className="text-secondary-ink">*</span>
           </label>
           <Select
             inputId={fieldId('serviceType')}
@@ -135,7 +135,7 @@ function QuoteFormFields({
 
         <div>
           <label htmlFor={fieldId('phone')} className={compact ? 'mb-1.5 block text-[13px] font-medium text-primary sm:mb-2 sm:text-[14px]' : 'mb-2 block text-[14px] font-medium text-primary'}>
-            Phone Number<span className="text-secondary">*</span>
+            Phone Number<span className="text-secondary-ink">*</span>
           </label>
           <Field
             id={fieldId('phone')}
@@ -151,7 +151,7 @@ function QuoteFormFields({
 
       <div>
         <label htmlFor={fieldId('message')} className={compact ? 'mb-1.5 block text-[13px] font-medium text-primary sm:mb-2 sm:text-[14px]' : 'mb-2 block text-[14px] font-medium text-primary'}>
-          Your Message<span className="text-secondary">*</span>
+          Your Message<span className="text-secondary-ink">*</span>
         </label>
         <Field
           id={fieldId('message')}

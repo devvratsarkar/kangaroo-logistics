@@ -75,7 +75,7 @@ export default function ContactInfoCards() {
             return (
               <li
                 key={card.id}
-                className="contact-info-card rounded-[22px] border border-primary/10 bg-white p-5 shadow-[0_16px_48px_rgba(12,32,54,0.08)] sm:p-6"
+                className="contact-info-card rounded-[22px] border border-primary/10 bg-white p-5 shadow-[0_16px_48px_rgba(13,27,61,0.08)] sm:p-6"
               >
                 <span className="flex size-12 items-center justify-center rounded-2xl bg-secondary text-primary">
                   <Icon className="size-5" strokeWidth={1.6} />

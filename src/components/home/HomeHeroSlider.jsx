@@ -208,7 +208,7 @@ export default function HomeHeroSlider() {
         <button
           type="button"
           aria-label="Previous slide"
-          className="absolute top-1/2 left-3 z-20 hidden size-15 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-secondary xl:left-10 xl:flex"
+          className="absolute top-1/2 left-3 z-20 hidden size-15 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-secondary hover:text-primary xl:left-10 xl:flex"
           onClick={() => swiperRef.current?.slidePrev()}
         >
           <ArrowLeftLongIcon />
@@ -216,7 +216,7 @@ export default function HomeHeroSlider() {
         <button
           type="button"
           aria-label="Next slide"
-          className="absolute top-1/2 right-3 z-20 hidden size-15 -translate-y-1/2 items-center justify-center rounded-full bg-secondary text-white transition-colors hover:bg-primary xl:right-10 xl:flex"
+          className="absolute top-1/2 right-3 z-20 hidden size-15 -translate-y-1/2 items-center justify-center rounded-full bg-secondary text-primary transition-colors hover:bg-primary hover:text-white xl:right-10 xl:flex"
           onClick={() => swiperRef.current?.slideNext()}
         >
           <ArrowRightLongIcon />
@@ -234,7 +234,7 @@ export default function HomeHeroSlider() {
           <button
             type="button"
             aria-label="Next slide"
-            className="flex size-11 items-center justify-center rounded-full bg-secondary text-white"
+            className="flex size-11 items-center justify-center rounded-full bg-secondary text-primary"
             onClick={() => swiperRef.current?.slideNext()}
           >
             <ArrowRightLongIcon className="size-4" />

@@ -68,7 +68,7 @@ function SupportStat({ stat }) {
     >
       <div className="flex items-center gap-4 sm:gap-5">
         <span className="support-stat-icon flex size-14 shrink-0 items-center justify-center rounded-2xl sm:size-16">
-          <Icon className="size-6 text-secondary sm:size-7" strokeWidth={1.5} />
+          <Icon className="size-6 text-secondary-ink sm:size-7" strokeWidth={1.5} />
         </span>
         <p className="font-display text-[40px] leading-none font-bold text-primary sm:text-[48px] lg:text-[56px]">
           {formatCount(count, stat.suffix)}
@@ -85,7 +85,7 @@ export default function HomeCustomerSupport() {
       <div
         className="support-section-panel relative overflow-hidden rounded-[30px] px-5 py-12 sm:px-8 sm:py-14 lg:px-12 lg:py-20"
         style={{
-          backgroundColor: '#f0f8f8',
+          backgroundColor: 'var(--color-surface)',
           backgroundImage: "url('/home/about-bg.webp')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
@@ -117,7 +117,7 @@ export default function HomeCustomerSupport() {
               className="group inline-flex items-center gap-2 rounded-full border-2 border-secondary bg-transparent px-7 py-3.5 font-display text-[15px] font-medium text-primary transition-colors hover:bg-secondary/10 sm:text-[16px]"
             >
               Our Services
-              <ArrowRightLongIcon className="size-4 text-secondary transition-transform duration-300 group-hover:translate-x-0.5" />
+              <ArrowRightLongIcon className="size-4 text-secondary-ink transition-transform duration-300 group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>

@@ -24,9 +24,9 @@ export default function ServiceDetailOverview({ service, onRequestQuote }) {
               {service.highlights.map((item) => (
                 <li
                   key={item}
-                  className="flex items-center gap-3 rounded-2xl border border-primary/10 bg-[#f7f9fa] px-4 py-3"
+                  className="flex items-center gap-3 rounded-2xl border border-primary/10 bg-surface px-4 py-3"
                 >
-                  <CheckCircleIcon className="size-5 shrink-0 text-secondary" strokeWidth={1.6} />
+                  <CheckCircleIcon className="size-5 shrink-0 text-secondary-ink" strokeWidth={1.6} />
                   <span className="font-display text-[14px] font-medium text-primary sm:text-[15px]">
                     {item}
                   </span>

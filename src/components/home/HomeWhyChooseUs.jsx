@@ -11,7 +11,7 @@ function WhyChooseImage({ item, accent = false }) {
           className="welcome-image-accent pointer-events-none absolute inset-x-2 top-2 bottom-0 rounded-[20px] bg-secondary sm:inset-x-3 sm:top-3"
         />
       ) : null}
-      <div className="relative overflow-hidden rounded-[18px] border border-white/80 shadow-[0_16px_45px_rgba(12,32,54,0.1)] sm:rounded-[22px]">
+      <div className="relative overflow-hidden rounded-[18px] border border-white/80 shadow-[0_16px_45px_rgba(13,27,61,0.1)] sm:rounded-[22px]">
         <img
           src={item.image}
           alt={item.imageAlt}
@@ -46,7 +46,7 @@ export default function HomeWhyChooseUs() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: '#f0f8f8',
+          backgroundColor: 'var(--color-surface)',
           backgroundImage: "url('/home/about-bg.webp')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',

@@ -21,7 +21,7 @@ export default function AboutSolutions() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: '#f0f8f8',
+          backgroundColor: 'var(--color-surface)',
           backgroundImage: "url('/home/about-bg.webp')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
@@ -41,7 +41,7 @@ export default function AboutSolutions() {
         </div>
 
         <div className="mt-10 grid gap-5 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-          <article className="about-solutions-card flex h-full flex-col overflow-hidden rounded-[24px] border border-primary/10 bg-white shadow-[0_14px_40px_rgba(12,32,54,0.06)] sm:col-span-2 lg:col-span-1">
+          <article className="about-solutions-card flex h-full flex-col overflow-hidden rounded-[24px] border border-primary/10 bg-white shadow-[0_14px_40px_rgba(13,27,61,0.06)] sm:col-span-2 lg:col-span-1">
             <div className="relative aspect-[5/3] overflow-hidden sm:aspect-[16/9] lg:aspect-[5/3.2]">
               <img
                 src="/home/why-choose-1.webp"
@@ -79,7 +79,7 @@ export default function AboutSolutions() {
           {aboutPageContent.highlights.map((item, index) => (
             <article
               key={item.title}
-              className="about-solutions-card flex h-full flex-col overflow-hidden rounded-[24px] border border-primary/10 bg-white shadow-[0_14px_40px_rgba(12,32,54,0.06)]"
+              className="about-solutions-card flex h-full flex-col overflow-hidden rounded-[24px] border border-primary/10 bg-white shadow-[0_14px_40px_rgba(13,27,61,0.06)]"
             >
               <div className="relative aspect-[5/3.2] overflow-hidden">
                 <img
@@ -92,7 +92,7 @@ export default function AboutSolutions() {
               </div>
 
               <div className="flex flex-1 flex-col px-5 py-5 sm:px-6 sm:py-6">
-                <span className="font-display text-[12px] tracking-[0.14em] text-secondary uppercase">
+                <span className="font-display text-[12px] tracking-[0.14em] text-secondary-ink uppercase">
                   Capability {String(index + 1).padStart(2, '0')}
                 </span>
                 <h3 className="mt-2 font-display text-[20px] leading-snug font-bold text-primary sm:text-[22px]">
