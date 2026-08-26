@@ -1326,6 +1326,10 @@ input:disabled {
 
 .site-footer-logo {
   display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #fff;
 }
 
 .site-footer-logo img {
@@ -2483,6 +2487,14 @@ a.site-toolbar-chip:hover {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+}
+
+.offcanvas-logo {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #fff;
 }
 
 .offcanvas-logo img {

@@ -92,10 +92,10 @@ export default function PrimaryHeader() {
                 aria-label="Kangaroo Logistics home"
               >
                 <img
-                  src="/logo.png"
+                  src="/logo.webp"
                   alt="Kangaroo Logistics LLC"
-                  width={260}
-                  height={74}
+                  width={224}
+                  height={56}
                 />
               </Link>
 

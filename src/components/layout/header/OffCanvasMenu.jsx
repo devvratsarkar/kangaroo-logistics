@@ -88,10 +88,10 @@ export default function OffCanvasMenu({ isOpen, onClose }) {
           <div className="offcanvas-head-top">
             <Link to={getHomePageRoute()} className="offcanvas-logo" onClick={onClose}>
               <img
-                src="/logo-footer.png"
+                src="/logo.webp"
                 alt="Kangaroo Logistics LLC"
-                width={200}
-                height={56}
+                width={160}
+                height={40}
                 loading="lazy"
                 decoding="async"
               />

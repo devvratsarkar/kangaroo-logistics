@@ -86,10 +86,10 @@ export default function PrimaryFooter() {
             <div className="site-footer-brand">
               <Link to={getHomePageRoute()} className="site-footer-logo" aria-label="Kangaroo Logistics home">
                 <img
-                  src="/logo-footer.png"
+                  src="/logo.webp"
                   alt="Kangaroo Logistics LLC"
                   width={240}
-                  height={68}
+                  height={60}
                   loading="lazy"
                   decoding="async"
                 />
