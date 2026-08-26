@@ -9,9 +9,6 @@ import {
   quoteValidationSchema,
 } from './quoteFormConfig.js'
 
-const inputClassName =
-  'w-full rounded-xl border border-primary/15 bg-white px-4 py-3 text-[15px] text-primary outline-none transition-colors placeholder:text-muted/70 focus:border-secondary focus:ring-2 focus:ring-secondary/20'
-
 const inputErrorClassName = 'border-red-400 focus:border-red-400 focus:ring-red-200'
 
 function FieldError({ name }) {
@@ -36,15 +33,26 @@ function QuoteFormFields({
   idPrefix,
   submitLabel,
   stickySubmit,
+  compact,
 }) {
   const serviceLocked = Boolean(lockedServiceSlug)
   const selectedService =
     quoteServiceOptions.find((option) => option.value === values.serviceType) ?? null
 
-  const fieldClass = (name) =>
-    [inputClassName, touched[name] && errors[name] ? inputErrorClassName : '']
+  const inputSizeClass = compact
+    ? 'px-3.5 py-2.5 text-[14px] sm:px-4 sm:py-3 sm:text-[15px]'
+    : 'px-4 py-3 text-[15px]'
+
+  const fieldInputClass = (name) =>
+    [
+      'w-full rounded-xl border border-primary/15 bg-white text-primary outline-none transition-colors placeholder:text-muted/70 focus:border-secondary focus:ring-2 focus:ring-secondary/20',
+      inputSizeClass,
+      touched[name] && errors[name] ? inputErrorClassName : '',
+    ]
       .filter(Boolean)
       .join(' ')
+
+  const fieldClass = fieldInputClass
 
   const fieldId = (name) => `${idPrefix}-${name}`
 
@@ -59,9 +67,9 @@ function QuoteFormFields({
         </div>
       ) : null}
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className={compact ? 'grid gap-3 sm:grid-cols-2 sm:gap-4' : 'grid gap-4 sm:grid-cols-2'}>
         <div>
-          <label htmlFor={fieldId('fullName')} className="mb-2 block text-[14px] font-medium text-primary">
+          <label htmlFor={fieldId('fullName')} className={compact ? 'mb-1.5 block text-[13px] font-medium text-primary sm:mb-2 sm:text-[14px]' : 'mb-2 block text-[14px] font-medium text-primary'}>
             Your Full Name<span className="text-secondary">*</span>
           </label>
           <Field
@@ -76,7 +84,7 @@ function QuoteFormFields({
         </div>
 
         <div>
-          <label htmlFor={fieldId('email')} className="mb-2 block text-[14px] font-medium text-primary">
+          <label htmlFor={fieldId('email')} className={compact ? 'mb-1.5 block text-[13px] font-medium text-primary sm:mb-2 sm:text-[14px]' : 'mb-2 block text-[14px] font-medium text-primary'}>
             Your Email Address<span className="text-secondary">*</span>
           </label>
           <Field
@@ -91,11 +99,11 @@ function QuoteFormFields({
         </div>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className={compact ? 'grid gap-3 sm:grid-cols-2 sm:gap-4' : 'grid gap-4 sm:grid-cols-2'}>
         <div>
           <label
             htmlFor={fieldId('serviceType')}
-            className="mb-2 block text-[14px] font-medium text-primary"
+            className={compact ? 'mb-1.5 block text-[13px] font-medium text-primary sm:mb-2 sm:text-[14px]' : 'mb-2 block text-[14px] font-medium text-primary'}
           >
             Service Type<span className="text-secondary">*</span>
           </label>
@@ -126,7 +134,7 @@ function QuoteFormFields({
         </div>
 
         <div>
-          <label htmlFor={fieldId('phone')} className="mb-2 block text-[14px] font-medium text-primary">
+          <label htmlFor={fieldId('phone')} className={compact ? 'mb-1.5 block text-[13px] font-medium text-primary sm:mb-2 sm:text-[14px]' : 'mb-2 block text-[14px] font-medium text-primary'}>
             Phone Number<span className="text-secondary">*</span>
           </label>
           <Field
@@ -142,16 +150,16 @@ function QuoteFormFields({
       </div>
 
       <div>
-        <label htmlFor={fieldId('message')} className="mb-2 block text-[14px] font-medium text-primary">
+        <label htmlFor={fieldId('message')} className={compact ? 'mb-1.5 block text-[13px] font-medium text-primary sm:mb-2 sm:text-[14px]' : 'mb-2 block text-[14px] font-medium text-primary'}>
           Your Message<span className="text-secondary">*</span>
         </label>
         <Field
           id={fieldId('message')}
           name="message"
           as="textarea"
-          rows={stickySubmit ? 4 : 5}
+          rows={stickySubmit ? (compact ? 3 : 4) : 5}
           placeholder="Tell us about your shipment, timeline, or logistics needs..."
-          className={`${fieldClass('message')} ${stickySubmit ? 'min-h-28' : 'min-h-32'} resize-y`}
+          className={`${fieldClass('message')} ${stickySubmit ? (compact ? 'min-h-24 sm:min-h-28' : 'min-h-28') : 'min-h-32'} resize-y`}
         />
         <FieldError name="message" />
       </div>
@@ -163,8 +171,10 @@ function QuoteFormFields({
       type="submit"
       disabled={isSubmitting}
       className={[
-        'group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-display text-[15px] font-medium text-white transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-70 sm:text-[16px]',
-        stickySubmit ? 'w-full' : 'mt-2 w-full sm:w-auto',
+        'group inline-flex items-center justify-center gap-2 rounded-full bg-primary font-display font-medium text-white transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-70',
+        stickySubmit
+          ? 'w-full px-5 py-3 text-[14px] sm:px-7 sm:py-3.5 sm:text-[16px]'
+          : 'mt-2 w-full px-7 py-3.5 text-[15px] sm:w-auto sm:text-[16px]',
       ].join(' ')}
     >
       {isSubmitting ? 'Sending...' : submitLabel}
@@ -177,10 +187,20 @@ function QuoteFormFields({
   if (stickySubmit) {
     return (
       <Form className="flex min-h-0 flex-1 flex-col" noValidate>
-        <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-5 py-5 sm:px-7 sm:py-6">
+        <div
+          className={[
+            'quote-modal-form-body min-h-0 flex-1 overflow-y-auto overscroll-contain',
+            compact ? 'space-y-3 px-4 py-4 sm:space-y-4 sm:px-7 sm:py-6' : 'space-y-4 px-5 py-5 sm:px-7 sm:py-6',
+          ].join(' ')}
+        >
           {fields}
         </div>
-        <div className="shrink-0 border-t border-primary/10 bg-white px-5 py-4 sm:px-7 sm:py-5">
+        <div
+          className={[
+            'quote-modal-form-footer shrink-0 border-t border-primary/10 bg-white',
+            compact ? 'px-4 sm:px-7' : 'px-5 sm:px-7',
+          ].join(' ')}
+        >
           {submitButton}
         </div>
       </Form>
@@ -202,6 +222,7 @@ export default function QuoteRequestForm({
   onSuccess,
   className = '',
   stickySubmit = false,
+  compact = false,
 }) {
   return (
     <div className={[stickySubmit ? 'flex min-h-0 flex-1 flex-col' : '', className].filter(Boolean).join(' ')}>
@@ -261,6 +282,7 @@ export default function QuoteRequestForm({
               idPrefix={idPrefix}
               submitLabel={submitLabel}
               stickySubmit={stickySubmit}
+              compact={compact}
             />
           )
         }
