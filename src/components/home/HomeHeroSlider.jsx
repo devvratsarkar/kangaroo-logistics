@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Autoplay, EffectCoverflow } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { homeSlides } from '../../data/homeSlides.js'
-import { ArrowLeftLongIcon, ArrowRightLongIcon } from '../ui/AllSVG.jsx'
+import { ArrowLeftLongIcon, ArrowRightLongIcon, MapPinIcon } from '../ui/AllSVG.jsx'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 
@@ -101,20 +101,13 @@ function SlideContent({ slide, active }) {
             ].join(' ')}
             style={{ animationDelay: '0.7s' }}
           >
-            <img
-              src="/banners/since.webp"
-              alt=""
-              className="size-14 object-contain sm:size-16"
-              width={64}
-              height={64}
-            />
+            <span className="flex size-14 items-center justify-center rounded-full border border-white/20 bg-white/10 text-secondary sm:size-16">
+              <MapPinIcon className="size-6 sm:size-7" strokeWidth={1.6} />
+            </span>
             <div>
               <h3 className="font-display text-lg font-semibold text-white">
-                We&apos;re Since <span className="text-secondary">{slide.sinceYear}</span>
+                {slide.locationLabel}
               </h3>
-              <h4 className="mt-1 font-display text-lg font-semibold text-white">
-                {slide.sinceLocation}
-              </h4>
             </div>
           </div>
         </div>

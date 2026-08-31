@@ -61,7 +61,7 @@ export default function HomeWelcome() {
               <div className="relative overflow-hidden rounded-[18px] border border-white/80 shadow-[0_20px_50px_rgba(13,27,61,0.12)] sm:rounded-[22px]">
                 <img
                   src="/home/welcome.jpg"
-                  alt="Kangaroo Logistics team coordinating freight operations"
+                  alt="Professional warehouse logistics operations"
                   className="aspect-16/10 w-full object-cover"
                   width={900}
                   height={560}

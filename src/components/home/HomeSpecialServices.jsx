@@ -44,7 +44,7 @@ export default function HomeSpecialServices() {
           </div>
 
           <p className="max-w-120 text-[15px] leading-7 text-muted sm:text-[16px] lg:text-right">
-            From temperature-controlled freight to port drayage — explore the
+            From temperature-controlled freight to over-the-road and rail — explore the
             logistics capabilities we deliver every day.
           </p>
         </div>

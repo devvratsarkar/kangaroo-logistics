@@ -104,19 +104,30 @@ export default function HomeIndustriesWeServe() {
           {industriesWeServe.map((industry) => (
             <li
               key={industry.id}
-              className="industry-card rounded-[18px] border border-primary/10 bg-white p-6 shadow-[0_8px_30px_rgba(13,27,61,0.06)] transition-[transform,box-shadow,border-color] duration-300 ease-out sm:p-7"
+              className="industry-card relative min-h-62 overflow-hidden rounded-[18px] border border-white/10 shadow-[0_8px_30px_rgba(13,27,61,0.12)] sm:min-h-68"
             >
-              <div className="industry-card-icon flex size-14 items-center justify-center rounded-full border border-dashed border-secondary bg-secondary/15 text-primary transition-all duration-300 ease-out">
-                <IndustryIcon type={industry.icon} className="size-7" />
+              <img
+                src={industry.image}
+                alt=""
+                className="industry-card-photo absolute inset-0 size-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="industry-card-overlay absolute inset-0" aria-hidden="true" />
+
+              <div className="relative z-1 flex h-full min-h-62 flex-col justify-end p-6 sm:min-h-68 sm:p-7">
+                <div className="industry-card-icon flex size-14 items-center justify-center rounded-full border border-dashed border-secondary bg-secondary/20 text-white">
+                  <IndustryIcon type={industry.icon} className="size-7" />
+                </div>
+
+                <h3 className="industry-card-title mt-5 font-display text-[20px] leading-tight font-semibold text-white sm:text-[22px]">
+                  {industry.title}
+                </h3>
+
+                <p className="industry-card-copy mt-3 text-[15px] leading-7 text-white/80 sm:text-[16px]">
+                  {industry.description}
+                </p>
               </div>
-
-              <h3 className="industry-card-title mt-5 font-display text-[20px] leading-tight font-semibold text-primary transition-colors duration-300 sm:text-[22px]">
-                {industry.title}
-              </h3>
-
-              <p className="industry-card-copy mt-3 text-[15px] leading-7 text-muted transition-colors duration-300 sm:text-[16px]">
-                {industry.description}
-              </p>
             </li>
           ))}
         </ul>

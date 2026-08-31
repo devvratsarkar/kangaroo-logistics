@@ -35,7 +35,7 @@ export const blogs = [
   {
     id: 'truckload-ltl-trends-2026',
     slug: 'strategic-outlook-2026-truckload-ltl-freight-trends-reshaping-global-logistics',
-    category: 'Road Freight',
+    category: 'Over the Road (OTR)',
     title: 'Strategic Outlook 2026: Truckload & LTL Freight Trends Reshaping Global Logistics',
     excerpt:
       'Discover the biggest Truckload (TL) and Less-Than-Truckload (LTL) freight trends shaping global logistics in 2026.',
@@ -61,7 +61,7 @@ export const blogs = [
   {
     id: 'road-freight-guide',
     slug: 'the-complete-guide-to-road-freight-transportation-everything-your-business-needs-to-know',
-    category: 'Road Freight',
+    category: 'Over the Road (OTR)',
     title: 'The Complete Guide to Road Freight Transportation: Everything Your Business Needs to Know',
     excerpt:
       'Everything your business needs to know about road freight transportation, from planning to delivery.',
@@ -178,7 +178,7 @@ export const blogs = [
   {
     id: 'cdl-english-tests',
     slug: 'dot-requires-cdl-tests-in-english-for-all-drivers',
-    category: 'Road Freight',
+    category: 'Over the Road (OTR)',
     title: 'DOT Requires CDL Tests in English for All Drivers',
     excerpt:
       'The DOT now requires CDL tests in English for all drivers, with important implications for carriers and fleets.',
@@ -204,7 +204,7 @@ export const blogs = [
   {
     id: 'what-is-a-reefer-truck',
     slug: 'what-is-a-reefer-truck',
-    category: 'Reefer Freight',
+    category: 'Temperature Controlled Freight',
     title: 'What Is a Reefer Truck? A Complete Guide to Refrigerated Trucking',
     excerpt:
       'Learn what a reefer truck is, how refrigerated trucking works, its benefits, industries served, and cold-chain best practices.',

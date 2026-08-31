@@ -7,9 +7,8 @@ import {
   footerSocialLinks,
   footerUsefulLinks,
 } from '../../../data/footerLinks.js'
-import { getHomePageRoute, getQuotePageRoute } from '../../../routes/routes.js'
+import { getHomePageRoute } from '../../../routes/routes.js'
 import {
-  FacebookIcon,
   InstagramIcon,
   LinkedInIcon,
   MailIcon,
@@ -18,7 +17,6 @@ import {
 } from '../../ui/AllSVG.jsx'
 
 const socialIcons = {
-  facebook: FacebookIcon,
   instagram: InstagramIcon,
   linkedin: LinkedInIcon,
 }
@@ -100,6 +98,7 @@ export default function PrimaryFooter() {
               <ul className="site-footer-social">
                 {footerSocialLinks.map(({ label, href, icon }) => {
                   const Icon = socialIcons[icon]
+                  if (!Icon) return null
                   return (
                     <li key={label}>
                       <a
@@ -120,15 +119,6 @@ export default function PrimaryFooter() {
             <div className="site-footer-nav">
               <FooterNavGroup title="Company" links={footerCompanyLinks} />
               <FooterNavGroup title="Resources" links={footerUsefulLinks} />
-
-              <div className="site-footer-cta">
-                <p className="site-footer-cta-text">
-                  Ready to move freight with confidence?
-                </p>
-                <Link to={getQuotePageRoute()} className="site-footer-cta-btn">
-                  Request a Quote
-                </Link>
-              </div>
             </div>
           </div>
 

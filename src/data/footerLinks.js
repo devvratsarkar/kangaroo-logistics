@@ -41,7 +41,6 @@ export const footerContact = {
 }
 
 export const footerSocialLinks = [
-  { label: 'Facebook', href: 'https://www.facebook.com', icon: 'facebook' },
   { label: 'Instagram', href: 'https://www.instagram.com', icon: 'instagram' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com', icon: 'linkedin' },
 ]

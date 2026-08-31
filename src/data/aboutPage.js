@@ -25,7 +25,7 @@ export const aboutPageContent = {
         'Dedicated freight professionals delivering tailored transportation solutions with industry expertise.',
     },
     {
-      title: '24/7 Customer Support',
+      title: '24/7 Support',
       description:
         'Responsive support and real-time shipment updates whenever you need assistance.',
     },
@@ -98,7 +98,7 @@ export const aboutPageContent = {
     'Fast & Reliable Service',
     'Cost-Effective Logistics',
     'Safe & Secure Shipping',
-    '24/7 Customer Support',
+    '24/7 Support',
     'Cross-Border Freight',
     'Efficient Freight Management',
     'Customized Shipping Solutions',

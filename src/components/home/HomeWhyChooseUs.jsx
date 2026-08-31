@@ -41,6 +41,8 @@ function WhyChooseContent({ item }) {
 }
 
 export default function HomeWhyChooseUs() {
+  if (!whyChooseUsItems.length) return null
+
   return (
     <section className="relative py-14 sm:py-16 lg:py-20">
       <div

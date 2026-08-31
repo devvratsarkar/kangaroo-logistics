@@ -2,8 +2,8 @@ import { getBlogDetailPageRoute } from '../routes/routes.js'
 
 /** Sidebar categories from Empath Logistics blog detail pages. */
 export const blogCategories = [
-  { slug: 'road-freight', label: 'Road Freight' },
-  { slug: 'reefer-freight', label: 'Reefer Freight' },
+  { slug: 'road-freight', label: 'Over the Road (OTR)' },
+  { slug: 'reefer-freight', label: 'Temperature Controlled Freight' },
   { slug: 'ocean-freight', label: 'Ocean Freight' },
   { slug: 'logistics-insight', label: 'Logistics Insight' },
   { slug: 'less-than-truckload', label: 'Less Than Truckload' },
@@ -26,7 +26,7 @@ export const popularPosts = [
   {
     slug: 'strategic-outlook-2026-truckload-ltl-freight-trends-reshaping-global-logistics',
     title: 'Strategic Outlook 2026: Truckload & LTL Freight Trends Reshaping Global Logistics',
-    category: 'Road Freight',
+    category: 'Over the Road (OTR)',
     image: '/blog/strategic-outlook-2026-truckload-ltl-freight-trends-reshaping-global-logistics.webp',
   },
   {
@@ -44,13 +44,13 @@ export const popularPosts = [
   {
     slug: 'what-is-a-reefer-truck',
     title: 'What Is a Reefer Truck? A Complete Guide to Refrigerated Trucking',
-    category: 'Reefer Freight',
+    category: 'Temperature Controlled Freight',
     image: '/blog/what-is-a-reefer-truck.webp',
   },
   {
     slug: 'the-complete-guide-to-road-freight-transportation-everything-your-business-needs-to-know',
     title: 'The Complete Guide to Road Freight Transportation: Everything Your Business Needs to Know',
-    category: 'Road Freight',
+    category: 'Over the Road (OTR)',
     image: '/blog/the-complete-guide-to-road-freight-transportation.webp',
   },
 ].map((post) => ({

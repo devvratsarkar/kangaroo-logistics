@@ -12,8 +12,7 @@ export const homeSlides = [
     image: '/banners/road-transport.webp',
     imageAlt: 'Road transport freight trucks',
     cta: { label: 'Get In Touch', to: getContactPageRoute() },
-    sinceYear: '2021',
-    sinceLocation: 'Based In USA',
+    locationLabel: 'Based in California, USA',
   },
   {
     id: 'specialized-freight',
@@ -26,8 +25,7 @@ export const homeSlides = [
     image: '/banners/specialized-freight.webp',
     imageAlt: 'Specialized temperature-controlled freight',
     cta: { label: 'Get In Touch', to: getContactPageRoute() },
-    sinceYear: '2021',
-    sinceLocation: 'Based In USA',
+    locationLabel: 'Based in California, USA',
   },
   {
     id: 'ocean-freight',
@@ -40,7 +38,6 @@ export const homeSlides = [
     image: '/banners/ocean-freight.webp',
     imageAlt: 'Ocean freight container shipping',
     cta: { label: 'Get In Touch', to: getContactPageRoute() },
-    sinceYear: '2021',
-    sinceLocation: 'Based In USA',
+    locationLabel: 'Based in California, USA',
   },
 ]

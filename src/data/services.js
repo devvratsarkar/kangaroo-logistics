@@ -3,14 +3,14 @@ import { serviceDetailsBySlug } from './serviceDetails.js'
 
 export const serviceNavItems = [
   {
-    label: 'Reefer Freight',
+    label: 'Temperature Controlled Freight',
     slug: 'reefer-freight',
     description: 'Temperature-controlled shipping for sensitive cargo',
     summary:
       'Keep perishables, pharma, and temperature-sensitive freight in spec from pickup to delivery with monitored reefer capacity.',
     highlights: ['Continuous temp monitoring', 'Cold-chain handling', 'Nationwide lanes'],
-    image: '/services/reefer.webp',
-    stageImage: '/banners/specialized-freight.webp',
+    image: '/services/reefer.jpg',
+    stageImage: '/services/reefer.jpg',
     imagePosition: 'center center',
     icon: '/services/icon-reefer.webp',
   },
@@ -27,26 +27,26 @@ export const serviceNavItems = [
     icon: '/services/icon-drayage.webp',
   },
   {
-    label: 'Warehouse',
+    label: 'Warehouse Service',
     slug: 'warehouse',
     description: 'Secure storage with inventory management',
     summary:
       'Store, stage, and ship with secure facilities and inventory visibility that keep your supply chain moving.',
     highlights: ['Secure storage', 'Inventory visibility', 'Order staging'],
-    image: '/services/warehouse.webp',
-    stageImage: '/services/warehouse-hd.webp',
+    image: '/services/warehouse.jpg',
+    stageImage: '/home/welcome.jpg',
     imagePosition: 'center center',
     icon: '/services/icon-warehouse.webp',
   },
   {
-    label: 'Multimodal Transport',
+    label: 'Multimodal / Intermodal',
     slug: 'multimodal-transport',
-    description: 'Integrated logistics across transport modes',
+    description: 'Integrated rail, ocean, and road freight',
     summary:
       'Connect ocean, rail, and road into one coordinated plan so freight keeps moving without handoff gaps.',
     highlights: ['Mode optimization', 'Single point of contact', 'End-to-end visibility'],
-    image: '/services/multimodal.webp',
-    stageImage: '/banners/ocean-freight.webp',
+    image: '/services/multimodal.jpg',
+    stageImage: '/services/multimodal.jpg',
     imagePosition: 'center center',
     icon: '/services/icon-multimodal.webp',
   },
@@ -63,14 +63,14 @@ export const serviceNavItems = [
     icon: '/services/icon-ocean.webp',
   },
   {
-    label: 'Road Freight',
+    label: 'Over the Road (OTR)',
     slug: 'road-freight',
     description: 'Fast, dependable over-the-road transportation',
     summary:
       'Cover regional and long-haul trucking with flexible capacity, clear ETAs, and careful freight handling.',
     highlights: ['FTL & LTL capacity', 'Regional & long-haul', 'Live shipment updates'],
-    image: '/services/road.webp',
-    stageImage: '/banners/road-transport.webp',
+    image: '/services/road.jpg',
+    stageImage: '/services/road.jpg',
     imagePosition: 'center center',
     icon: '/services/icon-road.webp',
   },
@@ -80,7 +80,7 @@ export const serviceNavItems = [
 }))
 
 export const servicesPageIntro =
-  'At Kangaroo Logistics, we provide comprehensive freight and logistics solutions designed to keep your business moving efficiently. From road transportation and ocean freight to warehousing, drayage, multimodal transport, and temperature-controlled shipping, our experienced team delivers reliable, cost-effective services tailored to your unique shipping requirements.'
+  'At Kangaroo Logistics, we provide comprehensive freight and logistics solutions designed to keep your business moving efficiently. From over-the-road transportation and ocean freight to warehousing, drayage, multimodal / intermodal, and temperature-controlled shipping, our experienced team delivers reliable, cost-effective services tailored to your unique shipping requirements.'
 
 export const servicesPageHighlights = [
   {

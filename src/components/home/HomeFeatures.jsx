@@ -28,15 +28,17 @@ function FeatureCard({ feature }) {
 export default function HomeFeatures() {
   const swiperRef = useRef(null)
 
+  if (!features.length) return null
+
   return (
-    <section className="home-features-section" aria-label="Kangaroo Logistics features">
+    <section className="home-features-section" aria-label="Pillars of Nationwide Logistics">
       <div className="custom_container">
         <div className="home-features-top">
           <div className="home-features-header">
-            <SectionBadge tone="soft">Features</SectionBadge>
-            <h2 className="home-features-title">Powerful Features of</h2>
+            <SectionBadge tone="soft">Pillars</SectionBadge>
+            <h2 className="home-features-title">Pillars of</h2>
             <h2 className="home-features-title home-features-title--last">
-              Kangaroo Logistics
+              Nationwide Logistics
             </h2>
           </div>
 
@@ -44,7 +46,7 @@ export default function HomeFeatures() {
             <button
               type="button"
               className="feature-slider-prev"
-              aria-label="Previous feature"
+              aria-label="Previous pillar"
               onClick={() => swiperRef.current?.slidePrev()}
             >
               <ArrowLeftLongIcon />
@@ -52,7 +54,7 @@ export default function HomeFeatures() {
             <button
               type="button"
               className="feature-slider-next"
-              aria-label="Next feature"
+              aria-label="Next pillar"
               onClick={() => swiperRef.current?.slideNext()}
             >
               <ArrowRightLongIcon />

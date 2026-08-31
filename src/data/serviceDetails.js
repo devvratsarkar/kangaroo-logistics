@@ -6,12 +6,12 @@
 
 export const serviceDetailsBySlug = {
   'reefer-freight': {
-    eyebrow: 'Reefer Freight Services',
+    eyebrow: 'Temperature Controlled Freight',
     heroTagline: 'Keeping your cargo perfectly chilled.',
     headline: 'Temperature-Sensitive Logistics',
     intro:
       'Our reefer freight services provide dependable temperature-controlled transportation for perishable and temperature-sensitive goods. Using advanced refrigerated equipment, we maintain precise temperature conditions throughout transit to ensure your products arrive fresh, safe, and in optimal condition. Whether you’re transporting food, pharmaceuticals, flowers, or other sensitive cargo, we deliver reliable cold chain logistics tailored to your requirements.',
-    offeringsTitle: 'Our Reefer Freight Services',
+    offeringsTitle: 'Our Temperature Controlled Freight Services',
     offeringsIntro: 'Shipping made simple with refrigerated capacity built for sensitive freight.',
     offerings: [
       'Refrigerated Trucking',
@@ -23,7 +23,7 @@ export const serviceDetailsBySlug = {
       'Temperature-Sensitive Cargo',
       'Door-to-Door Reefer Delivery',
     ],
-    reasonsTitle: 'Why Choose Our Reefer Freight Services?',
+    reasonsTitle: 'Why Choose Our Temperature Controlled Freight Services?',
     reasons: [
       {
         title: 'Advanced Refrigerated Transportation',
@@ -316,12 +316,12 @@ export const serviceDetailsBySlug = {
   },
 
   'multimodal-transport': {
-    eyebrow: 'Multimodal Transport',
+    eyebrow: 'Multimodal / Intermodal',
     heroTagline: 'One solution. Multiple transport modes.',
     headline: 'One Solution, Multiple Transport Modes',
     intro:
       'Our multimodal transport services combine road and ocean transportation to provide efficient, cost-effective, and reliable logistics solutions. By integrating multiple modes of transport under a single shipment plan, we simplify the supply chain while ensuring timely and secure delivery. Whether you’re moving domestic or international cargo, our experienced logistics team manages every stage of the journey for a hassle-free shipping experience.',
-    offeringsTitle: 'Our Multimodal Transport Services',
+    offeringsTitle: 'Our Multimodal / Intermodal Services',
     offeringsIntro: 'Shipping made simple across connected transport modes.',
     offerings: [
       'Road and Ocean Integration',
@@ -333,7 +333,7 @@ export const serviceDetailsBySlug = {
       'Project Cargo Management',
       'Supply Chain Coordination',
     ],
-    reasonsTitle: 'Why Choose Our Multimodal Transport Services?',
+    reasonsTitle: 'Why Choose Our Multimodal / Intermodal Services?',
     reasons: [
       {
         title: 'Single-Point Logistics Management',
@@ -512,12 +512,12 @@ export const serviceDetailsBySlug = {
   },
 
   'road-freight': {
-    eyebrow: 'Road Freight Transportation',
+    eyebrow: 'Over the Road (OTR) Transportation',
     heroTagline: 'Reliable delivery for every mile.',
-    headline: 'Reliable Road Freight Transportation Across the USA',
+    headline: 'Reliable Over the Road (OTR) Transportation Across the USA',
     intro:
       'At Kangaroo Logistics, we provide dependable road freight solutions designed to move your shipments safely, efficiently, and on schedule. Whether you need local deliveries, regional transportation, or nationwide freight services, our experienced logistics team ensures your cargo reaches its destination with care and professionalism. From small shipments to full truckloads, we offer flexible transportation solutions tailored to businesses across a wide range of industries.',
-    offeringsTitle: 'Our Road Freight Services',
+    offeringsTitle: 'Our Over the Road (OTR) Services',
     offeringsIntro: 'Comprehensive road freight for shipments of all sizes and types.',
     offerings: [
       { title: 'Full Truckload (FTL) Shipping', description: 'Dedicated truck capacity for large shipments with fast, direct, and secure delivery.' },
@@ -529,7 +529,7 @@ export const serviceDetailsBySlug = {
       { title: 'Specialized Flatbed Transport', description: 'Safe transportation for oversized, heavy, and uniquely shaped freight.' },
       { title: 'Door-to-Door Freight Transportation', description: 'Complete pickup and delivery with coordinated scheduling.' },
     ],
-    reasonsTitle: 'Why Choose Our Road Freight Services?',
+    reasonsTitle: 'Why Choose Our Over the Road (OTR) Services?',
     reasons: [
       {
         title: 'Reliable Delivery',
