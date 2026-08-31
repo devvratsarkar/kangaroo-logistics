@@ -27,8 +27,7 @@ function FeatureCard({ feature }) {
 
 export default function HomeFeatures() {
   const swiperRef = useRef(null)
-
-  if (!features.length) return null
+  const hasPillars = features.length > 0
 
   return (
     <section className="home-features-section" aria-label="Pillars of Nationwide Logistics">
@@ -42,53 +41,57 @@ export default function HomeFeatures() {
             </h2>
           </div>
 
-          <div className="feature-slider-arrows">
-            <button
-              type="button"
-              className="feature-slider-prev"
-              aria-label="Previous pillar"
-              onClick={() => swiperRef.current?.slidePrev()}
-            >
-              <ArrowLeftLongIcon />
-            </button>
-            <button
-              type="button"
-              className="feature-slider-next"
-              aria-label="Next pillar"
-              onClick={() => swiperRef.current?.slideNext()}
-            >
-              <ArrowRightLongIcon />
-            </button>
-          </div>
+          {hasPillars ? (
+            <div className="feature-slider-arrows">
+              <button
+                type="button"
+                className="feature-slider-prev"
+                aria-label="Previous pillar"
+                onClick={() => swiperRef.current?.slidePrev()}
+              >
+                <ArrowLeftLongIcon />
+              </button>
+              <button
+                type="button"
+                className="feature-slider-next"
+                aria-label="Next pillar"
+                onClick={() => swiperRef.current?.slideNext()}
+              >
+                <ArrowRightLongIcon />
+              </button>
+            </div>
+          ) : null}
         </div>
 
-        <div className="home-features-slider">
-          <Swiper
-            className="features-classic-swiper"
-            speed={1500}
-            loop
-            grabCursor
-            spaceBetween={30}
-            slidesPerView={1}
-            breakpoints={{
-              576: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              992: { slidesPerView: 2 },
-              1200: { slidesPerView: 3 },
-              1400: { slidesPerView: 3 },
-              1920: { slidesPerView: 3 },
-            }}
-            onSwiper={(swiper) => {
-              swiperRef.current = swiper
-            }}
-          >
-            {features.map((feature) => (
-              <SwiperSlide key={feature.id}>
-                <FeatureCard feature={feature} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        {hasPillars ? (
+          <div className="home-features-slider">
+            <Swiper
+              className="features-classic-swiper"
+              speed={1500}
+              loop
+              grabCursor
+              spaceBetween={30}
+              slidesPerView={1}
+              breakpoints={{
+                576: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 2 },
+                1200: { slidesPerView: 3 },
+                1400: { slidesPerView: 3 },
+                1920: { slidesPerView: 3 },
+              }}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper
+              }}
+            >
+              {features.map((feature) => (
+                <SwiperSlide key={feature.id}>
+                  <FeatureCard feature={feature} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        ) : null}
       </div>
     </section>
   )

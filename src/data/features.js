@@ -1,2 +1,44 @@
-/** Pillars of Nationwide Logistics. Replaced when the client provides new copy and photos. */
-export const features = []
+export const features = [
+  {
+    id: 'reliable-service',
+    title: 'Reliable Service',
+    image: '/features/reliable-service-axtvur.webp',
+    icon: '/features/reliable-service-icon-lfuun6.webp',
+    imageAlt: 'Warehouse team providing reliable logistics service',
+  },
+  {
+    id: 'experienced-team',
+    title: 'Experienced Team',
+    image: '/features/experienced-team-izmx1y.webp',
+    icon: '/features/experienced-team-icon-srcosw.webp',
+    imageAlt: 'Experienced logistics professionals at work',
+  },
+  {
+    id: 'customer-support',
+    title: '24/7 Support',
+    image: '/features/customer-support-ve5lbi.webp',
+    icon: '/features/customer-support-icon-iwggfy.webp',
+    imageAlt: 'Customer support team ready to help',
+  },
+  {
+    id: 'flexible-freight',
+    title: 'Flexible Freight Solutions',
+    image: '/features/flexible-freight-solutions-dmlat7.webp',
+    icon: '/features/flexible-freight-solutions-icon-pyu9zf.webp',
+    imageAlt: 'Flexible freight and logistics solutions',
+  },
+  {
+    id: 'safe-transport',
+    title: 'Safe & Secure Transport',
+    image: '/features/safe-secure-transport-y3egxh.webp',
+    icon: '/features/safe-secure-transport-icon-q8nywb.webp',
+    imageAlt: 'Safe and secure freight transport',
+  },
+  {
+    id: 'on-time-delivery',
+    title: 'On-Time Delivery',
+    image: '/features/on-time-delivery-wl2vyp.webp',
+    icon: '/features/on-time-delivery-icon-uy34ne.webp',
+    imageAlt: 'On-time delivery logistics operations',
+  },
+]
