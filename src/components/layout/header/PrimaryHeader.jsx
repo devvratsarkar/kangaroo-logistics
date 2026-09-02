@@ -4,6 +4,7 @@ import PrimaryToolbar from './PrimaryToolbar.jsx'
 import PrimaryMenu, { ServicesMegaMenu } from './PrimaryMenu.jsx'
 import OffCanvasMenu from './OffCanvasMenu.jsx'
 import { ArrowRightLongIcon, CloseIcon, MenuIcon, PhoneIcon } from '../../ui/AllSVG.jsx'
+import { primaryPhone } from '../../../data/companyContact.js'
 import {
   getHomePageRoute,
   getQuotePageRoute,
@@ -110,9 +111,9 @@ export default function PrimaryHeader() {
               <div className="site-header-actions">
                 <div className="site-header-help">
                   <span className="site-header-help-label">Need assistance?</span>
-                  <a href="tel:+17185550124" className="site-header-help-phone">
+                  <a href={primaryPhone.href} className="site-header-help-phone">
                     <PhoneIcon className="size-4" strokeWidth={1.7} />
-                    +1 (718) 555-0124
+                    {primaryPhone.label}
                   </a>
                 </div>
 

@@ -8,6 +8,7 @@ import {
   MailIcon,
   PhoneIcon,
 } from '../../components/ui/AllSVG.jsx'
+import { companyHours, primaryEmail, primaryPhone } from '../../data/companyContact.js'
 import { getHomePageRoute } from '../../routes/routes.js'
 
 const quoteBenefits = [
@@ -113,7 +114,7 @@ export default function GetAQuotePage() {
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 <a
-                  href="tel:+17185550124"
+                  href={primaryPhone.href}
                   className="flex items-center gap-3 rounded-2xl border border-primary/10 bg-primary px-4 py-3.5 text-white transition-colors hover:bg-primary/90"
                 >
                   <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-secondary">
@@ -124,13 +125,13 @@ export default function GetAQuotePage() {
                       Call us
                     </span>
                     <span className="mt-0.5 block font-display text-[14px] font-medium">
-                      +1 (718) 555-0124
+                      {primaryPhone.label}
                     </span>
                   </span>
                 </a>
 
                 <a
-                  href="mailto:ops@kangaroologistics.com"
+                  href={primaryEmail.href}
                   className="flex items-center gap-3 rounded-2xl border border-primary/10 bg-white px-4 py-3.5 text-primary transition-colors hover:border-secondary"
                 >
                   <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
@@ -141,7 +142,7 @@ export default function GetAQuotePage() {
                       Email us
                     </span>
                     <span className="mt-0.5 block font-display text-[14px] font-medium">
-                      ops@kangaroologistics.com
+                      {primaryEmail.label}
                     </span>
                   </span>
                 </a>
@@ -149,7 +150,7 @@ export default function GetAQuotePage() {
 
               <p className="mt-5 flex items-center gap-2 text-[13px] text-muted">
                 <ClockIcon className="size-4 text-secondary-ink" strokeWidth={1.7} />
-                Mon–Fri, 8AM – 6PM EST
+                {companyHours.short}
               </p>
             </div>
 

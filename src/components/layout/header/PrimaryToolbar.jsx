@@ -1,3 +1,4 @@
+import { companyAddress, primaryEmail } from '../../../data/companyContact.js'
 import {
   ClockIcon,
   InstagramIcon,
@@ -44,11 +45,8 @@ export default function PrimaryToolbar() {
       <div className="custom_container site-toolbar-inner">
         <div className="site-toolbar-left">
           <div className="site-toolbar-contacts">
-            <ToolbarChip
-              href="mailto:ops@kangaroologistics.com"
-              icon={MailIcon}
-            >
-              ops@kangaroologistics.com
+            <ToolbarChip href={primaryEmail.href} icon={MailIcon}>
+              {primaryEmail.label}
             </ToolbarChip>
 
             <ToolbarChip icon={ClockIcon} className="hidden sm:inline-flex">
@@ -56,7 +54,7 @@ export default function PrimaryToolbar() {
             </ToolbarChip>
 
             <ToolbarChip icon={MapPinIcon} className="hidden md:inline-flex">
-              California, USA
+              {companyAddress.short}
             </ToolbarChip>
           </div>
         </div>

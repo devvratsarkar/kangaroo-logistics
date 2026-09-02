@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import SectionBadge, { BuildingIcon } from '../common/SectionBadge.jsx'
 import { ArrowRightLongIcon, PhoneIcon } from '../ui/AllSVG.jsx'
 import { aboutPageContent } from '../../data/aboutPage.js'
+import { companyPhones, primaryPhone } from '../../data/companyContact.js'
 import { getQuotePageRoute } from '../../routes/routes.js'
 
 const highlightImages = [
@@ -112,13 +113,14 @@ export default function AboutSolutions() {
               Call Us Anytime
             </p>
             <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-display text-[20px] font-semibold text-white sm:text-[24px]">
-              <a href="tel:+17185550198" className="transition-colors hover:text-secondary">
-                +1 (718) 555-0198
-              </a>
-              <span className="text-white/35">|</span>
-              <a href="tel:+17185550124" className="transition-colors hover:text-secondary">
-                +1 (718) 555-0124
-              </a>
+              {companyPhones.map((phone, index) => (
+                <span key={phone.href} className="contents">
+                  {index > 0 ? <span className="text-white/35">|</span> : null}
+                  <a href={phone.href} className="transition-colors hover:text-secondary">
+                    {phone.label}
+                  </a>
+                </span>
+              ))}
             </div>
           </div>
 
@@ -131,7 +133,7 @@ export default function AboutSolutions() {
               <ArrowRightLongIcon className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
             </Link>
             <a
-              href="tel:+17185550124"
+              href={primaryPhone.href}
               className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 font-display text-[15px] font-medium text-white transition-colors hover:border-secondary hover:text-secondary"
             >
               <PhoneIcon className="size-4" strokeWidth={1.7} />

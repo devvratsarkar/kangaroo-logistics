@@ -29,18 +29,10 @@ export default function HomeWelcome() {
 
               <div className="mt-5 max-w-lg space-y-4 text-[15px] leading-7 text-muted sm:mt-6 sm:space-y-5 sm:text-[16px] sm:leading-7.5">
                 <p>
-                  At Kangaroo Logistics, we understand that seamless transportation
-                  is vital to global trade. As a leading provider of ocean, air, and
-                  road freight, we emphasize agility, cost-effectiveness, and
-                  reliability—ensuring your goods arrive smoothly, whether by sea,
-                  air, or land.
+                  At Kangaroo Logistics, we make freight transportation simple, reliable, and efficient. As a U.S.-based logistics company, we provide dependable road, ocean, air, and intermodal transportation solutions designed to keep your supply chain moving.
                 </p>
                 <p>
-                  Based in the USA, we leverage industry expertise and a trusted
-                  partner network to deliver tailored logistics solutions. From
-                  perishables and electronics to industrial machinery, our team handles
-                  every shipment with precision, care, and clear communication at
-                  every step.
+                  From a single shipment to ongoing freight programs, our team works closely with shippers, manufacturers, freight forwarders, and carriers to provide solutions tailored to each customer's needs. We combine industry knowledge, responsive communication, and a trusted transportation network to move freight safely and efficiently from origin to destination.
                 </p>
               </div>
 

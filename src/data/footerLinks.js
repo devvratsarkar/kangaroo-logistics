@@ -1,4 +1,9 @@
 import {
+  companyAddress,
+  companyEmails,
+  companyPhones,
+} from './companyContact.js'
+import {
   getAboutPageRoute,
   getBlogPageRoute,
   getContactPageRoute,
@@ -28,16 +33,10 @@ export const footerBottomLinks = [
 ]
 
 export const footerContact = {
-  addressLabel: 'Our Address',
-  address: '300 Delaware AVE, Suite - 210 # 518 Wilmington, Delaware, 19801, United States',
-  emails: [
-    { label: 'ops@kangaroologistics.com', href: 'mailto:ops@kangaroologistics.com' },
-    { label: 'info@kangaroologistics.com', href: 'mailto:info@kangaroologistics.com' },
-  ],
-  phones: [
-    { label: '+1 (718) 555-0124', href: 'tel:+17185550124' },
-    { label: '+1 (718) 555-0198', href: 'tel:+17185550198' },
-  ],
+  addressLabel: companyAddress.label,
+  address: companyAddress.formatted,
+  emails: companyEmails,
+  phones: companyPhones,
 }
 
 export const footerSocialLinks = [
@@ -46,4 +45,4 @@ export const footerSocialLinks = [
 ]
 
 export const footerDescription =
-  'Kangaroo Logistics delivers reliable, cost-effective freight and logistics solutions tailored to your business. From road transportation and ocean freight to warehousing and specialized shipping, we keep your supply chain moving with confidence.'
+  'When your business depends on freight arriving safely and on time, you need a logistics partner you can count on. Kangaroo Logistics connects businesses with reliable transportation and logistics solutions backed by responsive communication, competitive pricing, and hands-on shipment management.'

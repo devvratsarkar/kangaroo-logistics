@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ChevronDownIcon, CloseIcon, MailIcon, PhoneIcon, ArrowRightLongIcon } from '../../ui/AllSVG.jsx'
+import { primaryEmail, primaryPhone } from '../../../data/companyContact.js'
 import { serviceNavItems } from '../../../data/services.js'
 import {
   getAboutPageRoute,
@@ -108,13 +109,13 @@ export default function OffCanvasMenu({ isOpen, onClose }) {
           </div>
 
           <div className="offcanvas-quick">
-            <a href="tel:+17185550124">
+            <a href={primaryPhone.href}>
               <PhoneIcon className="size-3.5" strokeWidth={1.6} />
-              +1 (718) 555-0124
+              {primaryPhone.label}
             </a>
-            <a href="mailto:ops@kangaroologistics.com">
+            <a href={primaryEmail.href}>
               <MailIcon className="size-3.5" strokeWidth={1.6} />
-              ops@kangaroologistics.com
+              {primaryEmail.label}
             </a>
           </div>
         </div>
