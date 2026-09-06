@@ -36,7 +36,7 @@ export default function BlogCommentForm({ postTitle }) {
         0 Comments
       </p>
       <h2 className="mt-2 font-display text-[26px] font-bold text-primary sm:text-[30px]">
-        Leave A Comment
+        Leave a note on this article
       </h2>
       <p className="mt-2 text-[14px] leading-6 text-muted">
         Share your thoughts on {postTitle}.

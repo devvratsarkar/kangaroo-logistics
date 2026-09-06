@@ -83,7 +83,7 @@ export default function ServiceDetailPage() {
                       {item.label}
                     </span>
                     <span className="mt-1 block text-[13px] leading-5 text-muted">
-                      {item.description}
+                      {item.pageDescription ?? item.description}
                     </span>
                   </span>
                 </Link>

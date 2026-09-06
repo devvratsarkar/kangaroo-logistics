@@ -31,7 +31,7 @@ export default function ContactHero() {
         </p>
 
         <h1 className="mt-3 max-w-3xl font-display text-[36px] leading-[1.12] font-bold tracking-[-0.02em] sm:text-[46px] lg:text-[52px]">
-          Get in touch with Kangaroo Logistics
+          Reach the Kangaroo dispatch desk
         </h1>
 
         <p className="mt-4 max-w-2xl text-[15px] leading-7 text-white/75 sm:text-[17px] sm:leading-8">

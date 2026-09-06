@@ -1,619 +1,611 @@
-/**
- * Detail copy adapted from Empath Logistics service pages,
- * rewritten for Kangaroo Logistics branding.
- * Source structure: https://www.empathlogistics.com/services
- */
-
 export const serviceDetailsBySlug = {
   'reefer-freight': {
     eyebrow: 'Temperature Controlled Freight',
-    heroTagline: 'Keeping your cargo perfectly chilled.',
-    headline: 'Temperature-Sensitive Logistics',
+    heroTagline: 'Setpoint discipline from dock to dock.',
+    headline: 'Cold-chain trucking for freight that cannot drift',
     intro:
-      'Our reefer freight services provide dependable temperature-controlled transportation for perishable and temperature-sensitive goods. Using advanced refrigerated equipment, we maintain precise temperature conditions throughout transit to ensure your products arrive fresh, safe, and in optimal condition. Whether you’re transporting food, pharmaceuticals, flowers, or other sensitive cargo, we deliver reliable cold chain logistics tailored to your requirements.',
-    offeringsTitle: 'Our Temperature Controlled Freight Services',
-    offeringsIntro: 'Shipping made simple with refrigerated capacity built for sensitive freight.',
+      'Kangaroo Logistics books refrigerated capacity for produce, dairy, frozen foods, floral, and other temperature-sensitive cargo. We confirm the required setpoint before dispatch, match the load to a reefer unit that can hold it, and stay on the shipment until it is at the receiving dock in spec. California produce lanes and nationwide grocery distribution are a core part of the work we do every week.',
+    offeringsTitle: 'Temperature-controlled coverage',
+    offeringsIntro: 'Equipment and handling matched to the product, not a generic reefer template.',
     offerings: [
-      'Refrigerated Trucking',
-      'Frozen Goods Transportation',
-      'Fresh Produce Shipping',
-      'Pharmaceutical Logistics',
-      'Dairy & Beverage Transport',
-      'Cold Chain Distribution',
-      'Temperature-Sensitive Cargo',
-      'Door-to-Door Reefer Delivery',
+      'Fresh produce lanes',
+      'Frozen food trucking',
+      'Dairy and beverage reefer',
+      'Floral and nursery freight',
+      'Pharma-adjacent chilled freight',
+      'Multi-stop grocery deliveries',
+      'Pre-cool and pulping checks',
+      'Continuous temperature reporting',
     ],
-    reasonsTitle: 'Why Choose Our Temperature Controlled Freight Services?',
+    reasonsTitle: 'Why shippers use our reefer desk',
     reasons: [
       {
-        title: 'Advanced Refrigerated Transportation',
+        title: 'Setpoint confirmed before wheels roll',
         description:
-          'Modern reefer equipment keeps your cargo at the required temperature throughout transit.',
+          'We capture the required temperature range in the load tender and verify it with the driver before pickup.',
       },
       {
-        title: 'Safe Handling of Sensitive Cargo',
+        title: 'Equipment that actually holds the range',
         description:
-          'Our trained team carefully handles temperature-sensitive products from pickup to delivery.',
+          'We cover with reefers suited to frozen, chilled, or dual-temp needs instead of stretching a dry van with a blanket.',
       },
       {
-        title: 'Nationwide & International Coverage',
+        title: 'California produce fluency',
         description:
-          'Reliable reefer transportation solutions for domestic and cross-border shipments.',
+          'Central Valley, coastal, and desert growing regions are familiar origins for our coordinators.',
       },
       {
-        title: 'Consistent Temperature Monitoring',
+        title: 'Exception handling in transit',
         description:
-          'Continuous monitoring helps maintain ideal conditions for sensitive shipments.',
+          'If a unit alarms, an appointment slips, or a receiver delays, we escalate instead of waiting for a missed delivery.',
       },
       {
-        title: 'Timely Pickups & Deliveries',
+        title: 'Receiver-ready paperwork',
         description:
-          'Efficient scheduling ensures your refrigerated freight arrives on time.',
+          'BOLs, temperature records, and appointment numbers travel with the load so the dock is not guessing.',
       },
       {
-        title: 'Real-Time Shipment Tracking',
+        title: 'Backup coverage on tight windows',
         description:
-          'Monitor your shipment with live updates from pickup through final delivery.',
+          'When a truck falls out, we work a replacement rather than leaving the shipper to restart the search.',
       },
     ],
-    processTitle: 'How reefer freight works',
+    processTitle: 'How a reefer shipment runs with us',
     process: [
       {
         step: '01',
-        title: 'Shipment Assessment',
+        title: 'Product and range',
         description:
-          'We evaluate your cargo’s temperature requirements and select the appropriate refrigerated transportation solution.',
+          'Tell us commodity, temperature, pallet count, and any pulp or pre-cool requirements.',
       },
       {
         step: '02',
-        title: 'Reefer Preparation',
+        title: 'Unit match',
         description:
-          'Our refrigerated equipment is pre-cooled and configured to maintain the precise temperature required for your shipment.',
+          'We book a reefer that can hold the range and confirm pickup with the shipper’s appointment window.',
       },
       {
         step: '03',
-        title: 'Temperature-Controlled Transit',
+        title: 'In-transit watch',
         description:
-          'Your shipment is transported in modern reefer equipment with continuous temperature monitoring for maximum product protection.',
+          'Drivers check in, temperature is monitored, and we flag delays before they hit the receiver.',
       },
       {
         step: '04',
-        title: 'Safe Delivery',
+        title: 'Delivery close-out',
         description:
-          'We ensure your cargo reaches its destination on time while maintaining the required temperature throughout the journey.',
+          'We confirm unload, capture any OS&D notes, and send you a clean status for the file.',
       },
     ],
     faqs: [
       {
-        question: 'What products can be transported in reefer freight?',
+        question: 'What temperature ranges can you cover?',
         answer:
-          'We transport fresh produce, frozen foods, dairy products, pharmaceuticals, flowers, beverages, and other temperature-sensitive cargo.',
+          'We routinely book frozen, chilled, and produce-friendly ranges. Share the exact setpoint or band with the quote request so we match the unit correctly.',
       },
       {
-        question: 'Can you maintain different temperature ranges?',
+        question: 'Do you handle produce out of California?',
         answer:
-          'Yes. Our refrigerated equipment supports a variety of temperature settings based on your shipment’s requirements.',
+          'Yes. Produce moving out of California growing regions is a regular part of our reefer book, including multi-stop retail deliveries.',
       },
       {
-        question: 'Is temperature monitored during transit?',
+        question: 'Can you provide temperature records?',
         answer:
-          'Yes. We continuously monitor temperatures to help ensure your cargo remains within the required range throughout transportation.',
+          'When the equipment and carrier support it, we pass along in-transit temperature data and driver reports with the delivery file.',
       },
       {
-        question: 'Do you offer nationwide refrigerated shipping?',
+        question: 'What if the receiver has a tight appointment?',
         answer:
-          'Yes. We provide reliable reefer freight services for both domestic and international shipments.',
+          'We book against the appointment, watch ETA, and call ahead if weather or traffic puts the window at risk.',
       },
     ],
   },
 
   drayage: {
     eyebrow: 'Drayage Services',
-    heroTagline: 'Efficient container transportation.',
-    headline: 'Reliable Port Container Transport',
+    heroTagline: 'Containers that leave the terminal on time.',
+    headline: 'Port and ramp drayage with fewer surprises',
     intro:
-      'Our drayage services provide reliable short-distance transportation of shipping containers between ports, rail terminals, warehouses, and distribution centers. We ensure timely container pickups and deliveries, helping businesses maintain efficient supply chain operations while reducing delays. Whether it’s import, export, or intermodal container movement, our experienced team handles every shipment with precision, safety, and professionalism.',
-    offeringsTitle: 'Our Drayage Services',
-    offeringsIntro: 'Shipping made simple with fast, coordinated container moves.',
+      'Drayage is a short move with a long list of failure points: chassis, terminal appointments, last-free-day pressure, and warehouse receiving hours. Kangaroo Logistics coordinates container pickup from West Coast ports and inland ramps, then delivers to warehouses, transload yards, or distribution centers with a clear status trail. Import, export, and empty returns are all in scope.',
+    offeringsTitle: 'Container moves we cover',
+    offeringsIntro: 'Short-haul container work planned around terminal rules and receiver hours.',
     offerings: [
-      'Port-to-Warehouse Transport',
-      'Rail Terminal Container Movement',
-      'Intermodal Drayage',
-      'Import & Export Container Delivery',
-      'Empty Container Returns',
-      'Container Pickup & Drop-Off',
-      'Local Freight Transportation',
-      'Warehouse Distribution Support',
+      'Port-to-warehouse delivery',
+      'Ramp-to-warehouse dray',
+      'Export container drop-off',
+      'Empty returns',
+      'Transload handoffs',
+      'Live unload and drop-and-hook',
+      'Chassis coordination',
+      'Last-free-day planning',
     ],
-    reasonsTitle: 'Why Choose Our Drayage Services?',
+    reasonsTitle: 'Why our drayage desk stays useful',
     reasons: [
       {
-        title: 'Fast Container Transportation',
-        description: 'Move containers quickly and efficiently with dependable drayage services.',
+        title: 'Terminal timing first',
+        description:
+          'We plan around vessel availability, appointment slots, and last free day instead of quoting a fantasy pickup.',
       },
       {
-        title: 'Experienced Logistics Professionals',
+        title: 'Chassis and equipment chase',
         description:
-          'Our skilled team coordinates every shipment with precision and expertise.',
+          'If a chassis is tight, we work the problem before the container sits another day.',
       },
       {
-        title: 'Safe & Secure Cargo Handling',
+        title: 'Warehouse alignment',
         description:
-          'Every container is handled with care to protect your cargo throughout transit.',
+          'Receiving hours, live vs. drop, and appointment numbers are confirmed with the facility, not assumed.',
       },
       {
-        title: 'Reliable Port & Terminal Pickups',
+        title: 'Import and export both ways',
         description:
-          'Ensure timely container pickups from ports and rail terminals with minimal delays.',
+          'Loaded inbound, loaded outbound, and empty returns are handled as one cycle, not three separate mysteries.',
       },
       {
-        title: 'Timely Deliveries',
+        title: 'Status you can act on',
         description:
-          'Optimized routes and efficient scheduling help keep your freight on time.',
+          'You get pickup confirmation, in-gate/out-gate updates, and delivery ETAs you can share with the DC.',
       },
       {
-        title: 'Real-Time Shipment Updates',
+        title: 'West Coast port familiarity',
         description:
-          'Stay informed with accurate tracking and timely status updates from pickup to delivery.',
+          'California port and ramp work is a regular part of our book, including moves into Central Valley warehouses.',
       },
     ],
-    processTitle: 'How drayage works',
+    processTitle: 'How a drayage job is run',
     process: [
       {
         step: '01',
-        title: 'Container Scheduling',
+        title: 'Box details',
         description:
-          'We coordinate container pickup based on port or terminal availability and your delivery requirements.',
+          'Container number, terminal or ramp, last free day, and delivery address go on the file first.',
       },
       {
         step: '02',
-        title: 'Container Pickup',
+        title: 'Appointment and chassis',
         description:
-          'Our team picks up containers from ports, rail terminals, or shipping yards and prepares them for transport.',
+          'We line up terminal access, chassis, and the warehouse receiving window before dispatch.',
       },
       {
         step: '03',
-        title: 'Secure Transportation',
+        title: 'Pull and haul',
         description:
-          'Our professional drivers transport containers safely between ports, rail yards, warehouses, and distribution centers.',
+          'The driver pulls the box, we confirm out-gate, and the container moves to the assigned facility.',
       },
       {
         step: '04',
-        title: 'Timely Delivery',
+        title: 'Return or reload',
         description:
-          'We ensure prompt delivery, provide shipment updates, and complete the transportation process efficiently.',
+          'After unload, we complete the empty return or stage the next loaded move so the cycle does not stall.',
       },
     ],
     faqs: [
       {
-        question: 'What is drayage?',
+        question: 'Which terminals and ramps do you serve?',
         answer:
-          'Drayage is the short-distance transportation of shipping containers between ports, rail terminals, warehouses, and other logistics facilities.',
+          'We regularly cover West Coast ports and nearby rail ramps, then deliver into California warehouses and inland DCs. Share the terminal and destination with the quote so we confirm coverage.',
       },
       {
-        question: 'When is drayage used?',
+        question: 'Can you work against last free day?',
         answer:
-          'Drayage is commonly used to move containers between different transportation modes as part of the supply chain.',
+          'Yes. Last free day is part of the planning conversation. The earlier we have the box details, the better the chance of pulling before storage charges start.',
       },
       {
-        question: 'Do you provide port pickup and delivery?',
+        question: 'Do you handle drop and hook as well as live unload?',
         answer:
-          'Yes. We offer reliable container pickup from ports and terminals, along with delivery to warehouses or final destinations.',
+          'Both. We confirm with the warehouse whether the job is live, drop, or transload so the driver arrives with the right expectation.',
       },
       {
-        question: 'Can you transport import and export containers?',
+        question: 'What information do you need to quote drayage?',
         answer:
-          'Yes. We handle both import and export container movements efficiently and securely.',
+          'Terminal or ramp, container size, commodity if restricted, delivery ZIP, live vs. drop, and last free day. Weight and chassis type help when they are known.',
       },
     ],
   },
 
   warehouse: {
     eyebrow: 'Warehouse Services',
-    heroTagline: 'Secure storage you can trust.',
-    headline: 'Smart Packaging & Secure Storage Solutions',
+    heroTagline: 'Space, staging, and a clean handoff.',
+    headline: 'Warehouse capacity that supports the next move',
     intro:
-      'At Kangaroo Logistics, we provide reliable packaging and storage services designed to protect your goods at every stage of the logistics process. Whether you need temporary storage, inventory staging, or flexible warehouse capacity, our experienced team ensures every item is handled with care and stored in a safe, professionally managed environment. Our goal is to give you peace of mind with secure, flexible, and cost-effective solutions tailored to your unique needs.',
-    offeringsTitle: 'Our Warehouse & Packaging Services',
-    offeringsIntro: 'Packed with care — from receiving through fulfillment.',
+      'Storage only helps if freight can get in, stay accounted for, and leave on the next truck without a scavenger hunt. Kangaroo Logistics arranges warehouse space for overflow inventory, inbound container deconsolidation, order staging, and short-term holds between modes. Facilities are selected for security, access, and the type of freight you actually ship.',
+    offeringsTitle: 'Warehouse support we arrange',
+    offeringsIntro: 'Flexible space and handling so inventory is ready when the next truck is.',
     offerings: [
-      'Climate-Controlled Storage Units',
-      '24/7 Security Monitoring',
-      'Flexible Storage Plans',
-      'Business Inventory Storage',
-      'Cross-Docking Support',
-      'Labeling & Inventory Management',
-      'Fragile Item Protection',
-      'Order Staging & Distribution',
+      'Short-term overflow storage',
+      'Inbound container transload',
+      'Pallet inbound and outbound',
+      'Order staging for outbound trucks',
+      'Cross-dock when dwell should stay low',
+      'Inventory counts at receipt',
+      'Labeling and simple kitting',
+      'Appointment-based shipping',
     ],
-    reasonsTitle: 'Why Choose Our Warehouse Services',
+    reasonsTitle: 'Why shippers add warehouse through us',
     reasons: [
       {
-        title: 'Secure Storage Facilities',
+        title: 'Space tied to transportation',
         description:
-          'Your inventory is stored in clean, secure, and professionally managed warehouse facilities.',
+          'The same desk that books the truck or dray also lines up the dock, so freight is not stranded between vendors.',
       },
       {
-        title: '24/7 Security Monitoring',
+        title: 'Overflow without a five-year lease',
         description:
-          'Continuous surveillance and controlled access help keep your goods protected around the clock.',
+          'Seasonal peaks and delayed containers need weeks of space, not a new building. We quote that way.',
       },
       {
-        title: 'Fast Distribution Support',
+        title: 'Transload that shortens dwell',
         description:
-          'Seamlessly move your inventory from storage to its destination with reliable transportation services.',
+          'Ocean boxes can be stripped and reloaded to domestic equipment when that is faster than storing the container.',
       },
       {
-        title: 'Flexible Storage Solutions',
+        title: 'Receiving discipline',
         description:
-          'Choose short-term or long-term storage plans tailored to your business requirements.',
+          'Inbound freight is checked in, counted, and put away with a location so outbound loading is not a search party.',
       },
       {
-        title: 'Organized Inventory Management',
+        title: 'Security as a default',
         description:
-          'Efficient inventory tracking ensures quick access and accurate handling of your stored items.',
+          'We use professionally managed facilities with controlled access rather than informal yard parking.',
       },
       {
-        title: 'Dedicated Customer Support',
+        title: 'Clear in-and-out charges',
         description:
-          'Our experienced team provides responsive assistance and personalized warehouse solutions whenever you need them.',
+          'Handling, storage, and extra accessorials are spelled out so the invoice is not a surprise after the freight leaves.',
       },
     ],
-    processTitle: 'How warehousing works',
+    processTitle: 'How warehousing is set up',
     process: [
       {
         step: '01',
-        title: 'Consultation & Planning',
+        title: 'Volume and dwell',
         description:
-          'We begin with a detailed consultation to understand your storage, transportation, and inventory requirements, then create a customized warehousing plan.',
+          'Pallet count, SKU mix, inbound mode, and how long product needs to sit determine the facility type.',
       },
       {
         step: '02',
-        title: 'Receiving & Inventory Check',
+        title: 'Inbound plan',
         description:
-          'Your goods are received, inspected, and accurately recorded before being organized for secure storage.',
+          'We schedule the receiving appointment, confirm equipment type, and capture what must be checked at the door.',
       },
       {
         step: '03',
-        title: 'Secure Storage',
+        title: 'Store or stage',
         description:
-          'Your inventory is stored in clean, secure, and monitored warehouse facilities with organized inventory management for easy access.',
+          'Freight is put away or staged for the next outbound wave with inventory notes you can reference.',
       },
       {
         step: '04',
-        title: 'Order Fulfillment & Delivery',
+        title: 'Ship out',
         description:
-          'When you’re ready, we carefully prepare your items for dispatch and ensure timely, reliable delivery to their final destination.',
+          'When you release the order, we build the outbound load and hand it to the booked carrier on time.',
       },
     ],
     faqs: [
       {
-        question: 'What packaging services do you provide?',
+        question: 'Is this long-term 3PL fulfillment?',
         answer:
-          'We offer packing support including fragile item protection, custom crating, electronics packaging, furniture wrapping, labeling, and inventory management — plus packing supplies when needed.',
+          'We focus on freight-adjacent storage: overflow, transload, and staging between moves. If you need a full e-commerce 3PL with returns and pick-pack at scale, we will tell you honestly and point you to a better fit.',
       },
       {
-        question: 'Can you handle fragile, high-value, or oversized cargo?',
+        question: 'Can you take an ocean container straight into storage?',
         answer:
-          'Yes. We engineer packing solutions using cushioning, custom crating, and careful handling practices to protect sensitive electronics, industrial equipment, and high-value goods.',
+          'Yes. We can arrange dray into a warehouse, strip the box, and either store pallets or reload to outbound trucks.',
       },
       {
-        question: 'Is there a minimum commitment or volume required for storage?',
+        question: 'Do you offer climate-controlled space?',
         answer:
-          'No. We offer flexible, scalable options for businesses of all sizes — from a few pallets of overflow stock to larger long-term distribution needs.',
+          'When the product requires it, we source climate-controlled or cooler space. Tell us the temperature need with the request.',
       },
       {
-        question: 'How secure are your warehouse facilities?',
+        question: 'How is billing structured?',
         answer:
-          'Security is a top priority. Facilities feature continuous monitoring, controlled access, and professionally managed processes so your inventory stays protected.',
-      },
-      {
-        question: 'Do you offer cross-docking services?',
-        answer:
-          'Yes. If your cargo needs to transfer from one truck to another — or from an ocean container to domestic trucks — without long-term storage, our cross-docking services keep transit times low.',
+          'Typical charges include inbound handling, storage by pallet or space, and outbound handling. Accessorials such as labeling or extra labor are quoted before work starts.',
       },
     ],
   },
 
   'multimodal-transport': {
     eyebrow: 'Multimodal / Intermodal',
-    heroTagline: 'One solution. Multiple transport modes.',
-    headline: 'One Solution, Multiple Transport Modes',
+    heroTagline: 'One plan across truck, rail, and ocean.',
+    headline: 'Connected moves without a gap at every handoff',
     intro:
-      'Our multimodal transport services combine road and ocean transportation to provide efficient, cost-effective, and reliable logistics solutions. By integrating multiple modes of transport under a single shipment plan, we simplify the supply chain while ensuring timely and secure delivery. Whether you’re moving domestic or international cargo, our experienced logistics team manages every stage of the journey for a hassle-free shipping experience.',
-    offeringsTitle: 'Our Multimodal / Intermodal Services',
-    offeringsIntro: 'Shipping made simple across connected transport modes.',
+      'Some freight should never live on a single mode. Kangaroo Logistics builds multimodal and intermodal plans that combine ocean, rail, and over-the-road legs under one coordinator. The goal is simple: fewer orphaned containers, fewer “who has it now?” emails, and a transit plan that still makes sense after the first delay.',
+    offeringsTitle: 'Multimodal work we manage',
+    offeringsIntro: 'Mode combinations chosen for cost, transit, and where the freight actually sits.',
     offerings: [
-      'Road and Ocean Integration',
-      'Domestic & International Shipping',
-      'Door-to-Door Delivery',
-      'Container Transportation',
-      'Cargo Consolidation',
-      'Customs Clearance Support',
-      'Project Cargo Management',
-      'Supply Chain Coordination',
+      'Rail plus truck (intermodal)',
+      'Ocean plus inland dray',
+      'Port to rail to door',
+      'Transload between modes',
+      'Door-to-door coordination',
+      'Cargo consolidation',
+      'Customs document handoff',
+      'Project and oversize routing',
     ],
-    reasonsTitle: 'Why Choose Our Multimodal / Intermodal Services?',
+    reasonsTitle: 'Why a single desk for mixed modes helps',
     reasons: [
       {
-        title: 'Single-Point Logistics Management',
+        title: 'Handoffs have an owner',
         description:
-          'Manage every shipment through one dedicated logistics partner for seamless coordination.',
+          'Rail ramps, ports, and truckers do not share a brain. We do, so the next leg is booked before the current one ends.',
       },
       {
-        title: 'Flexible Transport Combinations',
+        title: 'Cost vs. transit is explicit',
         description:
-          'Combine road and ocean freight to create the most efficient shipping solution.',
+          'We show when rail saves money and when a straight truck is cheaper once dwell and missed appointments are counted.',
       },
       {
-        title: 'Real-Time Shipment Tracking',
-        description: 'Monitor your cargo with accurate tracking and timely shipment updates.',
-      },
-      {
-        title: 'Cost-Effective Transportation Solutions',
+        title: 'One status trail',
         description:
-          'Optimize shipping costs with efficient, flexible, and budget-friendly freight options.',
+          'You get a single chain of updates instead of piecing together ocean, ramp, and highway emails.',
       },
       {
-        title: 'Faster & Efficient Deliveries',
+        title: 'Backup if a mode slips',
         description:
-          'Reduce transit times with optimized routes and coordinated transportation.',
+          'If a train misses or a vessel rolls, we re-plan the inland leg instead of leaving freight parked.',
       },
       {
-        title: 'Safe Cargo Handling',
-        description: 'Your freight is carefully managed from pickup through final delivery.',
+        title: 'California inland connections',
+        description:
+          'West Coast gateways into Central Valley and inland DCs are lanes we plan often.',
+      },
+      {
+        title: 'Docs that travel with the freight',
+        description:
+          'We keep booking, release, and delivery paperwork aligned so a missing form is not the delay.',
       },
     ],
-    processTitle: 'How multimodal transport works',
+    processTitle: 'How a multimodal plan is built',
     process: [
       {
         step: '01',
-        title: 'Transport Planning',
+        title: 'Map the legs',
         description:
-          'We assess your cargo, destination, and timeline to create the most efficient multimodal transportation plan.',
+          'Origin, destination, cargo, and deadline tell us which mix of ocean, rail, and truck is realistic.',
       },
       {
         step: '02',
-        title: 'Carrier Coordination',
+        title: 'Book each handoff',
         description:
-          'We coordinate trusted road and ocean carriers to ensure smooth cargo transfers and optimized transit.',
+          'We secure space and appointments on every leg so the freight is not waiting on a last-minute truck.',
       },
       {
         step: '03',
-        title: 'Coordinated Shipping',
+        title: 'Watch the transfers',
         description:
-          'Our team manages every transport stage, documentation, and cargo transfers between different transport modes.',
+          'Ramp, port, and warehouse events are tracked. If one slips, the next leg is adjusted.',
       },
       {
         step: '04',
-        title: 'Final Delivery',
+        title: 'Door delivery',
         description:
-          'We monitor your shipment throughout its journey and ensure safe, timely delivery to its final destination.',
+          'The final truck or dray completes the move and we close the file with a delivery confirmation.',
       },
     ],
     faqs: [
       {
-        question: 'What is multimodal transport?',
+        question: 'Is multimodal the same as intermodal?',
         answer:
-          'Multimodal transport involves moving cargo using two or more transportation modes, such as road, rail, sea, or air, under a single logistics arrangement.',
+          'Intermodal usually means the freight stays in the same container or trailer across modes, often rail plus truck. Multimodal is broader: cargo can transfer between equipment as long as the plan is coordinated. We use whichever structure fits the shipment.',
       },
       {
-        question: 'What are the benefits of multimodal transport?',
+        question: 'When is rail worth it versus a straight truck?',
         answer:
-          'It reduces logistics complexity, improves efficiency, lowers transportation costs, and provides better shipment coordination.',
+          'Longer inland hauls with flexible delivery windows often favor rail. Tight appointments, short lanes, or highly time-sensitive product usually stay over the road. We will say which one we would run.',
       },
       {
-        question: 'Can you manage international multimodal shipments?',
+        question: 'Can you include ocean in the same plan?',
         answer:
-          'Yes. We handle both domestic and international multimodal transport, including documentation and customs support.',
+          'Yes. We can book the ocean leg and arrange the inland dray, rail, or truck so the import does not stall at the port.',
       },
       {
-        question: 'What types of cargo can be transported?',
+        question: 'Who do I call if something is delayed mid-route?',
         answer:
-          'We transport general cargo, containerized goods, commercial products, industrial equipment, and project cargo.',
+          'Your Kangaroo coordinator. You should not have to decide whether the ocean line, ramp, or trucker is the right phone call.',
       },
     ],
   },
 
   'ocean-freight': {
     eyebrow: 'Ocean Freight Services',
-    heroTagline: 'Global shipping made simple.',
-    headline: 'Trusted & Cost-Effective Ocean Freight',
+    heroTagline: 'Container shipping with inland follow-through.',
+    headline: 'Ocean bookings that do not stop at the pier',
     intro:
-      'Ocean freight is the ideal solution for transporting large volumes of cargo across international destinations in a cost-effective and efficient manner. Whether you need Full Container Load (FCL), Less than Container Load (LCL), or specialized cargo shipping, our experienced logistics team ensures your goods are delivered safely and on schedule. From customs documentation to port handling and final delivery, we provide end-to-end ocean freight solutions tailored to your business needs.',
-    offeringsTitle: 'Our Ocean Freight Services',
-    offeringsIntro: 'Flexible container options for shipments of every size.',
+      'Ocean freight only works if space, documents, and the inland move are planned together. Kangaroo Logistics helps shippers book FCL and LCL, prepare the paperwork trail, and connect the box to drayage, rail, or over-the-road delivery after it lands. We treat the port as a waypoint, not the finish line.',
+    offeringsTitle: 'Ocean options we quote',
+    offeringsIntro: 'Container choices and inland connections sized to the cargo, not the other way around.',
     offerings: [
-      { title: 'Full Container Load (FCL)', description: 'Dedicated containers for high-volume and secure shipments.' },
-      { title: 'Less than Container Load (LCL)', description: 'Cost-effective shared container shipping for smaller cargo.' },
-      { title: 'Import & Export Shipping', description: 'Reliable international freight for global trade operations.' },
-      { title: 'Door-to-Door Ocean Freight', description: 'Complete pickup and delivery from origin to destination.' },
-      { title: 'Customs Clearance Support', description: 'Expert assistance for smooth customs documentation and clearance.' },
-      { title: 'Cargo Consolidation', description: 'Combine shipments to reduce costs and improve efficiency.' },
-      { title: 'Heavy & Oversized Cargo Transport', description: 'Safe handling of oversized and specialized freight shipments.' },
-      { title: 'Commercial & Industrial Shipments', description: 'Tailored logistics for commercial and industrial cargo needs.' },
+      { title: 'Full Container Load (FCL)', description: 'Dedicated 20’ or 40’ equipment when volume or security calls for a full box.' },
+      { title: 'Less than Container Load (LCL)', description: 'Shared container space for smaller lots that still need an ocean move.' },
+      { title: 'Import and export bookings', description: 'Outbound and inbound ocean with a named inland plan.' },
+      { title: 'Port-to-door follow-through', description: 'Drayage, rail, or truck arranged for after vessel arrival.' },
+      { title: 'Documentation support', description: 'Help assembling commercial docs, booking confirmations, and release paperwork.' },
+      { title: 'Cargo consolidation', description: 'Combine lots when LCL or mixed origin freight should travel together.' },
+      { title: 'Oversize and heavy pieces', description: 'Special equipment and routing when standard boxes will not fit.' },
+      { title: 'Transload after arrival', description: 'Strip the ocean box and reload to domestic trucks when that is faster.' },
     ],
-    reasonsTitle: 'Why Choose Our Ocean Freight Services?',
+    reasonsTitle: 'Why book ocean through Kangaroo',
     reasons: [
       {
-        title: 'Cost-effective international shipping',
-        description: 'Affordable global shipping solutions without compromising reliability.',
+        title: 'Inland is part of the quote',
+        description: 'A cheap ocean rate that ignores drayage and last free day is not a cheap shipment. We price the path.',
       },
       {
-        title: 'Worldwide port-to-port and door-to-door delivery',
-        description: 'Seamless transportation from origin to final destination.',
+        title: 'FCL and LCL without a second vendor',
+        description: 'Volume can grow or shrink; the desk stays the same.',
       },
       {
-        title: 'Secure cargo handling and tracking',
-        description: 'Safe freight management with real-time shipment visibility.',
+        title: 'West Coast gateway experience',
+        description: 'Los Angeles / Long Beach and other Pacific gateways are common entries for the freight we handle inland.',
       },
       {
-        title: 'FCL & LCL container solutions',
-        description: 'Flexible container options for shipments of every size.',
+        title: 'Docs before the box is stuck',
+        description: 'We push for complete paperwork early so customs or release issues are not discovered at the terminal.',
       },
       {
-        title: 'Customs clearance assistance',
-        description: 'Expert support for smooth and compliant customs processing.',
+        title: 'Last-free-day awareness',
+        description: 'Arrival is not delivery. We plan the pull so storage and detention are not the default.',
       },
       {
-        title: 'Timely and reliable transit schedules',
-        description: 'Dependable delivery timelines to keep your supply chain moving.',
+        title: 'One coordinator after arrival',
+        description: 'When the vessel docks, the same team that booked the water is already lining up the truck.',
       },
     ],
-    processTitle: 'How ocean freight works',
+    processTitle: 'How an ocean shipment moves',
     process: [
       {
         step: '01',
-        title: 'Shipment Planning',
+        title: 'Cargo and lane',
         description:
-          'We analyze your cargo requirements and recommend the most suitable sea freight solution based on volume, destination, and budget.',
+          'We review commodity, volume, origin port, destination, and whether FCL or LCL is the better fit.',
       },
       {
         step: '02',
-        title: 'Carrier Booking',
+        title: 'Booking',
         description:
-          'We secure space with trusted ocean carriers and schedule your shipment for the most efficient transit.',
+          'Space is requested with the carrier or NVO, and sailing options are confirmed against your deadline.',
       },
       {
         step: '03',
-        title: 'Documentation & Shipping',
+        title: 'Documents and load',
         description:
-          'Our team manages booking, customs paperwork, container loading, and secure transportation from origin to destination.',
+          'We help keep booking, commercial papers, and container load details aligned before the vessel sails.',
       },
       {
         step: '04',
-        title: 'Delivery & Tracking',
+        title: 'Arrival and inland',
         description:
-          'Track your shipment throughout its journey while we ensure timely delivery and complete logistics support until arrival.',
+          'On arrival we arrange dray, rail, warehouse, or OTR so the box keeps moving toward the door.',
       },
     ],
     faqs: [
       {
-        question: 'What is the difference between FCL and LCL?',
+        question: 'Should I choose FCL or LCL?',
         answer:
-          'FCL (Full Container Load) uses an entire container for one shipment, while LCL (Less than Container Load) allows multiple shipments from different customers to share container space.',
+          'FCL is usually better when you can fill a container or need the freight isolated. LCL is useful for smaller lots if the extra handling and longer dwell are acceptable. We will recommend based on cube, weight, and timing.',
       },
       {
-        question: 'How long does ocean freight take?',
+        question: 'Do you clear customs?',
         answer:
-          'Transit times depend on the origin, destination, shipping route, and customs procedures. We’ll provide an estimated delivery schedule before shipment.',
+          'We support the document trail and coordinate with your licensed customs broker. We are not a substitute for a licensed broker when formal entry is required.',
       },
       {
-        question: 'Is sea freight cheaper than air freight?',
+        question: 'Can you deliver inland after the port?',
         answer:
-          'Yes. Ocean freight is generally much more economical for large, heavy, or bulk shipments, though transit times are longer.',
+          'Yes. Drayage, intermodal, warehouse transload, and over-the-road delivery can be booked as part of the same plan.',
       },
       {
-        question: 'Can you handle customs clearance?',
+        question: 'How far in advance should I request space?',
         answer:
-          'Yes. We assist with import/export documentation and customs clearance to ensure a smooth shipping process.',
+          'Peak seasons and tight equipment markets need more lead time. As a rule, the earlier we have the cargo details, the more sailing options we can hold.',
       },
     ],
   },
 
   'road-freight': {
     eyebrow: 'Over the Road (OTR) Transportation',
-    heroTagline: 'Reliable delivery for every mile.',
-    headline: 'Reliable Over the Road (OTR) Transportation Across the USA',
+    heroTagline: 'Highway capacity with a named dispatcher.',
+    headline: 'Over-the-road freight that stays on the calendar',
     intro:
-      'At Kangaroo Logistics, we provide dependable road freight solutions designed to move your shipments safely, efficiently, and on schedule. Whether you need local deliveries, regional transportation, or nationwide freight services, our experienced logistics team ensures your cargo reaches its destination with care and professionalism. From small shipments to full truckloads, we offer flexible transportation solutions tailored to businesses across a wide range of industries.',
-    offeringsTitle: 'Our Over the Road (OTR) Services',
-    offeringsIntro: 'Comprehensive road freight for shipments of all sizes and types.',
+      'Most of the freight economy still moves on rubber. Kangaroo Logistics covers FTL and LTL over the road for local California work, regional West Coast lanes, and long-haul destinations across the United States. We match equipment to the cargo, set a pickup that the shipper can actually make, and stay with the truck until delivery is confirmed.',
+    offeringsTitle: 'OTR options we book',
+    offeringsIntro: 'Dry van, reefer, and specialized highway capacity sized to the shipment.',
     offerings: [
-      { title: 'Full Truckload (FTL) Shipping', description: 'Dedicated truck capacity for large shipments with fast, direct, and secure delivery.' },
-      { title: 'Less Than Truckload (LTL) Shipping', description: 'Cost-effective shipping for smaller loads without sacrificing reliability or speed.' },
-      { title: 'Local & Regional Freight', description: 'Dependable short-haul and regional trucking for nearby lanes.' },
-      { title: 'Long-Haul Transportation', description: 'Nationwide coverage for longer routes with clear ETAs.' },
-      { title: 'Expedited Freight Services', description: 'Faster options for time-sensitive shipments.' },
-      { title: 'Temperature-Controlled Freight', description: 'Reliable refrigerated transportation for perishable and temperature-sensitive cargo.' },
-      { title: 'Specialized Flatbed Transport', description: 'Safe transportation for oversized, heavy, and uniquely shaped freight.' },
-      { title: 'Door-to-Door Freight Transportation', description: 'Complete pickup and delivery with coordinated scheduling.' },
+      { title: 'Full Truckload (FTL)', description: 'Dedicated trailer when volume, security, or transit time needs the whole unit.' },
+      { title: 'Less Than Truckload (LTL)', description: 'Pallet-level shipping when a full trailer is more truck than you need.' },
+      { title: 'Local and regional hauls', description: 'California and nearby-state lanes with same-week pickup windows.' },
+      { title: 'Long-haul OTR', description: 'Cross-country dry van and reefer with ETAs you can plan labor around.' },
+      { title: 'Expedited trucking', description: 'Team drivers or tighter transit when the calendar will not wait.' },
+      { title: 'Temperature-controlled OTR', description: 'Reefer over the highway when product must stay in range.' },
+      { title: 'Flatbed and specialized', description: 'Open-deck and oversize when a van cannot take the freight.' },
+      { title: 'Drop trailer programs', description: 'Drop-and-hook where the shipper or receiver can support it.' },
     ],
-    reasonsTitle: 'Why Choose Our Over the Road (OTR) Services?',
+    reasonsTitle: 'Why shippers keep OTR on our desk',
     reasons: [
       {
-        title: 'Reliable Delivery',
+        title: 'Coverage before the clock runs out',
         description:
-          'We understand the importance of meeting deadlines and work diligently to deliver every shipment on time.',
+          'We work the load until a truck is assigned, not until the first round of emails goes unanswered.',
       },
       {
-        title: 'Experienced Drivers',
+        title: 'Pickup windows that match the dock',
         description:
-          'Our professional drivers are trained to handle shipments safely while following all transportation regulations.',
+          'A booked truck that arrives during lunch or after the warehouse closes is not covered. We confirm hours first.',
       },
       {
-        title: 'Flexible Transportation Solutions',
+        title: 'FTL and LTL in one place',
         description:
-          'Whether you need one-time shipping or ongoing logistics support, we provide customized freight solutions.',
+          'Volume changes week to week. You should not need a new vendor when a shipment shrinks from a van to six pallets.',
       },
       {
-        title: 'Nationwide Coverage',
+        title: 'California origin strength',
         description:
-          'Our transportation network allows us to move freight efficiently across cities, states, and nationwide.',
+          'Manteca is a practical base for Central Valley, Bay Area, and statewide outbound freight.',
       },
       {
-        title: 'Real-Time Shipment Tracking',
+        title: 'Check calls that mean something',
         description:
-          'Stay informed with shipment updates and real-time tracking throughout the transportation process.',
+          'Updates include location and ETA, not a generic “in transit” that you already knew.',
       },
       {
-        title: 'Economical Freight Solutions',
+        title: 'Accessorials discussed early',
         description:
-          'We deliver dependable transportation services at cost-effective rates without compromising quality.',
+          'Liftgate, inside delivery, detention, and layover are flagged when the freight profile requires them.',
       },
     ],
-    processTitle: 'How road freight works',
+    processTitle: 'How an OTR load is covered',
     process: [
       {
         step: '01',
-        title: 'Shipment Request',
+        title: 'Tender the facts',
         description:
-          'Share your origin, destination, cargo details, and timing so we can recommend the right FTL, LTL, or specialized option.',
+          'Origin, destination, commodity, weight or pallets, equipment, and pickup window are enough to start.',
       },
       {
         step: '02',
-        title: 'Capacity Matching',
+        title: 'Cover the truck',
         description:
-          'We match your freight with reliable truck capacity and confirm pickup windows that fit your schedule.',
+          'We match FTL, LTL, or specialized equipment and send you the rate plus any known accessorials.',
       },
       {
         step: '03',
-        title: 'Secure Transit',
+        title: 'Dispatch and track',
         description:
-          'Your shipment moves with professional handling, secure loading practices, and clear status updates along the route.',
+          'Driver details, pickup confirmation, and transit check calls stay with your coordinator.',
       },
       {
         step: '04',
-        title: 'On-Time Delivery',
+        title: 'Deliver and close',
         description:
-          'We complete delivery to the final destination and keep you informed through arrival confirmation.',
+          'We confirm delivery, collect POD, and note any exceptions while they are still fresh.',
       },
     ],
     faqs: [
       {
-        question: 'What types of freight can you transport?',
+        question: 'Do you run both FTL and LTL?',
         answer:
-          'We transport a wide variety of freight, including palletized goods, retail products, industrial equipment, construction materials, consumer goods, and commercial shipments. Our team can recommend the most suitable transportation solution based on your cargo.',
+          'Yes. If the freight fills a trailer, we book FTL. If it is a handful of pallets, we quote LTL and tell you the transit tradeoff.',
       },
       {
-        question: 'Do you offer Full Truckload (FTL) and Less Than Truckload (LTL) services?',
+        question: 'What equipment can you cover?',
         answer:
-          'Yes. We provide both Full Truckload (FTL) and Less Than Truckload (LTL) shipping options. Whether you need an entire truck or are shipping smaller loads, we have flexible solutions to meet your requirements.',
+          'Dry van and reefer are the most common. Flatbed and other specialized equipment are quoted when the cargo requires them.',
       },
       {
-        question: 'Which areas do you serve?',
+        question: 'Can you pick up in California and deliver nationwide?',
         answer:
-          'We offer road freight services across local, regional, and nationwide routes throughout the United States, ensuring reliable transportation wherever your business operates.',
+          'Yes. California origins to destinations across the U.S. are a core OTR pattern for us, along with inbound freight coming the other way.',
       },
       {
-        question: 'How do you ensure the safety of my cargo?',
+        question: 'How do you handle detention?',
         answer:
-          'Our experienced drivers follow strict safety procedures, and all shipments are handled with care using secure loading techniques and well-maintained equipment to help minimize the risk of damage during transit.',
+          'We record free time against the appointment, keep you informed if the dock is slow, and document detention so billing matches what happened on site.',
       },
       {
-        question: 'Do you provide expedited freight services?',
+        question: 'Is expedited available?',
         answer:
-          'Yes. We offer expedited road freight solutions for time-sensitive shipments to help ensure your cargo reaches its destination as quickly as possible.',
+          'When the deadline is real, we look at teams, dedicated runs, or a tighter transit plan and quote that option separately from standard OTR.',
       },
     ],
   },

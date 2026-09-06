@@ -13,10 +13,10 @@ export default function ServiceDetailFaq({ service }) {
             FAQ
           </SectionBadge>
           <h2 className="mt-5 font-display text-[30px] leading-[1.15] font-bold text-primary sm:mt-6 sm:text-[38px] lg:text-[44px]">
-            Frequently Asked Questions
+            Before you tender this lane
           </h2>
           <p className="mt-4 text-[15px] leading-7 text-muted sm:text-[16px]">
-            Still have questions? Here are answers about {service.label.toLowerCase()}.
+            Straight answers about how Kangaroo books {service.label.toLowerCase()}.
           </p>
         </div>
 

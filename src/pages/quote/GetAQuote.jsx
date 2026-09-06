@@ -13,16 +13,16 @@ import { getHomePageRoute } from '../../routes/routes.js'
 
 const quoteBenefits = [
   {
-    title: '24-hour estimate',
-    description: 'Free response with a clear plan for your lane and cargo.',
+    title: 'Same-desk quote',
+    description: 'OTR, reefer, drayage, ocean, warehouse, and multimodal from one file.',
   },
   {
-    title: 'Full service coverage',
-    description: 'Reefer, drayage, warehouse, multimodal, ocean, and road.',
+    title: 'Usable by next business day',
+    description: 'Give us origin, destination, commodity, and window — we send a rate you can book.',
   },
   {
-    title: 'Dedicated coordination',
-    description: 'Support from booking through pickup and final delivery.',
+    title: 'Covered through POD',
+    description: 'The coordinator who quotes the load stays on pickup, exceptions, and delivery.',
   },
 ]
 
@@ -53,8 +53,8 @@ export default function GetAQuotePage() {
             Get a Quote
           </h1>
           <p className="mt-4 max-w-2xl text-[15px] leading-7 text-white/75 sm:text-[17px] sm:leading-8">
-            Request a tailored quote for your logistics needs. Choose a service,
-            share shipment details, and our team will respond within 24 hours.
+            Choose the service, add cargo notes, and send it to the Manteca desk.
+            We reply with equipment, transit, and a rate — not a vague range.
           </p>
         </div>
       </section>
@@ -81,13 +81,12 @@ export default function GetAQuotePage() {
                 </SectionBadge>
 
                 <h2 className="mt-5 font-display text-[30px] leading-[1.15] font-bold text-primary sm:mt-6 sm:text-[36px] lg:text-[40px]">
-                  Tell us what you need to move
+                  Tender the facts we need to cover it
                 </h2>
 
                 <p className="mt-4 max-w-md text-[15px] leading-7 text-muted sm:text-[16px] sm:leading-7.5">
-                  Select the service that fits your shipment, then share contact
-                  details and cargo notes. We&apos;ll review your request and send a
-                  clear estimate.
+                  Pick a service, then add contact details and anything the dock
+                  will care about: hours, pallet count, setpoint, or last free day.
                 </p>
 
                 <ul className="mt-8 space-y-4">
@@ -160,7 +159,7 @@ export default function GetAQuotePage() {
                   Shipment details
                 </p>
                 <h3 className="mt-1.5 font-display text-[22px] font-bold text-primary sm:text-[24px]">
-                  Request your estimate
+                  Load details
                 </h3>
               </div>
 

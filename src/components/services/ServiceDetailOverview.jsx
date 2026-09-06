@@ -37,14 +37,14 @@ export default function ServiceDetailOverview({ service, onRequestQuote }) {
 
           <aside className="service-detail-aside rounded-3xl border border-primary/10 bg-primary p-6 text-white sm:p-8">
             <p className="font-display text-[13px] tracking-[0.14em] text-secondary uppercase">
-              Need this service?
+              Cover this lane
             </p>
             <h3 className="mt-3 font-display text-[26px] leading-tight font-bold sm:text-[28px]">
-              Get a free estimate in 24 hours
+              Quote from the Manteca desk
             </h3>
             <p className="mt-3 text-[15px] leading-7 text-white/70">
-              Share your lane, cargo type, and timing. Our team will map the right plan
-              and respond quickly.
+              Send origin, destination, commodity, and the pickup window. We come
+              back with equipment, transit, and a rate.
             </p>
 
             <div className="mt-7 space-y-3">

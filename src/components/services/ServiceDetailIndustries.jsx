@@ -8,10 +8,10 @@ export default function ServiceDetailIndustries() {
       <div className="custom_container">
         <div className="mx-auto max-w-3xl text-center">
           <SectionBadge icon={GlobeIcon} tone="soft">
-            Serving Diverse Industries
+            Freight we see most
           </SectionBadge>
           <h2 className="mt-5 font-display text-[30px] leading-[1.15] font-bold text-primary sm:mt-6 sm:text-[38px]">
-            Industries We Serve
+            Commodity types this desk covers
           </h2>
         </div>
 

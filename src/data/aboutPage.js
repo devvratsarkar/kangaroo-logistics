@@ -1,142 +1,131 @@
-/**
- * About page content adapted from Empath Logistics about-us,
- * rewritten for Kangaroo Logistics branding.
- * Source: https://www.empathlogistics.com/about-us
- */
-
 export const aboutPageContent = {
-  heroTagline: 'Your trusted logistics partner.',
-  introTitle: 'We are Kangaroo Logistics!',
+  heroTagline: 'California-based freight coordination you can count on.',
+  introTitle: 'Built to keep California freight moving',
   introParagraphs: [
-    'At Kangaroo Logistics, we believe logistics is more than moving freight—it’s about delivering reliability, building trust, and helping businesses grow. We provide comprehensive transportation and supply chain solutions designed to keep your shipments moving safely, efficiently, and on schedule.',
-    'With a customer-first approach and a commitment to operational excellence, we offer a full range of services, including road freight, ocean freight, drayage, reefer transportation, warehousing, packaging, and multimodal logistics. Whether you’re shipping locally across the United States or managing international freight, our experienced team delivers tailored solutions that meet your unique business needs.',
-    'Our strength lies in combining industry expertise, modern logistics technology, and a dependable network of transportation partners. From shipment planning and tracking to final delivery, we focus on transparency, efficiency, and exceptional service at every stage of the supply chain.',
-    'At Kangaroo Logistics, we don’t just transport goods—we create lasting partnerships by providing reliable logistics solutions that help our clients stay competitive in today’s fast-moving marketplace. Your success is our priority, and we’re dedicated to delivering every shipment with precision, care, and confidence.',
+    'Kangaroo Logistics is a California freight brokerage based in Manteca. We help shippers, manufacturers, and distributors move cargo across the U.S. with a practical mix of over-the-road trucking, temperature-controlled capacity, port drayage, ocean booking, warehousing, and multimodal planning.',
+    'We started this company to close a gap we saw every week: plenty of trucks, not enough clear ownership. When a pickup slips, a temperature setpoint drifts, or a container sits at a terminal, someone has to stay on the phone until the freight is moving again. That is the work we take on.',
+    'Our team books capacity, confirms appointments, watches exceptions, and keeps both shippers and carriers aligned. You get one point of contact, a plan that matches the cargo, and status updates you can share internally without chasing five different people.',
+    'Whether you are shipping produce out of the Central Valley, inbound containers through West Coast ports, or finished goods across the country, we treat every load as a live operation — not a ticket that disappears after booking.',
   ],
-  solutionsTitle: 'Freight Solutions Built Around Your Business',
+  solutionsTitle: 'What working with Kangaroo looks like',
   stats: [
-    { value: '30k+', label: 'Successful Shipments Completed' },
-    { value: '98%', label: 'Customer Satisfaction Rate' },
+    { value: 'CA HQ', label: 'Based in Manteca, California' },
+    { value: '6', label: 'Core freight services under one desk' },
   ],
   highlights: [
     {
-      title: 'Experienced Logistics Team',
+      title: 'Lane-first planning',
       description:
-        'Dedicated freight professionals delivering tailored transportation solutions with industry expertise.',
+        'We start with origin, destination, product, and timing — then match the mode instead of forcing freight into a one-size template.',
     },
     {
-      title: '24/7 Support',
+      title: 'Hands-on dispatch',
       description:
-        'Responsive support and real-time shipment updates whenever you need assistance.',
+        'Pickup windows, driver check calls, and exception handling stay with a coordinator who already knows the load.',
     },
   ],
-  missionTitle: 'Our Mission',
+  missionTitle: 'How we operate',
   missionItems: [
     {
-      title: 'Reliable Transportation',
-      description: 'Provide safe, timely, and dependable freight services for every shipment.',
+      title: 'Own the handoffs',
+      description: 'Port, warehouse, and highway transfers are coordinated before they become delays.',
     },
     {
-      title: 'Trusted Partnerships',
-      description:
-        'Build lasting relationships through transparency, integrity, and personalized service.',
+      title: 'Protect product quality',
+      description: 'Reefer setpoints, load securement, and handling notes travel with the shipment.',
     },
     {
-      title: 'Operational Excellence',
-      description:
-        'Optimize logistics with efficient planning and smart freight management solutions.',
+      title: 'Keep communication short',
+      description: 'You hear what changed, what we are doing, and when the next update lands.',
     },
     {
-      title: 'Customer Success',
-      description:
-        "Support our customers' growth by delivering flexible, reliable, and cost-effective transportation services.",
+      title: 'Use the right mode',
+      description: 'OTR, intermodal, ocean, or a mix — we choose what actually fits cost and transit.',
     },
     {
-      title: 'Tailored Freight Solutions',
-      description:
-        "Deliver customized logistics services designed to meet every customer's unique shipping needs.",
+      title: 'Stay reachable',
+      description: 'Dispatch and ops stay available when freight is in motion, including after hours.',
     },
     {
-      title: 'Safe Cargo Handling',
-      description:
-        'Ensure every shipment is transported securely with a strong focus on safety and reliability.',
+      title: 'Build repeatable lanes',
+      description: 'Once a lane works, we document it so the next shipment starts faster.',
     },
   ],
-  valuesTitle: 'Our Core Values',
+  valuesTitle: 'What we hold ourselves to',
   valuesIntro:
-    'Connecting Shippers, Carriers, and Logistics Experts Through Trusted Freight Solutions',
+    'Freight only works when shippers, carriers, and our desk share the same facts. These are the standards we use on every load.',
   values: [
     {
-      title: 'Relationship Building',
+      title: 'Clarity over volume',
       description:
-        'At Kangaroo Logistics, we believe in treating every customer with honesty, respect, and care. Each client is assigned a dedicated logistics team focused on understanding their unique transportation needs and providing personalized, reliable freight solutions that support long-term success.',
+        'We would rather quote a lane we can cover well than oversell capacity. If a window, equipment type, or rate does not work, we say so early and offer the next viable option.',
     },
     {
-      title: 'Excellent Customer Service',
+      title: 'Accountability on the clock',
       description:
-        'Delivering outstanding service is our priority every day. Our dedicated logistics professionals provide prompt support, clear communication, and personalized freight solutions to ensure every shipment is managed efficiently from pickup to delivery.',
+        'A booked load has an owner. Our coordinators confirm pickup, watch transit, and close the loop at delivery instead of handing the file to a general inbox.',
     },
     {
-      title: 'Trust & Reliability',
+      title: 'Respect for carriers',
       description:
-        'At Kangaroo Logistics, trust and reliability are the foundation of every partnership. We work closely with both shippers and carrier partners to ensure transparent communication, efficient coordination, and smooth freight operations. Our commitment to integrity, timely support, and dependable service helps build lasting relationships and keeps every shipment moving with confidence.',
+        'On-time pay, accurate load details, and realistic appointment times keep good trucks coming back. That reliability is what shippers feel on the dock.',
     },
     {
-      title: 'Community Service',
+      title: 'Local knowledge, national reach',
       description:
-        'At Kangaroo Logistics, we believe that success goes beyond delivering freight—it’s about making a positive impact. We are committed to building strong relationships, supporting the communities we serve, and conducting business with integrity, responsibility, and respect. Through meaningful partnerships and dependable service, we strive to create lasting value for our customers, carrier partners, and the communities around us.',
+        'California origins, West Coast ports, and inland destinations are our daily map. We use that regional fluency while covering lanes across the United States.',
     },
   ],
   capabilities: [
-    'Freight Brokerage',
-    'Full Truckload (FTL)',
-    'Less Than Truckload (LTL)',
-    'Reefer Shipping',
-    'Flatbed Transport',
-    'Container Drayage',
-    'Trusted Carrier Network',
-    'Fast & Reliable Service',
-    'Cost-Effective Logistics',
-    'Safe & Secure Shipping',
+    'Over-the-road FTL & LTL',
+    'Temperature-controlled freight',
+    'Port and ramp drayage',
+    'Ocean FCL & LCL booking',
+    'Multimodal / intermodal planning',
+    'Warehouse staging & storage',
+    'Appointment scheduling',
+    'Live load tracking',
+    'Detention & exception handling',
+    'Produce and food lanes',
+    'Retail and e-commerce freight',
+    'Industrial & construction hauls',
+    'Cross-dock coordination',
+    'Documentation support',
+    'Dedicated lane programs',
     '24/7 Support',
-    'Cross-Border Freight',
-    'Efficient Freight Management',
-    'Customized Shipping Solutions',
-    'Supply Chain Solutions',
-    'On-Time Deliveries',
   ],
   faqsIntro:
-    'Find answers to common questions about our freight brokerage services, shipping process, carrier network, and logistics solutions.',
+    'Straight answers about how Kangaroo Logistics books freight, covers lanes, and stays with a shipment after pickup.',
   faqs: [
     {
-      question: 'Who are you?',
+      question: 'Where is Kangaroo Logistics based?',
       answer:
-        'We are a trusted logistics company providing reliable freight transportation, warehousing, and supply chain solutions across the United States and international markets. Our mission is to deliver every shipment safely, efficiently, and on time.',
+        'Our office is at 460 Gavi Lane, Manteca, California. We cover shipments nationwide from this California base, with a strong focus on West Coast origins, ports, and inbound distribution.',
     },
     {
-      question: 'What makes your company different?',
+      question: 'Are you a carrier or a brokerage?',
       answer:
-        'We combine industry expertise, advanced logistics technology, experienced professionals, and customer-focused service to provide customized transportation solutions for businesses of all sizes.',
+        'We operate as a freight brokerage. That means we match your shipment with vetted capacity — dry van, reefer, flatbed, drayage, ocean, or intermodal — and manage the move from quote through delivery.',
     },
     {
-      question: 'What industries do you serve?',
+      question: 'What kinds of freight do you handle?',
       answer:
-        'We work with a wide range of industries, including manufacturing, retail, healthcare, automotive, food & beverage, construction, e-commerce, and government organizations.',
+        'Common freight includes produce and other temperature-sensitive goods, container moves from ports and ramps, retail and e-commerce inventory, industrial materials, and general dry freight. If a load needs special equipment, we confirm that before we book.',
     },
     {
-      question: 'Are you licensed and insured?',
+      question: 'How quickly can I get a quote?',
       answer:
-        'Yes. We operate in compliance with industry regulations and maintain the required licensing and insurance to ensure safe and reliable transportation services.',
+        'Share origin, destination, commodity, weight or pallet count, and the pickup window. Most quotes go out within one business day. Time-critical or equipment-specific loads may need a short follow-up call.',
     },
     {
-      question: 'How do you ensure the safety of shipments?',
+      question: 'Do you provide tracking after pickup?',
       answer:
-        'We follow strict safety standards, partner with trusted carriers, utilize shipment tracking, and implement quality control processes to ensure every shipment reaches its destination securely.',
+        'Yes. Once a load is covered, you receive pickup confirmation, transit updates, and delivery status. If something changes — weather, appointment, or equipment — we contact you instead of waiting for you to ask.',
     },
     {
-      question: 'Can you provide customized logistics solutions?',
+      question: 'Can you run repeating lanes?',
       answer:
-        'Absolutely. Every business has unique shipping needs, so we create customized logistics plans based on your cargo type, budget, delivery schedule, and supply chain requirements.',
+        'Yes. After a lane proves out, we can set a standing program with preferred equipment, appointment patterns, and backup coverage so weekly or seasonal volume is easier to plan.',
     },
   ],
 }

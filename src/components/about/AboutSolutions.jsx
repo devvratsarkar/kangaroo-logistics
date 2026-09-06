@@ -56,7 +56,7 @@ export default function AboutSolutions() {
                 aria-hidden="true"
               />
               <p className="absolute bottom-4 left-4 font-display text-[13px] tracking-[0.12em] text-secondary uppercase">
-                Proven results
+                Manteca, California
               </p>
             </div>
 
@@ -110,7 +110,7 @@ export default function AboutSolutions() {
         <div className="mt-7 flex flex-col gap-5 overflow-hidden rounded-[24px] bg-primary sm:mt-8 lg:mt-9 lg:flex-row lg:items-center lg:justify-between">
           <div className="px-6 pt-6 sm:px-8 sm:pt-7 lg:py-7 lg:pr-0">
             <p className="font-display text-[13px] tracking-[0.14em] text-secondary uppercase">
-              Call Us Anytime
+              Dispatch phones
             </p>
             <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-display text-[20px] font-semibold text-white sm:text-[24px]">
               {companyPhones.map((phone, index) => (
@@ -129,7 +129,7 @@ export default function AboutSolutions() {
               to={getQuotePageRoute()}
               className="group inline-flex items-center gap-2 rounded-full bg-secondary px-6 py-3 font-display text-[15px] font-medium text-primary transition-colors hover:bg-secondary/90"
             >
-              Get Started
+              Request a quote
               <ArrowRightLongIcon className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
             </Link>
             <a

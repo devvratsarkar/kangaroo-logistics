@@ -17,16 +17,16 @@ export default function ServicesCta() {
 
         <div className="relative z-1 mx-auto max-w-3xl text-center">
           <SectionBadge icon={ChatBubbleIcon} tone="light">
-            Ready to ship
+            Next shipment
           </SectionBadge>
 
           <h2 className="mt-5 font-display text-[30px] leading-[1.15] font-bold sm:mt-6 sm:text-[38px] lg:text-[44px]">
-            Tell us what you need to move — we will map the right service
+            Send the lane. We will tell you the mode and the rate.
           </h2>
 
           <p className="mx-auto mt-4 max-w-xl text-[15px] leading-7 text-white/70 sm:text-[16px] sm:leading-7.5">
-            Share lane details, cargo type, and timing. Our team responds with a
-            clear plan and a free estimate within 24 hours.
+            Origin, destination, commodity, and pickup window are enough to
+            start. Most quotes go out within one business day.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-9 sm:flex-row sm:gap-4">

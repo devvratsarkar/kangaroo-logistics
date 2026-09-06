@@ -26,12 +26,12 @@ export default function ContactFormSection() {
               </SectionBadge>
 
               <h2 className="mt-5 font-display text-[28px] leading-[1.15] font-bold text-primary sm:mt-6 sm:text-[34px] lg:text-[38px]">
-                Need Help? We&apos;re Here
+                Send a load or a question
               </h2>
 
               <p className="mt-3 text-[15px] leading-7 text-muted sm:text-[16px]">
-                If you need help with any freight solution, simply send us a message.
-                Our team will respond quickly.
+                Include origin, destination, commodity, and timing if you have
+                them. A coordinator will reply from the Manteca desk.
               </p>
 
               <div className="mt-7">

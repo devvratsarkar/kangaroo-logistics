@@ -14,7 +14,7 @@ export default function AboutFaq() {
             Frequently Asked Questions
           </SectionBadge>
           <h2 className="mt-5 font-display text-[30px] leading-[1.15] font-bold text-primary sm:mt-6 sm:text-[38px] lg:text-[44px]">
-            Find answers to common questions
+            Questions we get before a first load
           </h2>
           <p className="mt-4 text-[15px] leading-7 text-muted sm:text-[16px]">
             {aboutPageContent.faqsIntro}

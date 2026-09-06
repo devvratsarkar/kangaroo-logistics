@@ -26,17 +26,17 @@ export default function ServicesHero() {
         </SectionBadge>
 
         <p className="mt-5 font-display text-[15px] tracking-[0.08em] text-secondary uppercase sm:mt-6 sm:text-[16px]">
-          Complete logistics solutions for every shipment.
+          Booked in Manteca. Covered across the U.S.
         </p>
 
         <h1 className="mt-3 max-w-3xl font-display text-[36px] leading-[1.12] font-bold tracking-[-0.02em] sm:text-[48px] lg:text-[56px]">
-          Complete Logistics Solutions
+          Freight services we actually run
         </h1>
 
         <p className="mt-5 max-w-2xl text-[15px] leading-7 text-white/72 sm:mt-6 sm:text-[17px] sm:leading-8">
-          From road transportation and ocean freight to warehousing, drayage,
-          multimodal transport, and temperature-controlled shipping — reliable,
-          cost-effective services tailored to your shipping requirements.
+          Over-the-road, reefer, drayage, ocean, warehouse staging, and
+          multimodal plans — quoted and dispatched from one California desk
+          that stays with the load through delivery.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10">

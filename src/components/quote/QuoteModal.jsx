@@ -56,10 +56,10 @@ export default function QuoteModal({
                 id={titleId}
                 className="mt-1 font-display text-[20px] leading-tight font-bold text-primary sm:mt-1.5 sm:text-[28px]"
               >
-                {serviceLabel ? `Quote for ${serviceLabel}` : 'Get a free estimate'}
+                {serviceLabel ? `Quote for ${serviceLabel}` : 'Quote this lane'}
               </h2>
               <p className="mt-1.5 max-w-md text-[13px] leading-5 text-muted sm:mt-2 sm:text-[15px] sm:leading-6">
-                Share your shipment details and we&apos;ll respond within 24 hours.
+                Origin, destination, commodity, and pickup window are enough to start.
               </p>
             </div>
 

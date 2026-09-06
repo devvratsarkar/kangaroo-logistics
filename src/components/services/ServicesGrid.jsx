@@ -12,7 +12,7 @@ export default function ServicesGrid() {
             Our Services
           </SectionBadge>
           <h2 className="mt-5 font-display text-[32px] leading-[1.15] font-bold sm:mt-6 sm:text-[40px] lg:text-[48px]">
-            Our Services
+            Six modes, one desk
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-7 text-muted sm:text-[16px] sm:leading-7.5">
             {servicesPageIntro}
@@ -54,11 +54,11 @@ export default function ServicesGrid() {
                     {service.label}
                   </span>
                   <span className="mt-3 text-[15px] leading-7 text-muted">
-                    {service.description}
+                    {service.pageDescription ?? service.description}
                   </span>
 
                   <span className="mt-auto flex items-center gap-2 pt-6 font-display text-[15px] font-medium text-primary">
-                    Read More
+                    See how we run it
                     <ArrowRightLongIcon className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </span>
                 </span>

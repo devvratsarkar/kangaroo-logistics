@@ -26,11 +26,11 @@ export default function BlogHero() {
         </SectionBadge>
 
         <h1 className="mt-5 max-w-3xl font-display text-[36px] leading-[1.12] font-bold tracking-[-0.02em] sm:mt-6 sm:text-[46px] lg:text-[52px]">
-          Supply chain insights & logistics news
+          Notes from the freight desk
         </h1>
         <p className="mt-4 max-w-2xl text-[15px] leading-7 text-white/75 sm:text-[17px] sm:leading-8">
-          Practical freight insights, industry updates, and logistics guides from
-          the Kangaroo Logistics team.
+          Practical writing from Kangaroo Logistics on California outbound lanes,
+          reefer handling, drayage clocks, and how we quote a load.
         </p>
       </div>
     </section>

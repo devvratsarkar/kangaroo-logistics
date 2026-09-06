@@ -22,8 +22,11 @@ export default function AboutValues() {
             Our Core Values
           </SectionBadge>
           <h2 className="mt-5 font-display text-[28px] leading-[1.2] font-bold text-primary sm:mt-6 sm:text-[36px] lg:text-[42px]">
-            {aboutPageContent.valuesIntro}
+            {aboutPageContent.valuesTitle}
           </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-7 text-muted sm:text-[16px]">
+            {aboutPageContent.valuesIntro}
+          </p>
         </div>
 
         <ul className="mt-10 grid gap-5 sm:mt-12 lg:grid-cols-2 lg:gap-6">

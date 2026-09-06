@@ -28,7 +28,7 @@ export default function AboutIntro() {
               to={getContactPageRoute()}
               className="group mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-display text-[15px] font-medium text-white transition-colors hover:bg-primary/90 sm:text-[16px]"
             >
-              Send Message
+              Talk to dispatch
               <ArrowRightLongIcon className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
             </Link>
           </div>

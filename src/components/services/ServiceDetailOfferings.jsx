@@ -27,7 +27,7 @@ export default function ServiceDetailOfferings({ service }) {
       <div className="custom_container relative">
         <div className="mx-auto max-w-3xl text-center">
           <SectionBadge icon={ProcessIcon} tone="soft">
-            Shipping Made Simple
+            What we cover
           </SectionBadge>
           <h2 className="mt-5 font-display text-[30px] leading-[1.15] font-bold text-primary sm:mt-6 sm:text-[38px] lg:text-[44px]">
             {service.offeringsTitle}
