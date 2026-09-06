@@ -30,14 +30,14 @@ export default function HomeFeatures() {
   const hasPillars = features.length > 0
 
   return (
-    <section className="home-features-section" aria-label="Pillars of Nationwide Logistics">
+    <section className="home-features-section" aria-label="Pillars of Kangaroo Logistics">
       <div className="custom_container">
         <div className="home-features-top">
           <div className="home-features-header">
             <SectionBadge tone="soft">Pillars</SectionBadge>
             <h2 className="home-features-title">Pillars of</h2>
             <h2 className="home-features-title home-features-title--last">
-              Nationwide Logistics
+              Kangaroo Logistics
             </h2>
           </div>
 

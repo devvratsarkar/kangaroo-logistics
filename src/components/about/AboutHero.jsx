@@ -7,7 +7,7 @@ export default function AboutHero() {
   return (
     <section className="services-page-hero relative overflow-hidden text-white">
       <img
-        src="/banners/road-transport.webp"
+        src="/about/about-hero.jpg"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 size-full object-cover"
