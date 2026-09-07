@@ -55,7 +55,10 @@ export default function HomeConsultations() {
               validationSchema={helpdeskSchema}
               onSubmit={async (values, { resetForm, setStatus }) => {
                 try {
-                  await submitConsultation(values)
+                  await submitConsultation(values, {
+                    formSource: 'Home helpdesk',
+                    requestType: 'Helpdesk message',
+                  })
                   resetForm()
                   setStatus({ success: true })
                 } catch {

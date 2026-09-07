@@ -219,6 +219,7 @@ export default function QuoteRequestForm({
   lockedServiceSlug = '',
   idPrefix = 'quote',
   submitLabel = 'Request a Quote',
+  formSource = 'Website form',
   onSuccess,
   className = '',
   stickySubmit = false,
@@ -232,7 +233,10 @@ export default function QuoteRequestForm({
         validationSchema={quoteValidationSchema}
         onSubmit={async (values, { resetForm, setStatus }) => {
           try {
-            await submitConsultation(values)
+            await submitConsultation(values, {
+              formSource,
+              requestType: 'Quote request',
+            })
             if (onSuccess) {
               onSuccess(values)
             } else {

@@ -80,6 +80,7 @@ export default function QuoteModal({
           lockedServiceSlug={lockedServiceSlug}
           idPrefix="quote-modal"
           submitLabel="Submit quote request"
+          formSource={serviceLabel ? `Quote modal · ${serviceLabel}` : 'Quote modal'}
           stickySubmit
           compact
           className="min-h-0 flex-1"
