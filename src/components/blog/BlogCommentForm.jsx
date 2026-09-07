@@ -1,6 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import * as Yup from 'yup'
 import { ArrowRightLongIcon } from '../ui/AllSVG.jsx'
+import { submitBlogComment } from '../../utils/submitConsultation.js'
 
 const commentSchema = Yup.object({
   name: Yup.string().trim().min(3, 'Name must be at least 3 characters').required('Name is required'),
@@ -53,8 +54,16 @@ export default function BlogCommentForm({ postTitle }) {
         validationSchema={commentSchema}
         onSubmit={async (values, { resetForm, setStatus, setSubmitting }) => {
           try {
-            await new Promise((resolve) => setTimeout(resolve, 700))
-            console.info('Blog comment submitted:', values)
+            await submitBlogComment(
+              {
+                ...values,
+                articleTitle: postTitle,
+              },
+              {
+                formSource: postTitle ? `Blog article · ${postTitle}` : 'Blog article',
+                requestType: 'Blog comment',
+              },
+            )
             resetForm()
             setStatus({ success: true })
           } catch {

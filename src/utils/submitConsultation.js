@@ -9,6 +9,7 @@ import { serviceNavItems } from '../data/services.js'
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const COMMENT_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_POST_COMMENT_TEMPLATE_ID
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 const SITE_URL = String(import.meta.env.VITE_SITE_URL || '').replace(/\/$/, '')
 
@@ -45,14 +46,19 @@ function formatSubmittedAt() {
 }
 
 function buildTemplateParams(values, { formSource, requestType }) {
-  const fullName = displayValue(values.fullName)
+  const fullName = displayValue(values.fullName || values.name)
   const email = displayValue(values.email)
   const hasEmail = Boolean(values.email?.trim())
   const phone = displayValue(values.phone)
-  const serviceType = resolveServiceLabel(values.serviceType)
+  const city = displayValue(values.city || values.address)
+  const articleTitle = displayValue(values.articleTitle || values.postTitle, '')
+  const serviceType = articleTitle || resolveServiceLabel(values.serviceType)
   const siteUrl = SITE_URL || (typeof window !== 'undefined' ? window.location.origin : '')
   const pageUrl =
     typeof window !== 'undefined' ? window.location.href : siteUrl || NOT_PROVIDED
+  const emailSubject = articleTitle
+    ? `${requestType} on “${articleTitle}” from ${fullName}`
+    : `${requestType} — ${serviceType} from ${fullName}`
 
   return {
     full_name: fullName,
@@ -60,7 +66,11 @@ function buildTemplateParams(values, { formSource, requestType }) {
     user_email: email,
     reply_to: hasEmail ? values.email.trim() : primaryEmail.label,
     user_phone: phone,
+    user_city: city,
+    city,
     service_type: serviceType,
+    article_title: articleTitle || NOT_PROVIDED,
+    post_title: articleTitle || NOT_PROVIDED,
     message: displayValue(values.message, ''),
     message_html: formatMessageHtml(values.message),
     form_source: formSource,
@@ -74,24 +84,48 @@ function buildTemplateParams(values, { formSource, requestType }) {
     company_email: primaryEmail.label,
     company_address: companyAddress.formatted,
     company_hours: companyHours.label,
-    email_subject: `${requestType} — ${serviceType} from ${fullName}`,
+    email_subject: emailSubject,
   }
+}
+
+async function sendEmail(values, { formSource, requestType, templateId }) {
+  if (!SERVICE_ID || !templateId || !PUBLIC_KEY) {
+    throw new Error('EmailJS environment variables are missing')
+  }
+
+  try {
+    await emailjs.send(
+      SERVICE_ID,
+      templateId,
+      buildTemplateParams(values, { formSource, requestType }),
+      { publicKey: PUBLIC_KEY },
+    )
+  } catch (error) {
+    console.error('EmailJS send failed', error)
+    throw error
+  }
+
+  return { success: true }
 }
 
 export async function submitConsultation(
   values,
   { formSource = 'Website form', requestType = 'Quote request' } = {},
 ) {
-  if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-    throw new Error('EmailJS environment variables are missing')
-  }
+  return sendEmail(values, {
+    formSource,
+    requestType,
+    templateId: TEMPLATE_ID,
+  })
+}
 
-  await emailjs.send(
-    SERVICE_ID,
-    TEMPLATE_ID,
-    buildTemplateParams(values, { formSource, requestType }),
-    { publicKey: PUBLIC_KEY },
-  )
-
-  return { success: true }
+export async function submitBlogComment(
+  values,
+  { formSource = 'Blog article', requestType = 'Blog comment' } = {},
+) {
+  return sendEmail(values, {
+    formSource,
+    requestType,
+    templateId: COMMENT_TEMPLATE_ID || TEMPLATE_ID,
+  })
 }
