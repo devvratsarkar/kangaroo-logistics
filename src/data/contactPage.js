@@ -6,7 +6,7 @@ import {
 } from './companyContact.js'
 
 export const contactPageInfo = {
-  heroTagline: 'Dispatch is in Manteca. The freight can go anywhere.',
+  heroTagline: 'Based in Manteca, we move freight across the USA and cross-border into Canada.',
   intro:
     'Call, email, or send a load tender. Use this page for quotes, pickup questions, tracking, and anything that needs a coordinator on the file — not a generic inbox.',
   hours: companyHours.label,

@@ -26,7 +26,7 @@ export default function ServicesHero() {
         </SectionBadge>
 
         <p className="mt-5 font-display text-[15px] tracking-[0.08em] text-secondary uppercase sm:mt-6 sm:text-[16px]">
-          Booked in Manteca. Covered across the U.S.
+          Booked in Manteca. Covered across the U.S. and Canada.
         </p>
 
         <h1 className="mt-3 max-w-3xl font-display text-[36px] leading-[1.12] font-bold tracking-[-0.02em] sm:text-[48px] lg:text-[56px]">
@@ -35,7 +35,7 @@ export default function ServicesHero() {
 
         <p className="mt-5 max-w-2xl text-[15px] leading-7 text-white/72 sm:mt-6 sm:text-[17px] sm:leading-8">
           Over-the-road, reefer, drayage, ocean, warehouse staging, and
-          multimodal plans — quoted and dispatched from one California desk
+          multimodal plans — quoted and dispatched from one desk
           that stays with the load through delivery.
         </p>
 

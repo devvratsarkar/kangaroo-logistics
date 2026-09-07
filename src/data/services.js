@@ -86,7 +86,7 @@ export const serviceNavItems = [
 }))
 
 export const servicesPageIntro =
-  'Kangaroo Logistics books and manages the freight modes California shippers actually use: over-the-road FTL and LTL, temperature-controlled trucking, port and ramp drayage, ocean containers, warehouse staging, and multimodal plans that connect those legs. Based in Manteca, we cover local work and nationwide destinations from the same desk.'
+  'Kangaroo Logistics books and manages the freight modes shippers rely on across the USA and Canada: over-the-road FTL and LTL, temperature-controlled trucking, port and ramp drayage, ocean containers, warehouse staging, and multimodal transportation solutions. Based in Manteca, we support local, nationwide, and cross-border freight between the United States and Canada from the same desk.'
 
 export const servicesPageHighlights = [
   {

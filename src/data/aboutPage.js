@@ -1,11 +1,11 @@
 export const aboutPageContent = {
-  heroTagline: 'California-based freight coordination you can count on.',
-  introTitle: 'Built to keep California freight moving',
+  heroTagline: 'U.S. and Canada freight coordination you can count on.',
+  introTitle: 'Built to Keep Freight Moving Across the USA & Canada',
   introParagraphs: [
-    'Kangaroo Logistics is a California freight brokerage based in Manteca. We help shippers, manufacturers, and distributors move cargo across the U.S. with a practical mix of over-the-road trucking, temperature-controlled capacity, port drayage, ocean booking, warehousing, and multimodal planning.',
+    'Kangaroo Logistics is a freight brokerage based in Manteca. We help shippers, manufacturers, and distributors move cargo across the U.S. and Canada with a practical mix of over-the-road trucking, temperature-controlled capacity, port drayage, ocean booking, warehousing, and multimodal planning.',
     'We started this company to close a gap we saw every week: plenty of trucks, not enough clear ownership. When a pickup slips, a temperature setpoint drifts, or a container sits at a terminal, someone has to stay on the phone until the freight is moving again. That is the work we take on.',
     'Our team books capacity, confirms appointments, watches exceptions, and keeps both shippers and carriers aligned. You get one point of contact, a plan that matches the cargo, and status updates you can share internally without chasing five different people.',
-    'Whether you are shipping produce out of the Central Valley, inbound containers through West Coast ports, or finished goods across the country, we treat every load as a live operation — not a ticket that disappears after booking.',
+    'Whether you are shipping produce out of the Central Valley, inbound containers through West Coast ports, or finished goods across the U.S. and Canada, we treat every load as a live operation — not a ticket that disappears after booking.',
   ],
   solutionsTitle: 'What working with Kangaroo looks like',
   stats: [
@@ -71,9 +71,9 @@ export const aboutPageContent = {
         'On-time pay, accurate load details, and realistic appointment times keep good trucks coming back. That reliability is what shippers feel on the dock.',
     },
     {
-      title: 'Local knowledge, national reach',
+      title: 'Local Knowledge, National Reach',
       description:
-        'California origins, West Coast ports, and inland destinations are our daily map. We use that regional fluency while covering lanes across the United States.',
+        'California roots, West Coast ports, and inland destinations are our daily map. We combine local expertise with reliable freight coverage across the USA and cross-border Canada.',
     },
   ],
   capabilities: [
@@ -100,7 +100,7 @@ export const aboutPageContent = {
     {
       question: 'Where is Kangaroo Logistics based?',
       answer:
-        'Our office is at 460 Gavi Lane, Manteca, California. We cover shipments nationwide from this California base, with a strong focus on West Coast origins, ports, and inbound distribution.',
+        'Our office is at 460 Gavi Lane, Manteca, California. We cover shipments across the U.S. and Canada from this office, with a strong focus on West Coast origins, ports, and inbound distribution.',
     },
     {
       question: 'Are you a carrier or a brokerage?',
