@@ -21,9 +21,7 @@ const socialIcons = {
   linkedin: LinkedInIcon,
 }
 
-function FooterLink({ item }) {
-  const className = 'site-footer-link'
-
+function FooterLink({ item, className = 'site-footer-link' }) {
   if (item.to.startsWith('#')) {
     return (
       <a href={item.to} className={className}>
@@ -151,7 +149,7 @@ export default function PrimaryFooter() {
             <ul className="site-footer-bottom-menu">
               {footerBottomLinks.map((item) => (
                 <li key={item.label}>
-                  <a href={item.to}>{item.label}</a>
+                  <FooterLink item={item} className="site-footer-bottom-link" />
                 </li>
               ))}
             </ul>

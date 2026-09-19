@@ -29,3 +29,11 @@ export function getBlogPageRoute() {
 export function getBlogDetailPageRoute(slug = ':slug') {
   return `/blog/${slug}`
 }
+
+export function getPrivacyPageRoute() {
+  return `/privacy-policy`
+}
+
+export function getTermsPageRoute() {
+  return `/terms-and-conditions`
+}

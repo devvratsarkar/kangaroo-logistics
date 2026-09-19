@@ -2,6 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik'
 import Select from 'react-select'
 import { ArrowRightLongIcon } from '../ui/AllSVG.jsx'
 import { submitConsultation } from '../../utils/submitConsultation.js'
+import LegalConsentField from '../legal/LegalConsentField.jsx'
 import {
   createQuoteInitialValues,
   getQuoteSelectStyles,
@@ -163,6 +164,10 @@ function QuoteFormFields({
         />
         <FieldError name="message" />
       </div>
+
+      {stickySubmit ? null : (
+        <LegalConsentField id={`${idPrefix}-acceptedLegal`} compact={compact} />
+      )}
     </>
   )
 
@@ -201,7 +206,10 @@ function QuoteFormFields({
             compact ? 'px-4 sm:px-7' : 'px-5 sm:px-7',
           ].join(' ')}
         >
-          {submitButton}
+          <div className={compact ? 'space-y-3' : 'space-y-4'}>
+            <LegalConsentField id={`${idPrefix}-acceptedLegal`} compact={compact} />
+            {submitButton}
+          </div>
         </div>
       </Form>
     )

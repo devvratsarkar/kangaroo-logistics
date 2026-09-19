@@ -1,11 +1,16 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import * as Yup from 'yup'
 import SectionBadge from '../common/SectionBadge.jsx'
+import LegalConsentField, {
+  legalConsentInitialValue,
+  legalConsentSchema,
+} from '../legal/LegalConsentField.jsx'
 import { ArrowRightLongIcon, ChatBubbleIcon } from '../ui/AllSVG.jsx'
 import { submitConsultation } from '../../utils/submitConsultation.js'
 
 const initialValues = {
   message: '',
+  acceptedLegal: legalConsentInitialValue,
 }
 
 const helpdeskSchema = Yup.object({
@@ -14,6 +19,7 @@ const helpdeskSchema = Yup.object({
     .min(10, 'Message must be at least 10 characters')
     .max(1000, 'Message must be 1000 characters or less')
     .required('Please enter a message'),
+  acceptedLegal: legalConsentSchema,
 })
 
 const inputClassName =
@@ -117,6 +123,8 @@ export default function HomeConsultations() {
                         className="mt-1.5 text-[13px] leading-5 text-red-500"
                       />
                     </div>
+
+                    <LegalConsentField id="helpdesk-acceptedLegal" />
 
                     <button
                       type="submit"

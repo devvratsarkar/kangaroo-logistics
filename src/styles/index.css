@@ -1638,14 +1638,16 @@ input:disabled {
   }
 }
 
-.site-footer-bottom-menu a {
+.site-footer-bottom-menu a,
+.site-footer-bottom-link {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.62);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.site-footer-bottom-menu a:hover {
+.site-footer-bottom-menu a:hover,
+.site-footer-bottom-link:hover {
   color: var(--color-secondary);
 }
 
@@ -2944,6 +2946,27 @@ a.site-toolbar-chip:hover {
   }
 }
 
+.legal-consent-checkbox {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  accent-color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.legal-consent-link {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.legal-consent-link:hover {
+  color: var(--color-secondary-ink);
+}
+
 /* ── Contact page ── */
 
 .contact-info-link {
@@ -3123,5 +3146,78 @@ a.site-toolbar-chip:hover {
 @media (min-width: 640px) {
   .blog-detail-content p {
     font-size: 17px;
+  }
+}
+
+/* ── Legal pages ── */
+
+.legal-section {
+  scroll-margin-top: 120px;
+}
+
+.legal-section + .legal-section {
+  margin-top: 36px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(13, 27, 61, 0.08);
+}
+
+.legal-document h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-primary);
+}
+
+.legal-document p,
+.legal-document li {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--color-muted);
+}
+
+.legal-document p + p {
+  margin-top: 14px;
+}
+
+.legal-document ul {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 0 0 0 18px;
+}
+
+.legal-document li strong {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.legal-toc-link {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.legal-toc-link:hover {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+@media (min-width: 640px) {
+  .legal-document h2 {
+    font-size: 26px;
+  }
+
+  .legal-document p,
+  .legal-document li {
+    font-size: 16px;
   }
 }

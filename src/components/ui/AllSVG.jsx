@@ -403,6 +403,26 @@ export function HeadsetIcon({ className = 'size-4', strokeWidth = 1.7 }) {
   )
 }
 
+export function ShieldIcon({ className = 'size-4', strokeWidth = 1.7 }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      aria-hidden="true"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 3.75 4.5 6.75v6.15c0 4.14 2.7 7.35 7.5 8.85 4.8-1.5 7.5-4.71 7.5-8.85V6.75L12 3.75Z"
+      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="m9 12 2 2 4-4" />
+    </svg>
+  )
+}
+
 export function DeliveryCartIcon({ className = 'size-4', strokeWidth = 1.7 }) {
   return (
     <svg

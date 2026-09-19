@@ -8,15 +8,17 @@ import {
   getBlogPageRoute,
   getContactPageRoute,
   getHomePageRoute,
+  getPrivacyPageRoute,
   getQuotePageRoute,
   getServicesPageRoute,
+  getTermsPageRoute,
 } from '../routes/routes.js'
 
 export const footerCompanyLinks = [
   { label: 'Home', to: getHomePageRoute() },
   { label: 'About Us', to: getAboutPageRoute() },
-  { label: 'Privacy Policy', to: '#privacy-policy' },
-  { label: 'Terms & Condition', to: '#terms-and-conditions' },
+  { label: 'Privacy Policy', to: getPrivacyPageRoute() },
+  { label: 'Terms & Conditions', to: getTermsPageRoute() },
 ]
 
 export const footerUsefulLinks = [
@@ -27,8 +29,8 @@ export const footerUsefulLinks = [
 ]
 
 export const footerBottomLinks = [
-  { label: 'Privacy and Policy', to: '#privacy-policy' },
-  { label: 'Sitemap', to: '#sitemap' },
+  { label: 'Privacy Policy', to: getPrivacyPageRoute() },
+  { label: 'Terms & Conditions', to: getTermsPageRoute() },
   { label: "FAQ's", to: '#faq' },
 ]
 

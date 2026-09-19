@@ -7,15 +7,19 @@ import ContactUsPage from '../pages/contact/ContactUs'
 import GetAQuotePage from '../pages/quote/GetAQuote'
 import BlogPage from '../pages/blog/Blog'
 import BlogDetailPage from '../pages/blog/BlogDetail'
+import PrivacyPolicyPage from '../pages/legal/PrivacyPolicy'
+import TermsAndConditionsPage from '../pages/legal/TermsAndConditions'
 import {
   getAboutPageRoute,
   getBlogDetailPageRoute,
   getBlogPageRoute,
   getContactPageRoute,
   getHomePageRoute,
+  getPrivacyPageRoute,
   getQuotePageRoute,
   getServiceDetailPageRoute,
   getServicesPageRoute,
+  getTermsPageRoute,
 } from './routes'
 
 export const RouterData = [
@@ -53,6 +57,14 @@ export const RouterData = [
       {
         path: getBlogDetailPageRoute(),
         element: <BlogDetailPage />,
+      },
+      {
+        path: getPrivacyPageRoute(),
+        element: <PrivacyPolicyPage />,
+      },
+      {
+        path: getTermsPageRoute(),
+        element: <TermsAndConditionsPage />,
       },
     ],
   },
