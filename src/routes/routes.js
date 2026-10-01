@@ -37,3 +37,7 @@ export function getPrivacyPageRoute() {
 export function getTermsPageRoute() {
   return `/terms-and-conditions`
 }
+
+export function getSmsTermsPageRoute() {
+  return `/sms-terms-and-conditions`
+}

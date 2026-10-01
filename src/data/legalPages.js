@@ -1,7 +1,12 @@
 import { companyAddress, primaryEmail, primaryPhone } from './companyContact.js'
-import { getContactPageRoute, getPrivacyPageRoute, getTermsPageRoute } from '../routes/routes.js'
+import {
+  getContactPageRoute,
+  getPrivacyPageRoute,
+  getSmsTermsPageRoute,
+  getTermsPageRoute,
+} from '../routes/routes.js'
 
-export const legalLastUpdated = 'September 19, 2026'
+export const legalLastUpdated = 'October 1, 2026'
 export const legalCompanyName = 'Kangaroo Logistics LLC'
 
 export const privacyPolicyPage = {
@@ -40,7 +45,7 @@ export const privacyPolicyPage = {
       items: [
         {
           title: 'Quote and contact forms',
-          text: 'Name, email, phone number, city, service type, shipment notes, and any origin, destination, commodity, or timing details you include.',
+          text: 'Name, email, phone number, city, service type, shipment notes, any origin, destination, commodity, or timing details you include, and whether you chose to opt in to SMS.',
         },
         {
           title: 'Blog comments',
@@ -65,6 +70,7 @@ export const privacyPolicyPage = {
         'Prepare rates, check capacity, and coordinate pickups or deliveries',
         'Share load details with carriers, warehouses, or other vendors only as needed to cover a shipment',
         'Follow up on a request you started on the website or by phone',
+        'Send SMS only when you have checked the optional SMS consent box on a form',
         'Improve the site, forms, and the way our desk handles incoming work',
         'Meet legal, insurance, accounting, or safety recordkeeping requirements',
       ],
@@ -74,8 +80,13 @@ export const privacyPolicyPage = {
       title: 'How we share information',
       paragraphs: [
         'We do not sell personal information. We share it only when it is needed to run the business or when the law requires it.',
+        'Mobile Opt-in, SMS Consent, and phone numbers collected for SMS communication purposes will not be shared with any third party or affiliates for marketing purposes.',
       ],
       items: [
+        {
+          title: 'SMS and mobile opt-in',
+          text: 'Mobile Opt-in, SMS Consent, and phone numbers collected for SMS communication purposes will not be shared with any third party or affiliates for marketing purposes.',
+        },
         {
           title: 'Service providers',
           text: 'Email delivery and hosting vendors that process form submissions so our team can receive and reply to them.',
@@ -92,6 +103,16 @@ export const privacyPolicyPage = {
           title: 'Legal requests',
           text: 'Regulators, courts, or law enforcement when we are required to disclose information.',
         },
+      ],
+    },
+    {
+      id: 'sms-communications',
+      title: 'SMS communications',
+      paragraphs: [
+        `If you check the optional SMS consent box on a form, ${legalCompanyName} may send text messages to the phone number you provided. Those messages relate to shipment updates, load inquiries, quote follow-up, and dispatch coordination.`,
+        'Checking the box is optional. You can submit a form and provide a phone number without agreeing to receive SMS. Consent is not required to request a quote or do business with us.',
+        `Message frequency varies. Message and data rates may apply. Reply STOP at any time to opt out. Text HELP to ${primaryPhone.label} for assistance, or email ${primaryEmail.label}.`,
+        'Mobile Opt-in, SMS Consent, and phone numbers collected for SMS communication purposes will not be shared with any third party or affiliates for marketing purposes.',
       ],
     },
     {
@@ -261,7 +282,7 @@ export const termsAndConditionsPage = {
       id: 'user-submissions',
       title: 'Forms and comments',
       paragraphs: [
-        'When you submit a quote request, contact form, or blog comment, you grant us permission to use that content to respond, operate the business, and keep a record of the request. Do not submit confidential information you are not authorized to share.',
+        'When you submit a quote request, contact form, or blog comment, you grant us permission to use that content to respond, operate the business, and keep a record of the request. Do not submit confidential information you are not authorized to share. SMS consent is separate, optional, and governed by our SMS Terms and Conditions.',
         'We may refuse or delete a comment or message that is off-topic, abusive, or appears to be spam.',
       ],
     },
@@ -305,6 +326,94 @@ export const termsAndConditionsPage = {
       title: 'Contact us about these terms',
       paragraphs: [
         `Questions about these terms can be sent to ${primaryEmail.label} or ${primaryPhone.label}. Our mailing address is ${legalCompanyName}, ${companyAddress.formatted}. For a new shipment, use the quote page or call dispatch.`,
+      ],
+    },
+  ],
+}
+
+export const smsTermsPage = {
+  slug: 'sms-terms-and-conditions',
+  path: getSmsTermsPageRoute(),
+  badge: 'Legal',
+  icon: 'file',
+  crumb: 'SMS Terms',
+  tagline: 'How text messages from the Manteca desk work.',
+  title: 'SMS Terms and Conditions',
+  intro:
+    'These terms explain how Kangaroo Logistics uses SMS when you optionally opt in on a website form, what messages you may receive, and how to stop them.',
+  lastUpdated: legalLastUpdated,
+  image: '/banners/road-transport.webp',
+  related: {
+    label: 'Also review',
+    title: 'Privacy Policy',
+    to: getPrivacyPageRoute(),
+    description: 'What we collect on forms and how we share SMS opt-in information.',
+  },
+  sections: [
+    {
+      id: 'overview',
+      title: 'Overview',
+      paragraphs: [
+        `These SMS Terms and Conditions apply when you check the optional SMS consent box on a ${legalCompanyName} website form and provide a phone number. They supplement our Privacy Policy and website Terms & Conditions.`,
+        'SMS consent is exclusive to text messaging. Agreeing to the Privacy Policy or website Terms does not enroll you in SMS.',
+      ],
+    },
+    {
+      id: 'consent',
+      title: 'Optional consent',
+      paragraphs: [
+        'The SMS checkbox is never pre-checked. It is optional. You may provide your phone number and submit a form without agreeing to receive text messages.',
+        'Consent is not a condition of requesting a quote, leaving a comment, or doing business with Kangaroo Logistics.',
+      ],
+    },
+    {
+      id: 'message-types',
+      title: 'Types of messages',
+      paragraphs: [
+        'If you opt in, we may send text messages related to:',
+      ],
+      items: [
+        'Shipment updates and load status',
+        'Quote and load inquiries',
+        'Dispatch coordination and appointment follow-up',
+        'Replies when you text HELP or contact the desk about a load',
+      ],
+    },
+    {
+      id: 'frequency-and-rates',
+      title: 'Frequency and rates',
+      paragraphs: [
+        'Message frequency varies based on your shipment or inquiry. Message and data rates may apply, depending on your wireless plan and carrier.',
+      ],
+    },
+    {
+      id: 'opt-out-and-help',
+      title: 'Opt out and help',
+      paragraphs: [
+        `Reply STOP at any time to opt out of SMS from Kangaroo Logistics. After you opt out, we will not send further marketing or operational texts to that number unless you opt in again.`,
+        `Text HELP to ${primaryPhone.label} for assistance, or email ${primaryEmail.label}. You can also call the Manteca desk at ${primaryPhone.label}.`,
+      ],
+    },
+    {
+      id: 'sharing',
+      title: 'How we share SMS information',
+      paragraphs: [
+        'Mobile Opt-in, SMS Consent, and phone numbers collected for SMS communication purposes will not be shared with any third party or affiliates for marketing purposes.',
+        'We may use carriers and messaging vendors solely to deliver texts you asked for. Those vendors are not permitted to use your number for their own marketing.',
+      ],
+    },
+    {
+      id: 'privacy',
+      title: 'Privacy',
+      paragraphs: [
+        'Our Privacy Policy describes what we collect, how we use it, and how we share it. The SMS-specific sharing rule on that page also applies to numbers collected for text messaging.',
+      ],
+    },
+    {
+      id: 'contact',
+      title: 'Contact us about SMS',
+      paragraphs: [
+        `Questions about these SMS terms can be sent to ${primaryEmail.label} or ${primaryPhone.label}. Mail can be sent to ${legalCompanyName}, ${companyAddress.formatted}.`,
       ],
     },
   ],

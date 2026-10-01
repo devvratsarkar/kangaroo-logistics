@@ -1,25 +1,30 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import * as Yup from 'yup'
 import SectionBadge from '../common/SectionBadge.jsx'
-import LegalConsentField, {
-  legalConsentInitialValue,
-  legalConsentSchema,
-} from '../legal/LegalConsentField.jsx'
+import SmsConsentField, {
+  smsConsentInitialValue,
+  smsConsentSchema,
+} from '../legal/SmsConsentField.jsx'
 import { ArrowRightLongIcon, ChatBubbleIcon } from '../ui/AllSVG.jsx'
 import { submitConsultation } from '../../utils/submitConsultation.js'
 
 const initialValues = {
+  phone: '',
   message: '',
-  acceptedLegal: legalConsentInitialValue,
+  smsConsent: smsConsentInitialValue,
 }
 
 const helpdeskSchema = Yup.object({
+  phone: Yup.string()
+    .trim()
+    .matches(/^[+]?[\d\s().-]{7,20}$/, 'Enter a valid phone number')
+    .required('Phone number is required'),
   message: Yup.string()
     .trim()
     .min(10, 'Message must be at least 10 characters')
     .max(1000, 'Message must be 1000 characters or less')
     .required('Please enter a message'),
-  acceptedLegal: legalConsentSchema,
+  smsConsent: smsConsentSchema,
 })
 
 const inputClassName =
@@ -100,6 +105,32 @@ export default function HomeConsultations() {
                     ) : null}
 
                     <div>
+                      <label htmlFor="helpdesk-phone" className="sr-only">
+                        Phone number
+                      </label>
+                      <Field
+                        id="helpdesk-phone"
+                        name="phone"
+                        type="tel"
+                        autoComplete="tel"
+                        placeholder="+1 (555) 000-0000"
+                        className={[
+                          inputClassName,
+                          touched.phone && errors.phone
+                            ? 'border-red-400 focus:border-red-400 focus:ring-red-200'
+                            : '',
+                        ]
+                          .filter(Boolean)
+                          .join(' ')}
+                      />
+                      <ErrorMessage
+                        name="phone"
+                        component="p"
+                        className="mt-1.5 text-[13px] leading-5 text-red-500"
+                      />
+                    </div>
+
+                    <div>
                       <label htmlFor="helpdesk-message" className="sr-only">
                         Your message
                       </label>
@@ -124,7 +155,7 @@ export default function HomeConsultations() {
                       />
                     </div>
 
-                    <LegalConsentField id="helpdesk-acceptedLegal" />
+                    <SmsConsentField id="helpdesk-smsConsent" />
 
                     <button
                       type="submit"

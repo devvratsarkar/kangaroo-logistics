@@ -1,6 +1,6 @@
 import * as Yup from 'yup'
 import { serviceNavItems } from '../../data/services.js'
-import { legalConsentInitialValue, legalConsentSchema } from '../legal/LegalConsentField.jsx'
+import { smsConsentInitialValue, smsConsentSchema } from '../legal/SmsConsentField.jsx'
 
 export const quoteServiceOptions = serviceNavItems.map((service) => ({
   value: service.slug,
@@ -13,7 +13,7 @@ export const quoteInitialValues = {
   serviceType: '',
   phone: '',
   message: '',
-  acceptedLegal: legalConsentInitialValue,
+  smsConsent: smsConsentInitialValue,
 }
 
 export const quoteValidationSchema = Yup.object({
@@ -36,7 +36,7 @@ export const quoteValidationSchema = Yup.object({
     .min(10, 'Message must be at least 10 characters')
     .max(1000, 'Message must be 1000 characters or less')
     .required('Message is required'),
-  acceptedLegal: legalConsentSchema,
+  smsConsent: smsConsentSchema,
 })
 
 export function createQuoteInitialValues(lockedServiceSlug = '') {

@@ -9,6 +9,7 @@ import BlogPage from '../pages/blog/Blog'
 import BlogDetailPage from '../pages/blog/BlogDetail'
 import PrivacyPolicyPage from '../pages/legal/PrivacyPolicy'
 import TermsAndConditionsPage from '../pages/legal/TermsAndConditions'
+import SmsTermsPage from '../pages/legal/SmsTerms'
 import {
   getAboutPageRoute,
   getBlogDetailPageRoute,
@@ -19,6 +20,7 @@ import {
   getQuotePageRoute,
   getServiceDetailPageRoute,
   getServicesPageRoute,
+  getSmsTermsPageRoute,
   getTermsPageRoute,
 } from './routes'
 
@@ -65,6 +67,10 @@ export const RouterData = [
       {
         path: getTermsPageRoute(),
         element: <TermsAndConditionsPage />,
+      },
+      {
+        path: getSmsTermsPageRoute(),
+        element: <SmsTermsPage />,
       },
     ],
   },

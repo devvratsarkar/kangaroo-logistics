@@ -11,6 +11,7 @@ import {
   getPrivacyPageRoute,
   getQuotePageRoute,
   getServicesPageRoute,
+  getSmsTermsPageRoute,
   getTermsPageRoute,
 } from '../routes/routes.js'
 
@@ -19,6 +20,7 @@ export const footerCompanyLinks = [
   { label: 'About Us', to: getAboutPageRoute() },
   { label: 'Privacy Policy', to: getPrivacyPageRoute() },
   { label: 'Terms & Conditions', to: getTermsPageRoute() },
+  { label: 'SMS Terms', to: getSmsTermsPageRoute() },
 ]
 
 export const footerUsefulLinks = [
@@ -31,6 +33,7 @@ export const footerUsefulLinks = [
 export const footerBottomLinks = [
   { label: 'Privacy Policy', to: getPrivacyPageRoute() },
   { label: 'Terms & Conditions', to: getTermsPageRoute() },
+  { label: 'SMS Terms', to: getSmsTermsPageRoute() },
   { label: "FAQ's", to: '#faq' },
 ]
 

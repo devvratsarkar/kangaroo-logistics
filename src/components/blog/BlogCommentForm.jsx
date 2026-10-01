@@ -1,6 +1,10 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import * as Yup from 'yup'
 import { ArrowRightLongIcon } from '../ui/AllSVG.jsx'
+import SmsConsentField, {
+  smsConsentInitialValue,
+  smsConsentSchema,
+} from '../legal/SmsConsentField.jsx'
 import { submitBlogComment } from '../../utils/submitConsultation.js'
 
 const commentSchema = Yup.object({
@@ -15,6 +19,7 @@ const commentSchema = Yup.object({
     .trim()
     .min(3, 'Message must be at least 3 characters')
     .required('Message is required'),
+  smsConsent: smsConsentSchema,
 })
 
 const inputClassName =
@@ -50,6 +55,7 @@ export default function BlogCommentForm({ postTitle }) {
           phone: '',
           address: '',
           message: '',
+          smsConsent: smsConsentInitialValue,
         }}
         validationSchema={commentSchema}
         onSubmit={async (values, { resetForm, setStatus, setSubmitting }) => {
@@ -159,6 +165,8 @@ export default function BlogCommentForm({ postTitle }) {
                 />
                 <FieldError name="message" />
               </div>
+
+              <SmsConsentField id="blog-comment-smsConsent" />
 
               <button
                 type="submit"

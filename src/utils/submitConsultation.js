@@ -73,6 +73,10 @@ function buildTemplateParams(values, { formSource, requestType }) {
     post_title: articleTitle || NOT_PROVIDED,
     message: displayValue(values.message, ''),
     message_html: formatMessageHtml(values.message),
+    sms_consent:
+      values.smsConsent === true
+        ? 'Yes — opted in to SMS'
+        : 'No — did not opt in to SMS',
     form_source: formSource,
     request_type: requestType,
     submitted_at: formatSubmittedAt(),
